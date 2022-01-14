@@ -1,4 +1,5 @@
-import {injectGlobal} from '@emotion/css'
+import { injectGlobal } from '@emotion/css'
+import '../../packages/ui/reset.css'
 
 injectGlobal`
   * {
