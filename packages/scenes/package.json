@@ -1,6 +1,6 @@
 {
   "name": "@psycholog/scenes",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "stokes <stokes@teamt5.org>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
-    "@psycholog/ui": "~0.0.0",
+    "@psycholog/ui": "^0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
