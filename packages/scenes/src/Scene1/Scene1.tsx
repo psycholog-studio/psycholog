@@ -1,14 +1,8 @@
 import React from 'react'
-// import {} from '@psycholog/ui/'
-import ThreeBackground from '@psycholog/ui/ThreeBackground'
-import * as styles from './Scene1.styles'
+import BaseLayout from '@psycholog/ui/Layouts/BaseLayout'
 
 const Scene1 = (): JSX.Element => {
-  return (
-    <div className={styles.root}>
-      <ThreeBackground></ThreeBackground>
-    </div>
-  )
+  return <BaseLayout size="HD1080"></BaseLayout>
 }
 
 export default Scene1

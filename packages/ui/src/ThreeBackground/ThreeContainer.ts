@@ -6,14 +6,19 @@ export type ThreeController = {
 
 class THREEContainer {
   threeController: ThreeController
+  containerElement: HTMLElement
 
-  constructor() {
+  constructor(containerElement: HTMLElement) {
+    this.containerElement = containerElement
     this.threeController = {}
 
+    const rect = containerElement.getBoundingClientRect()
+
     const renderer = new THREE.WebGLRenderer({ antialias: true })
+
     const camera = new THREE.PerspectiveCamera(
       70,
-      window.innerWidth / window.innerHeight,
+      rect.width / rect.height,
       0.01,
       10
     )
@@ -25,7 +30,7 @@ class THREEContainer {
     const mesh = new THREE.Mesh(geometry, material)
     scene.add(mesh)
 
-    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setSize(rect.width, rect.height)
     this.threeController.app = renderer.domElement
 
     const animate = () => {
