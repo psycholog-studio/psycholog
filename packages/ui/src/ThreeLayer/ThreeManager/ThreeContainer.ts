@@ -1,11 +1,13 @@
 import * as THREE from 'three'
 
-type THREEContainerOptions = {
+export type THREEContainerOptions = {
   isAnimating?: boolean
+  containerElement?: HTMLElement
 }
 
+let _containerElement: HTMLElement
+
 class THREEContainer {
-  containerElement: HTMLElement
   renderer: THREE.WebGLRenderer
   camera: THREE.PerspectiveCamera
   scene: THREE.Scene
@@ -16,30 +18,36 @@ class THREEContainer {
     return this.renderer.domElement
   }
 
-  constructor(
-    containerElement: HTMLElement,
-    options: THREEContainerOptions = {}
-  ) {
-    this.containerElement = containerElement
+  constructor(options: THREEContainerOptions = {}) {
     this.animates = []
     this.isAnimating = options.isAnimating ?? true
 
-    const rect = containerElement.getBoundingClientRect()
-
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
-    this.renderer.setSize(rect.width, rect.height)
+    this.renderer.setSize(0, 0)
 
-    this.camera = new THREE.PerspectiveCamera(
-      70,
-      rect.width / rect.height,
-      0.01,
-      10
-    )
+    this.camera = new THREE.PerspectiveCamera(70, 0, 0.01, 10)
     this.camera.position.z = 1
 
     this.scene = new THREE.Scene()
 
+    if (options.containerElement) {
+      this.setContainerElement(options.containerElement)
+    }
+
     this.animate()
+  }
+
+  get containerElement() {
+    return _containerElement
+  }
+
+  setContainerElement = (element: HTMLElement) => {
+    _containerElement = element
+    const rect = _containerElement.getBoundingClientRect()
+
+    this.renderer.setSize(rect.width, rect.height)
+    this.camera.aspect = rect.width / rect.height
+    this.camera.updateProjectionMatrix()
   }
 
   subscribeAnimate = (animate: () => void) => {

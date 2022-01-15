@@ -1,6 +1,6 @@
 import React from 'react'
 import * as styles from './BaseLayout.styles'
-import ThreeBackground from '../../ThreeBackground'
+import ThreeLayer from '../../ThreeLayer'
 import sizes from './sizes'
 
 export type Size = keyof typeof sizes
@@ -47,7 +47,7 @@ const BaseLayout = (props: BaseLayoutProps): JSX.Element => {
   return (
     <div className={styles.root}>
       <div style={containerSizeStyle}>
-        <ThreeBackground />
+        <ThreeLayer />
       </div>
     </div>
   )
