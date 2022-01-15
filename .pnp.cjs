@@ -5181,6 +5181,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@psycholog/docs", "workspace:docs"],
             ["@babel/cli", "virtual:e06398b103324c36a2ea2dcac718f4453b52d265b935fc9d61f2eedacbd1fa5ad9b70b5d7e765e4c7bb69ce17333001abe21d84599d0ab8522bed64e8d66a946#npm:7.16.8"],
             ["@babel/core", "npm:7.16.7"],
+            ["@babel/plugin-proposal-numeric-separator", "virtual:c8c17d81d1dbf10cf69121102b7ccc73f84f12e2f556068bd2e7b11ad41f4ff0f8120ff863c3df1f24246b532c9db90f60b9dcd3a763e5e2643bebf78b8f21a2#npm:7.16.7"],
             ["@emotion/babel-plugin", "virtual:e06398b103324c36a2ea2dcac718f4453b52d265b935fc9d61f2eedacbd1fa5ad9b70b5d7e765e4c7bb69ce17333001abe21d84599d0ab8522bed64e8d66a946#npm:11.7.2"],
             ["@emotion/css", "virtual:e06398b103324c36a2ea2dcac718f4453b52d265b935fc9d61f2eedacbd1fa5ad9b70b5d7e765e4c7bb69ce17333001abe21d84599d0ab8522bed64e8d66a946#npm:11.7.1"],
             ["@mdx-js/react", "virtual:e06398b103324c36a2ea2dcac718f4453b52d265b935fc9d61f2eedacbd1fa5ad9b70b5d7e765e4c7bb69ce17333001abe21d84599d0ab8522bed64e8d66a946#npm:1.6.22"],

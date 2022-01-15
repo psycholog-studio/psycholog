@@ -18,6 +18,7 @@ module.exports = {
           "cssPropOptimization": true
         }
       ],
+      ["@babel/plugin-proposal-numeric-separator"],
     ]
   }),
   "stories": [

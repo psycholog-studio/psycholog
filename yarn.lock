@@ -2724,6 +2724,7 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.16.8
     "@babel/core": ^7.16.7
+    "@babel/plugin-proposal-numeric-separator": ^7.16.7
     "@emotion/babel-plugin": ^11.7.2
     "@emotion/css": ^11.7.1
     "@mdx-js/react": ^1.6.22
