@@ -5241,9 +5241,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@psycholog/ui", "workspace:packages/ui"],
             ["@emotion/css", "virtual:f2b6162eb6ab9885e1e63ddd81f69735ccbeca827b2a61464088943d013424312b86c8c2f8d3c27336b0b2782273b04b7542f80c5abeead8e0f4e79160dd7e9d#npm:11.7.1"],
             ["@storybook/react", "virtual:f2b6162eb6ab9885e1e63ddd81f69735ccbeca827b2a61464088943d013424312b86c8c2f8d3c27336b0b2782273b04b7542f80c5abeead8e0f4e79160dd7e9d#npm:6.4.12"],
+            ["@types/color", "npm:3.0.2"],
             ["@types/pixi.js", "npm:5.0.0"],
             ["@types/react", "npm:17.0.38"],
             ["@types/three", "npm:0.136.1"],
+            ["color", "npm:3.2.1"],
             ["pixi.js", "npm:6.2.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:f2b6162eb6ab9885e1e63ddd81f69735ccbeca827b2a61464088943d013424312b86c8c2f8d3c27336b0b2782273b04b7542f80c5abeead8e0f4e79160dd7e9d#npm:17.0.2"],
@@ -9283,6 +9285,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/color", [
+        ["npm:3.0.2", {
+          "packageLocation": "./.yarn/cache/@types-color-npm-3.0.2-ad6d562511-ee25101a59.zip/node_modules/@types/color/",
+          "packageDependencies": [
+            ["@types/color", "npm:3.0.2"],
+            ["@types/color-convert", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/color-convert", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/@types-color-convert-npm-2.0.0-f59f3c146a-027b68665d.zip/node_modules/@types/color-convert/",
@@ -12175,6 +12187,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["color", [
+        ["npm:3.2.1", {
+          "packageLocation": "./.yarn/cache/color-npm-3.2.1-568cf1014f-f81220e8b7.zip/node_modules/color/",
+          "packageDependencies": [
+            ["color", "npm:3.2.1"],
+            ["color-convert", "npm:1.9.3"],
+            ["color-string", "npm:1.9.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["color-convert", [
         ["npm:1.9.3", {
           "packageLocation": "./.yarn/cache/color-convert-npm-1.9.3-1fe690075e-fd7a64a17c.zip/node_modules/color-convert/",
@@ -12205,6 +12228,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/color-name-npm-1.1.4-025792b0ea-b044585952.zip/node_modules/color-name/",
           "packageDependencies": [
             ["color-name", "npm:1.1.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["color-string", [
+        ["npm:1.9.0", {
+          "packageLocation": "./.yarn/cache/color-string-npm-1.9.0-75382c0441-93c6678b84.zip/node_modules/color-string/",
+          "packageDependencies": [
+            ["color-string", "npm:1.9.0"],
+            ["color-name", "npm:1.1.4"],
+            ["simple-swizzle", "npm:0.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -16751,6 +16785,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-arrayish-npm-0.2.1-23927dfb15-eef4417e3c.zip/node_modules/is-arrayish/",
           "packageDependencies": [
             ["is-arrayish", "npm:0.2.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:0.3.2", {
+          "packageLocation": "./.yarn/cache/is-arrayish-npm-0.3.2-f856180f79-977e64f54d.zip/node_modules/is-arrayish/",
+          "packageDependencies": [
+            ["is-arrayish", "npm:0.3.2"]
           ],
           "linkType": "HARD",
         }]
@@ -22593,6 +22634,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/signal-exit-npm-3.0.6-66fc2466b6-b819ac81ba.zip/node_modules/signal-exit/",
           "packageDependencies": [
             ["signal-exit", "npm:3.0.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["simple-swizzle", [
+        ["npm:0.2.2", {
+          "packageLocation": "./.yarn/cache/simple-swizzle-npm-0.2.2-8dee37fad1-a7f3f2ab5c.zip/node_modules/simple-swizzle/",
+          "packageDependencies": [
+            ["simple-swizzle", "npm:0.2.2"],
+            ["is-arrayish", "npm:0.3.2"]
           ],
           "linkType": "HARD",
         }]
