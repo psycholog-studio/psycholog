@@ -1,5 +1,6 @@
 import { injectGlobal } from '@emotion/css'
 import '../../packages/ui/reset.css'
+import './styles.css'
 
 injectGlobal`
   * {
