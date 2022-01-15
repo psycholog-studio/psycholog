@@ -1,47 +1,61 @@
 import * as THREE from 'three'
 
-export type ThreeController = {
-  app?: HTMLCanvasElement
+type THREEContainerOptions = {
+  isAnimating?: boolean
 }
 
 class THREEContainer {
-  threeController: ThreeController
   containerElement: HTMLElement
+  renderer: THREE.WebGLRenderer
+  camera: THREE.PerspectiveCamera
+  scene: THREE.Scene
+  animates: (() => void)[]
+  isAnimating?: boolean
 
-  constructor(containerElement: HTMLElement) {
+  get app() {
+    return this.renderer.domElement
+  }
+
+  constructor(
+    containerElement: HTMLElement,
+    options: THREEContainerOptions = {}
+  ) {
     this.containerElement = containerElement
-    this.threeController = {}
+    this.animates = []
+    this.isAnimating = options.isAnimating ?? true
 
     const rect = containerElement.getBoundingClientRect()
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true })
+    this.renderer = new THREE.WebGLRenderer({ antialias: true })
+    this.renderer.setSize(rect.width, rect.height)
 
-    const camera = new THREE.PerspectiveCamera(
+    this.camera = new THREE.PerspectiveCamera(
       70,
       rect.width / rect.height,
       0.01,
       10
     )
-    camera.position.z = 1
+    this.camera.position.z = 1
 
-    const scene = new THREE.Scene()
-    const geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2)
-    const material = new THREE.MeshNormalMaterial()
-    const mesh = new THREE.Mesh(geometry, material)
-    scene.add(mesh)
+    this.scene = new THREE.Scene()
 
-    renderer.setSize(rect.width, rect.height)
-    this.threeController.app = renderer.domElement
+    this.animate()
+  }
 
-    const animate = () => {
-      requestAnimationFrame(animate)
+  subscribeAnimate = (animate: () => void) => {
+    return this.animates.push(animate)
+  }
 
-      mesh.rotation.x += 0.01
-      mesh.rotation.y += 0.02
-
-      renderer.render(scene, camera)
+  animate = () => {
+    if (this.isAnimating) {
+      requestAnimationFrame(this.animate)
     }
-    animate()
+
+    for (const animation of this.animates) {
+      animation()
+    }
+
+    this.renderer.render(this.scene, this.camera)
   }
 }
 

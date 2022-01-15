@@ -49,3 +49,8 @@ export const WQHD = Template.bind({})
 WQHD.args = {
   size: 'WQHD',
 }
+
+export const Normal = Template.bind({})
+Normal.args = {
+  size: 'WXGAPLUS',
+}
