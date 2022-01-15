@@ -1,56 +1,43 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import BaseLayout, { BaseLayoutProps } from './BaseLayout'
-
+import * as THREE from 'three'
+import { backgroundWithBoxRotation } from '../../ThreeLayer/ThreeWebglLayer/utils'
+import Box from '../../Box'
+import { css } from '@emotion/css'
 export default {
   title: 'ui/Layouts/BaseLayout',
   component: BaseLayout,
-  argTypes: {},
 } as Meta
 
-const Template: Story<BaseLayoutProps> = (args) => <BaseLayout {...args} />
+const scene = new THREE.Scene()
 
-export const Auto = Template.bind({})
-Auto.args = {
-  isSizeAuto: true,
+backgroundWithBoxRotation(scene)
+
+const cssBox = css`
+  width: 700px;
+  height: 200px;
+  margin-bottom: 50px;
+  padding: 20px;
+  color: white;
+`
+
+const cssRoot = css`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+`
+const NormalTemplate: Story<BaseLayoutProps> = (args) => {
+  return (
+    <BaseLayout {...args} scene={scene}>
+      <div className={cssRoot}>
+        <Box className={cssBox}>BaseLayout test!</Box>
+      </div>
+    </BaseLayout>
+  )
 }
 
-export const VGA = Template.bind({})
-VGA.args = {
-  size: 'VGA',
-}
-
-export const SVGA = Template.bind({})
-SVGA.args = {
-  size: 'SVGA',
-}
-
-export const XGA = Template.bind({})
-XGA.args = {
-  size: 'XGA',
-}
-
-export const SXGA = Template.bind({})
-SXGA.args = {
-  size: 'SXGA',
-}
-
-export const WXGAPLUS = Template.bind({})
-WXGAPLUS.args = {
-  size: 'WXGAPLUS',
-}
-
-export const HD1080 = Template.bind({})
-HD1080.args = {
-  size: 'HD1080',
-}
-
-export const WQHD = Template.bind({})
-WQHD.args = {
-  size: 'WQHD',
-}
-
-export const Normal = Template.bind({})
-Normal.args = {
-  size: 'WXGAPLUS',
-}
+export const Normal = NormalTemplate.bind({})
+Normal.args = {}

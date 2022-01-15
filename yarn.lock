@@ -2783,6 +2783,7 @@ __metadata:
     "@types/color": ^3.0.2
     "@types/pixi.js": ^5.0.0
     "@types/react": ^17.0.37
+    "@types/react-dom": ^17.0.11
     "@types/three": ^0.136.1
     color: ^3.2.0
     pixi.js: ^6.2.1
@@ -4922,6 +4923,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: fdcb761d3b8cd74530c00490a7b5b1868e82b742e05b03d8fc09d88cc135ec6377556bcc8b345bf0f3aa8c99259e6cecbccf912ef8c9da12611c274a5ffb3fa9
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^17.0.11":
+  version: 17.0.11
+  resolution: "@types/react-dom@npm:17.0.11"
+  dependencies:
+    "@types/react": "*"
+  checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
   languageName: node
   linkType: hard
 

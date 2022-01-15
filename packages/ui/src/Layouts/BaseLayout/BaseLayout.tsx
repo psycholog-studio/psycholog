@@ -1,54 +1,25 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import * as styles from './BaseLayout.styles'
-import ThreeLayer from '../../ThreeLayer'
-import sizes from './sizes'
+import ThreeWebglLayer from '../../ThreeLayer/ThreeWebglLayer'
+import ThreeCSSLayer from '../../ThreeLayer/ThreeCSSLayer'
+import UILayer from './UILayer'
 
-export type Size = keyof typeof sizes
+import * as THREE from 'three'
 
 export interface BaseLayoutProps {
-  size?: Size
-  width?: number
-  height?: number
-  isSizeAuto?: boolean
-  isCustom?: boolean
+  children?: ReactNode
+  scene?: THREE.Scene
 }
 
 const BaseLayout = (props: BaseLayoutProps): JSX.Element => {
-  const {
-    size = 'HD1080',
-    width = sizes.HD1080.width,
-    height = sizes.HD1080.height,
-    isSizeAuto = false,
-    isCustom = false,
-  } = props
-
-  let containerSizeStyle = {
-    width: '100%',
-    height: '100%',
-  }
-
-  if (isCustom) {
-    containerSizeStyle = {
-      width: `${width}px`,
-      height: `${height}px`,
-    }
-  } else if (isSizeAuto) {
-    containerSizeStyle = {
-      width: '100%',
-      height: '100%',
-    }
-  } else {
-    containerSizeStyle = {
-      width: `${sizes[size].width}px`,
-      height: `${sizes[size].height}px`,
-    }
-  }
-
+  const { scene, children } = props
   return (
     <div className={styles.root}>
-      <div style={containerSizeStyle}>
-        <ThreeLayer />
-      </div>
+      <UILayer className={styles.uiLayer}></UILayer>
+      <ThreeCSSLayer scene={scene} className={styles.threeCssLayer}>
+        {children}
+      </ThreeCSSLayer>
+      <ThreeWebglLayer scene={scene} className={styles.threeWebglLayer} />
     </div>
   )
 }
