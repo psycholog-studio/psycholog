@@ -4,6 +4,7 @@ const path = require('path')
 const node_modules = path.join(__dirname, 'node_modules');
 
 module.exports = {
+  staticDirs: [{ from: '../../assets', to: '/assets' }],
   babel: async (options) => ({
     ...options,
     plugins: [

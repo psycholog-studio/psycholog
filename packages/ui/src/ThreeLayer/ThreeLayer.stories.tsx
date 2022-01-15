@@ -3,6 +3,7 @@ import { Story, Meta } from '@storybook/react'
 import ThreeLayer from './ThreeLayer'
 import ThreeManager from './ThreeManager'
 import * as THREE from 'three'
+import Background from './ThreeManager/Background'
 
 export default {
   title: 'ui/ThreeLayer',
@@ -11,9 +12,10 @@ export default {
 
 const init = () => {
   const ThreeContainer = ThreeManager.ThreeContainer
-  const geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2)
+  const geometry = new THREE.BoxGeometry(1, 1, 1)
   const material = new THREE.MeshNormalMaterial()
   const mesh = new THREE.Mesh(geometry, material)
+  mesh.position.z = 5
   ThreeContainer.scene.add(mesh)
 
   const animatation = () => {
@@ -46,6 +48,8 @@ Normal.args = {}
 const BackgroundTemplate: Story = (args) => {
   const handleStartup = useCallback(() => {
     init()
+    const bg1 = new Background('assets/B.jpeg')
+    ThreeManager.ThreeContainer.scene.add(bg1.mesh)
   }, [])
 
   return (

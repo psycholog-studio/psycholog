@@ -1,11 +1,10 @@
-export type BackgroundSize = {
-  width: number
-  height: number
-}
-
 export const defaultBackgroundSize = {
   width: 1440,
   height: 900,
+
+  get aspect() {
+    return this.width / this.height
+  },
 }
 
 const _BackgroundSize = {
@@ -17,7 +16,11 @@ export const setBackgrounSize = (width: number, height: number) => {
   _BackgroundSize.height = height
 }
 
-const BackgroundSize = Object.defineProperties(_BackgroundSize, {
+const BackgroundSize: {
+  readonly width: number
+  readonly height: number
+  readonly aspect: number
+} = Object.defineProperties(_BackgroundSize, {
   'width': {
     writable: false,
   },

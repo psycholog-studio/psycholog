@@ -19,9 +19,12 @@ const ThreeLayer = (props: ThreeLayerProps): JSX.Element => {
       ThreeManager.ThreeContainer.setContainerElement(rootRef.current)
       rootRef.current.innerHTML = ''
       rootRef.current.appendChild(ThreeManager.ThreeContainer.app)
-    }
 
-    onStartup?.()
+      if (!ThreeManager.ThreeContainer.isStartup) {
+        ThreeManager.ThreeContainer.startup()
+        onStartup?.()
+      }
+    }
   }, [])
 
   return <div ref={rootRefCallback} className={styles.root}></div>

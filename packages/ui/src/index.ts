@@ -15,5 +15,5 @@ export * from './TerminalLine'
 export { default as TextLine } from './TextLine'
 export * from './TextLine'
 
-export { default as ThreeBackground } from './ThreeBackground'
-export * from './ThreeBackground'
+export { default as ThreeLayer } from './ThreeLayer'
+export * from './ThreeLayer'

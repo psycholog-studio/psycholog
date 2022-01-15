@@ -6,12 +6,14 @@ export type THREEContainerOptions = {
 }
 
 let _containerElement: HTMLElement
+let _isStartup = false
 
 class THREEContainer {
   renderer: THREE.WebGLRenderer
   camera: THREE.PerspectiveCamera
   scene: THREE.Scene
   animates: (() => void)[]
+  startupFuncs: (() => void)[]
   isAnimating?: boolean
 
   get app() {
@@ -19,26 +21,44 @@ class THREEContainer {
   }
 
   constructor(options: THREEContainerOptions = {}) {
+    const { isAnimating, containerElement } = options
+
+    this.startupFuncs = []
     this.animates = []
-    this.isAnimating = options.isAnimating ?? true
+    this.isAnimating = isAnimating ?? true
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
     this.renderer.setSize(0, 0)
 
     this.camera = new THREE.PerspectiveCamera(70, 0, 0.01, 10)
-    this.camera.position.z = 1
+    this.camera.position.z = 10
 
     this.scene = new THREE.Scene()
 
-    if (options.containerElement) {
-      this.setContainerElement(options.containerElement)
-    }
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5)
+    directionalLight.position.z = 15
+    this.scene.add(directionalLight)
 
-    this.animate()
+    if (containerElement) {
+      this.setContainerElement(containerElement)
+    }
+  }
+
+  get isStartup() {
+    return _isStartup
   }
 
   get containerElement() {
     return _containerElement
+  }
+
+  startup() {
+    for (const func of this.startupFuncs) {
+      func()
+    }
+    _isStartup = true
+
+    this.animate()
   }
 
   setContainerElement = (element: HTMLElement) => {
@@ -48,6 +68,10 @@ class THREEContainer {
     this.renderer.setSize(rect.width, rect.height)
     this.camera.aspect = rect.width / rect.height
     this.camera.updateProjectionMatrix()
+  }
+
+  subscribeStarup = (func: () => void) => {
+    return this.startupFuncs.push(func)
   }
 
   subscribeAnimate = (animate: () => void) => {
