@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useEffect } from 'react'
 import { Story, Meta } from '@storybook/react'
 import ThreeLayer from './ThreeLayer'
 import ThreeManager from './ThreeManager'
@@ -10,24 +10,28 @@ export default {
   component: ThreeLayer,
 } as Meta
 
-const init = () => {
+const boxRotation = (scene: THREE.Scene) => {
   const ThreeContainer = ThreeManager.ThreeContainer
   const geometry = new THREE.BoxGeometry(1, 1, 1)
   const material = new THREE.MeshNormalMaterial()
   const mesh = new THREE.Mesh(geometry, material)
   mesh.position.z = 5
-  ThreeContainer.scene.add(mesh)
+  scene.add(mesh)
 
   const animatation = () => {
     mesh.rotation.x += 0.01
     mesh.rotation.y += 0.02
   }
+
   ThreeContainer.subscribeAnimate(animatation)
 }
 
 const Template: Story = (args) => {
-  const handleStartup = useCallback(() => {
-    init()
+  useEffect(() => {
+    const scene = new THREE.Scene()
+    boxRotation(scene)
+
+    ThreeManager.ThreeContainer.setScene(scene)
   }, [])
 
   return (
@@ -37,7 +41,7 @@ const Template: Story = (args) => {
         height: '100vh',
       }}
     >
-      <ThreeLayer {...args} onStartup={handleStartup} />
+      <ThreeLayer {...args} />
     </div>
   )
 }
@@ -46,10 +50,17 @@ export const Normal = Template.bind({})
 Normal.args = {}
 
 const BackgroundTemplate: Story = (args) => {
-  const handleStartup = useCallback(() => {
-    init()
+  useEffect(() => {
+    const scene = new THREE.Scene()
+    boxRotation(scene)
     const bg1 = new Background('assets/B.jpeg')
-    ThreeManager.ThreeContainer.scene.add(bg1.mesh)
+    scene.add(bg1.mesh)
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5)
+    directionalLight.position.z = 15
+    scene.add(directionalLight)
+
+    ThreeManager.ThreeContainer.setScene(scene)
   }, [])
 
   return (
@@ -59,7 +70,7 @@ const BackgroundTemplate: Story = (args) => {
         height: '100vh',
       }}
     >
-      <ThreeLayer {...args} onStartup={handleStartup} />
+      <ThreeLayer {...args} />
     </div>
   )
 }
