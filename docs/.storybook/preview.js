@@ -25,6 +25,8 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <Story />
+    <div style={{ padding: '20px' }}>
+      <Story />
+    </div>
   ),
 ];

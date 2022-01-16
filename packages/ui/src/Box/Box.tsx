@@ -13,17 +13,17 @@ export type BoxProps = Omit<
   'ref'
 >
 
-const Box = forwardRef(
-  (inProps: BoxProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
-    const { className, children, ...props } = inProps
-    return (
-      <div {...props} ref={ref} className={cx(styles.root, className)}>
-        <Corners />
-        {children}
-      </div>
-    )
-  }
-)
+export type BoxRef = ForwardedRef<HTMLDivElement>
+
+const Box = forwardRef((inProps: BoxProps, ref: BoxRef): JSX.Element => {
+  const { className, children, ...props } = inProps
+  return (
+    <div {...props} ref={ref} className={cx(styles.root, className)}>
+      <Corners />
+      {children}
+    </div>
+  )
+})
 
 Box.displayName = 'Box'
 

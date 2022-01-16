@@ -5242,6 +5242,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/css", "virtual:f2b6162eb6ab9885e1e63ddd81f69735ccbeca827b2a61464088943d013424312b86c8c2f8d3c27336b0b2782273b04b7542f80c5abeead8e0f4e79160dd7e9d#npm:11.7.1"],
             ["@storybook/react", "virtual:f2b6162eb6ab9885e1e63ddd81f69735ccbeca827b2a61464088943d013424312b86c8c2f8d3c27336b0b2782273b04b7542f80c5abeead8e0f4e79160dd7e9d#npm:6.4.12"],
             ["@types/color", "npm:3.0.2"],
+            ["@types/node", "npm:17.0.8"],
             ["@types/pixi.js", "npm:5.0.0"],
             ["@types/react", "npm:17.0.38"],
             ["@types/react-dom", "npm:17.0.11"],
