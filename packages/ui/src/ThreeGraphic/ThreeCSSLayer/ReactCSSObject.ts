@@ -1,6 +1,6 @@
 import { CSS3DSprite } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
-import ThreeManager from '../core/ThreeManager'
 import { css } from '@emotion/css'
+
 export const ratio = 1
 
 const cssRoot = css`
@@ -18,20 +18,7 @@ class ReactCSSObject {
     this.css3DSprite = new CSS3DSprite(this.rootElement)
     this.css3DSprite.scale.set(ratio, ratio, ratio)
     this.css3DSprite.position.set(0, 0, 800)
-
     this.rootElement.classList.add(cssRoot)
-
-    const handleResize = () => {
-      const rect = ThreeManager.LayerController.webglApp.getBoundingClientRect()
-      this.rootElement.style.height = `${rect.height}px`
-      this.rootElement.style.width = `${rect.width}px`
-    }
-
-    requestAnimationFrame(() => {
-      handleResize()
-    })
-
-    ThreeManager.LayerController.subscribeWebglAppResize(handleResize)
   }
 }
 

@@ -1,6 +1,7 @@
 import { css } from '@emotion/css'
 
 export const root = css`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

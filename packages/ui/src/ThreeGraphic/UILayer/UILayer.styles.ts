@@ -6,4 +6,5 @@ export const root = css`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  align-items: center;
 `

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import * as styles from './BaseLayout.styles'
 import ThreeWebglLayer from '../../ThreeGraphic/ThreeWebglLayer'
 import ThreeCSSLayer from '../../ThreeGraphic/ThreeCSSLayer'
-import UILayer from './UILayer'
+import UILayer from '../../ThreeGraphic/UILayer'
 
 import * as THREE from 'three'
 
@@ -14,13 +14,11 @@ export interface BaseLayoutProps {
 const BaseLayout = (props: BaseLayoutProps): JSX.Element => {
   const { scene, children } = props
   return (
-    <div className={styles.root}>
-      <UILayer className={styles.uiLayer}></UILayer>
-      <ThreeCSSLayer scene={scene} className={styles.threeCssLayer}>
-        {children}
-      </ThreeCSSLayer>
+    <main className={styles.root}>
+      <UILayer className={styles.uiLayer}>{children}</UILayer>
+      <ThreeCSSLayer scene={scene} className={styles.threeCssLayer} />
       <ThreeWebglLayer scene={scene} className={styles.threeWebglLayer} />
-    </div>
+    </main>
   )
 }
 
