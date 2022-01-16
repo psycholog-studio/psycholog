@@ -14,5 +14,5 @@ export * from './TerminalLine'
 export { default as TextLine } from './TextLine'
 export * from './TextLine'
 
-export { default as ThreeLayer } from './ThreeLayer/ThreeWebglLayer'
-export * from './ThreeLayer/ThreeWebglLayer'
+export { default as ThreeLayer } from './ThreeGraphic/ThreeWebglLayer'
+export * from './ThreeGraphic/ThreeWebglLayer'

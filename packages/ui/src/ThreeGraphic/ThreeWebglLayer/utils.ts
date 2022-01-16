@@ -1,9 +1,9 @@
-import ThreeManager from '../ThreeManager'
+import ThreeManager from '../core/ThreeManager'
 import * as THREE from 'three'
-import Background from '../ThreeManager/Background'
+import ThreeBackground from '../core/ThreeBackground'
 
 export const boxRotation = (scene: THREE.Scene) => {
-  const ThreeContainer = ThreeManager.ThreeContainer
+  const LayerController = ThreeManager.LayerController
   const geometry = new THREE.BoxGeometry(200, 200, 200)
   const material = new THREE.MeshNormalMaterial()
   const mesh = new THREE.Mesh(geometry, material)
@@ -15,19 +15,15 @@ export const boxRotation = (scene: THREE.Scene) => {
     mesh.rotation.y += 0.02
   }
 
-  ThreeContainer.subscribeAnimate(animatation)
+  LayerController.subscribeAnimate(animatation)
 }
 
 export const backgroundWithBoxRotation = (scene: THREE.Scene) => {
   boxRotation(scene)
-  const bg1 = new Background('assets/B.jpg', {
+  const bg1 = new ThreeBackground('assets/B.jpg', {
     color: '#939393',
   })
   scene.add(bg1.mesh)
 
-  // const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5)
-  // directionalLight.position.z = 15
-  // scene.add(directionalLight)
-
-  ThreeManager.ThreeContainer.setScene(scene)
+  ThreeManager.LayerController.setScene(scene)
 }

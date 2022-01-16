@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
 
-export type THREEContainerOptions = {
+export type LayerControllerOptions = {
   isAutoSize?: boolean
   isAnimating?: boolean
   containerElement?: HTMLElement
@@ -10,18 +10,18 @@ export type THREEContainerOptions = {
   height?: number
 }
 
-let _containerElement: HTMLElement | undefined
-let _isStartup = false
-let _scene: THREE.Scene | undefined
+class LayerController {
+  #containerElement: HTMLElement | undefined = undefined
+  #isStartup = false
+  #scene: THREE.Scene | undefined = undefined
 
-class THREEContainer {
   renderer: THREE.WebGLRenderer
   cssRenderer: CSS3DRenderer
   camera: THREE.PerspectiveCamera
   webglAppResizeObserver: ResizeObserver
-  webglAppResizeFuncs: (() => void)[]
-  animates: (() => void)[]
-  startupFuncs: (() => void)[]
+  webglAppResizeFuncs: (() => void)[] = []
+  animates: (() => void)[] = []
+  startupFuncs: (() => void)[] = []
   isAnimating?: boolean
   isAutoSize?: boolean
   width: number
@@ -35,7 +35,7 @@ class THREEContainer {
     return this.cssRenderer.domElement
   }
 
-  constructor(options: THREEContainerOptions = {}) {
+  constructor(options: LayerControllerOptions = {}) {
     const {
       isAnimating = true,
       containerElement,
@@ -44,9 +44,6 @@ class THREEContainer {
       height = 900,
     } = options
 
-    this.startupFuncs = []
-    this.webglAppResizeFuncs = []
-    this.animates = []
     this.isAnimating = isAnimating
     this.isAutoSize = isAutoSize
     this.width = width
@@ -72,8 +69,8 @@ class THREEContainer {
             func()
           }
 
-          if (_containerElement) {
-            const rect = _containerElement.getBoundingClientRect()
+          if (this.#containerElement) {
+            const rect = this.#containerElement.getBoundingClientRect()
             if (this.isAutoSize) {
               this.renderer.setSize(rect.width, rect.height)
               this.camera.aspect = rect.width / rect.height
@@ -98,30 +95,30 @@ class THREEContainer {
   }
 
   get isStartup() {
-    return _isStartup
+    return this.#isStartup
   }
 
   get containerElement() {
-    return _containerElement
+    return this.#containerElement
   }
 
   get scene() {
-    return _scene
+    return this.#scene
   }
 
   startup() {
     for (const func of this.startupFuncs) {
       func()
     }
-    _isStartup = true
+    this.#isStartup = true
 
     this.animate()
   }
 
   setContainerElement = (element: HTMLElement) => {
-    _containerElement = element
+    this.#containerElement = element
 
-    const rect = _containerElement.getBoundingClientRect()
+    const rect = this.#containerElement.getBoundingClientRect()
     if (this.isAutoSize) {
       this.renderer.setSize(rect.width, rect.height)
       this.camera.aspect = rect.width / rect.height
@@ -133,7 +130,7 @@ class THREEContainer {
   }
 
   setScene = (scene: THREE.Scene) => {
-    _scene = scene
+    this.#scene = scene
   }
 
   subscribeStarup = (func: () => void) => {
@@ -149,14 +146,14 @@ class THREEContainer {
   }
 
   renderCss = () => {
-    if (_scene) {
-      this.cssRenderer.render(_scene, this.camera)
+    if (this.#scene) {
+      this.cssRenderer.render(this.#scene, this.camera)
     }
   }
 
   renderWebgl = () => {
-    if (_scene) {
-      this.renderer.render(_scene, this.camera)
+    if (this.#scene) {
+      this.renderer.render(this.#scene, this.camera)
     }
   }
 
@@ -173,4 +170,4 @@ class THREEContainer {
   }
 }
 
-export default THREEContainer
+export default LayerController

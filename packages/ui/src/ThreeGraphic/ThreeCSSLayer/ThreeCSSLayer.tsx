@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback, ReactNode } from 'react'
 import ReactDom from 'react-dom'
 import * as THREE from 'three'
 import { cx } from '@emotion/css'
-import ThreeManager from '../ThreeManager'
+import ThreeManager from '../core/ThreeManager'
 import * as styles from './ThreeCSSLayer.styles'
 import ReactCSSObject from './ReactCSSObject'
 
@@ -23,13 +23,13 @@ const ThreeCSSLayer = (props: ThreeCSSLayerProps): JSX.Element => {
       rootRef.current = element
     }
 
-    if (ThreeManager.ThreeContainer.containerElement !== rootRef.current) {
-      ThreeManager.ThreeContainer.setContainerElement(rootRef.current)
+    if (ThreeManager.LayerController.containerElement !== rootRef.current) {
+      ThreeManager.LayerController.setContainerElement(rootRef.current)
       rootRef.current.innerHTML = ''
-      rootRef.current.appendChild(ThreeManager.ThreeContainer.cssApp)
+      rootRef.current.appendChild(ThreeManager.LayerController.cssApp)
 
-      if (!ThreeManager.ThreeContainer.isStartup) {
-        ThreeManager.ThreeContainer.startup()
+      if (!ThreeManager.LayerController.isStartup) {
+        ThreeManager.LayerController.startup()
         onStartup?.()
       }
     }
@@ -47,7 +47,7 @@ const ThreeCSSLayer = (props: ThreeCSSLayerProps): JSX.Element => {
 
   useEffect(() => {
     ReactDom.render(<>{children}</>, cssObjectRef.current.rootElement, () => {
-      ThreeManager.ThreeContainer.renderCss()
+      ThreeManager.LayerController.renderCss()
     })
   }, [children])
 

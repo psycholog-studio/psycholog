@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import * as styles from './BaseLayout.styles'
-import ThreeWebglLayer from '../../ThreeLayer/ThreeWebglLayer'
-import ThreeCSSLayer from '../../ThreeLayer/ThreeCSSLayer'
+import ThreeWebglLayer from '../../ThreeGraphic/ThreeWebglLayer'
+import ThreeCSSLayer from '../../ThreeGraphic/ThreeCSSLayer'
 import UILayer from './UILayer'
 
 import * as THREE from 'three'

@@ -3,7 +3,7 @@ import ThreeManager from '../ThreeManager'
 
 const baseScale = 2200
 
-class Background {
+class ThreeBackground {
   geometry: THREE.PlaneGeometry
   material: THREE.MeshBasicMaterial
   mesh: THREE.Mesh
@@ -13,7 +13,7 @@ class Background {
     options: THREE.MeshBasicMaterialParameters = {}
   ) {
     this.geometry = new THREE.PlaneGeometry(
-      ThreeManager.BackgroundSize.aspect * baseScale,
+      ThreeManager.BackgroundController.aspect * baseScale,
       baseScale
     )
 
@@ -30,4 +30,4 @@ class Background {
   }
 }
 
-export default Background
+export default ThreeBackground

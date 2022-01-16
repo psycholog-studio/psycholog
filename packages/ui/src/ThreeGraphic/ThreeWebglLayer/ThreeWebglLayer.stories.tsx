@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { Story, Meta } from '@storybook/react'
 import ThreeWebglLayer from './ThreeWebglLayer'
-import ThreeManager from '../ThreeManager'
+import ThreeManager from '../core/ThreeManager'
 import * as THREE from 'three'
 import { backgroundWithBoxRotation, boxRotation } from './utils'
 
 export default {
-  title: 'ui/ThreeWebglLayer',
+  title: 'ui/ThreeGraphic/ThreeWebglLayer',
   component: ThreeWebglLayer,
 } as Meta
 
@@ -15,7 +15,7 @@ const Template: Story = (args) => {
     const scene = new THREE.Scene()
     boxRotation(scene)
 
-    ThreeManager.ThreeContainer.setScene(scene)
+    ThreeManager.LayerController.setScene(scene)
   }, [])
 
   return (

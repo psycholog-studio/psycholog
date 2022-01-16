@@ -2,7 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import BaseLayout, { BaseLayoutProps } from './BaseLayout'
 import * as THREE from 'three'
-import { backgroundWithBoxRotation } from '../../ThreeLayer/ThreeWebglLayer/utils'
+import { backgroundWithBoxRotation } from '../../ThreeGraphic/ThreeWebglLayer/utils'
 import Box from '../../Containers/Box'
 import { css } from '@emotion/css'
 export default {

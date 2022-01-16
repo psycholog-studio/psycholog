@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react'
-import ThreeManager from '../ThreeManager'
+import ThreeManager from '../core/ThreeManager'
 import * as styles from './ThreeWebglLayer.styles'
 import { cx } from '@emotion/css'
 import * as THREE from 'three'
@@ -19,20 +19,20 @@ const ThreeWebglLayer = (props: ThreeWebglLayerProps): JSX.Element => {
       rootRef.current = element
     }
 
-    if (ThreeManager.ThreeContainer.containerElement !== rootRef.current) {
-      ThreeManager.ThreeContainer.setContainerElement(rootRef.current)
+    if (ThreeManager.LayerController.containerElement !== rootRef.current) {
+      ThreeManager.LayerController.setContainerElement(rootRef.current)
       rootRef.current.innerHTML = ''
-      rootRef.current.appendChild(ThreeManager.ThreeContainer.webglApp)
+      rootRef.current.appendChild(ThreeManager.LayerController.webglApp)
 
-      if (!ThreeManager.ThreeContainer.isStartup) {
-        ThreeManager.ThreeContainer.startup()
+      if (!ThreeManager.LayerController.isStartup) {
+        ThreeManager.LayerController.startup()
         onStartup?.()
       }
     }
   }, [])
 
   if (scene) {
-    ThreeManager.ThreeContainer.setScene(scene)
+    ThreeManager.LayerController.setScene(scene)
   }
 
   return (

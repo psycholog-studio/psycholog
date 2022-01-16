@@ -1,5 +1,5 @@
 import { CSS3DSprite } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
-import ThreeManager from '../ThreeManager'
+import ThreeManager from '../core/ThreeManager'
 import { css } from '@emotion/css'
 export const ratio = 1
 
@@ -22,7 +22,7 @@ class ReactCSSObject {
     this.rootElement.classList.add(cssRoot)
 
     const handleResize = () => {
-      const rect = ThreeManager.ThreeContainer.webglApp.getBoundingClientRect()
+      const rect = ThreeManager.LayerController.webglApp.getBoundingClientRect()
       this.rootElement.style.height = `${rect.height}px`
       this.rootElement.style.width = `${rect.width}px`
     }
@@ -31,7 +31,7 @@ class ReactCSSObject {
       handleResize()
     })
 
-    ThreeManager.ThreeContainer.subscribeWebglAppResize(handleResize)
+    ThreeManager.LayerController.subscribeWebglAppResize(handleResize)
   }
 }
 
