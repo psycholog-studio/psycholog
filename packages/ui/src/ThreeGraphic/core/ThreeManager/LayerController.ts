@@ -18,6 +18,7 @@ class LayerController {
   renderer: THREE.WebGLRenderer
   cssRenderer: CSS3DRenderer
   camera: THREE.PerspectiveCamera
+  containerResizeObserver: ResizeObserver
   webglAppResizeObserver: ResizeObserver
   webglAppResizeFuncs: (() => void)[] = []
   animates: (() => void)[] = []
@@ -26,14 +27,6 @@ class LayerController {
   isAutoSize?: boolean
   width: number
   height: number
-
-  get webglApp() {
-    return this.renderer.domElement
-  }
-
-  get cssApp() {
-    return this.cssRenderer.domElement
-  }
 
   constructor(options: LayerControllerOptions = {}) {
     const {
@@ -50,13 +43,9 @@ class LayerController {
     this.height = height
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
-    this.renderer.setSize(this.width, this.height)
-    this.renderer.domElement.style.width = '100%'
-    this.renderer.domElement.style.height = 'auto'
     this.renderer.domElement.classList.add('webgl-app')
 
     this.cssRenderer = new CSS3DRenderer()
-    this.cssRenderer.setSize(this.width, this.height)
     this.cssRenderer.domElement.classList.add('css-app')
 
     this.camera = new THREE.PerspectiveCamera(70, 0, 0.01, 2000)
@@ -69,28 +58,30 @@ class LayerController {
             func()
           }
 
-          if (this.#containerElement) {
-            const rect = this.#containerElement.getBoundingClientRect()
-            if (this.isAutoSize) {
-              this.renderer.setSize(rect.width, rect.height)
-              this.camera.aspect = rect.width / rect.height
-            }
-
-            this.cssRenderer.setSize(rect.width, rect.height)
-            this.renderCss()
-          }
+          this.recalculateSize()
         }
       }
     })
 
     this.webglAppResizeObserver.observe(this.webglApp)
 
+    this.containerResizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentBoxSize) {
+          this.recalculateSize()
+        }
+      }
+    })
+
+    this.recalculateSize()
+
     if (!this.isAutoSize) {
       this.camera.aspect = this.width / this.height
     }
 
     if (containerElement) {
-      this.setContainerElement(containerElement)
+      this.#containerElement = containerElement
+      this.containerResizeObserver.observe(this.#containerElement)
     }
   }
 
@@ -100,6 +91,14 @@ class LayerController {
 
   get containerElement() {
     return this.#containerElement
+  }
+
+  get webglApp() {
+    return this.renderer.domElement
+  }
+
+  get cssApp() {
+    return this.cssRenderer.domElement
   }
 
   get scene() {
@@ -116,17 +115,13 @@ class LayerController {
   }
 
   setContainerElement = (element: HTMLElement) => {
-    this.#containerElement = element
-
-    const rect = this.#containerElement.getBoundingClientRect()
-    if (this.isAutoSize) {
-      this.renderer.setSize(rect.width, rect.height)
-      this.camera.aspect = rect.width / rect.height
+    if (this.#containerElement) {
+      this.containerResizeObserver.unobserve(this.#containerElement)
     }
 
-    this.cssRenderer.setSize(rect.width, rect.height)
-
-    this.camera.updateProjectionMatrix()
+    this.#containerElement = element
+    this.containerResizeObserver.observe(this.#containerElement)
+    this.recalculateSize()
   }
 
   setScene = (scene: THREE.Scene) => {
@@ -143,6 +138,35 @@ class LayerController {
 
   subscribeAnimate = (animate: () => void) => {
     return this.animates.push(animate)
+  }
+
+  recalculateSize = () => {
+    if (!this.#containerElement) {
+      console.warn(`containerElement is ${this.#containerElement} !`)
+      return
+    }
+
+    const rect = this.#containerElement.getBoundingClientRect()
+
+    if (this.isAutoSize) {
+      this.renderer.setSize(rect.width, rect.height)
+      this.camera.aspect = rect.width / rect.height
+    } else {
+      this.renderer.setSize(this.width, this.height)
+    }
+
+    if (rect.width / rect.height < this.width / this.height) {
+      this.renderer.domElement.style.width = '100%'
+      this.renderer.domElement.style.height = 'auto'
+    } else {
+      this.renderer.domElement.style.width = 'auto'
+      this.renderer.domElement.style.height = '100%'
+    }
+
+    this.cssRenderer.setSize(rect.width, rect.height)
+
+    this.camera.updateProjectionMatrix()
+    this.renderCss()
   }
 
   renderCss = () => {
