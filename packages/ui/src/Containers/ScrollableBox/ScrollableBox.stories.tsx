@@ -1,10 +1,9 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import { css } from '@emotion/css'
 import ScrollableBox, { ScrollableBoxProps } from './ScrollableBox'
 
 export default {
-  title: 'ui/ScrollableBox',
+  title: 'ui/Containers/ScrollableBox',
   component: ScrollableBox,
   argTypes: {},
 } as Meta

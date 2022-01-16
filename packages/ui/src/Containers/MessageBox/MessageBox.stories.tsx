@@ -4,7 +4,7 @@ import { css } from '@emotion/css'
 import MessageBox, { MessageBoxProps } from './MessageBox'
 
 export default {
-  title: 'ui/MessageBox',
+  title: 'ui/Containers/MessageBox',
   component: MessageBox,
 } as Meta
 

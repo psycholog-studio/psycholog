@@ -1,6 +1,8 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import ShellContainer, { ShellContainerProps } from '../ShellContainer'
+import ShellContainer, {
+  ShellContainerProps,
+} from '../Containers/ShellContainer'
 import TextLine from '../TextLine'
 import MessageLine from '../MessageLine'
 export default {

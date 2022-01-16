@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react'
 import ShellContainer, { ShellContainerProps } from './ShellContainer'
 
 export default {
-  title: 'ui/ShellContainer',
+  title: 'ui/Containers/ShellContainer',
   component: ShellContainer,
   argTypes: {
     children: { control: 'text' },

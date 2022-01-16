@@ -4,7 +4,7 @@ import { css } from '@emotion/css'
 import Box, { BoxProps } from './Box'
 
 export default {
-  title: 'ui/Box',
+  title: 'ui/Containers/Box',
   component: Box,
   argTypes: {},
 } as Meta

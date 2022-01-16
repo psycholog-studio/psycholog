@@ -1,13 +1,12 @@
 export * from './Effects'
 
+export * from './Containers'
+
 export { default as MessageLine } from './MessageLine'
 export * from './MessageLine'
 
 export { default as PixiBackground } from './PixiBackground'
 export * from './PixiBackground'
-
-export { default as ShellContainer } from './ShellContainer'
-export * from './ShellContainer'
 
 export { default as TerminalLine } from './TerminalLine'
 export * from './TerminalLine'
