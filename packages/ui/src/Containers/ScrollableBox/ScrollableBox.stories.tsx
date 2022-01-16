@@ -1,11 +1,12 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import ScrollableBox, { ScrollableBoxProps } from './ScrollableBox'
+import { paddingDecorator } from '../../storyUtils'
 
 export default {
   title: 'ui/Containers/ScrollableBox',
   component: ScrollableBox,
-  argTypes: {},
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story<ScrollableBoxProps> = (args) => {

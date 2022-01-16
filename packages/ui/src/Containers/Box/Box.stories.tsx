@@ -2,11 +2,12 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { css } from '@emotion/css'
 import Box, { BoxProps } from './Box'
+import { paddingDecorator } from '../../storyUtils'
 
 export default {
   title: 'ui/Containers/Box',
   component: Box,
-  argTypes: {},
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story<BoxProps> = (args) => {

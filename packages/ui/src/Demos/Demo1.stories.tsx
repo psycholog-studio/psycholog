@@ -5,12 +5,11 @@ import ShellContainer, {
 } from '../Containers/ShellContainer'
 import TextLine from '../TextLine'
 import MessageLine from '../MessageLine'
+import { paddingDecorator } from '../storyUtils'
 export default {
-  title: 'ui/Demo1',
+  title: 'ui/Demos/Demo1',
   component: ShellContainer,
-  argTypes: {
-    children: { control: 'text' },
-  },
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story<ShellContainerProps> = () => {

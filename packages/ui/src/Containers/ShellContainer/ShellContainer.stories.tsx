@@ -1,6 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import ShellContainer, { ShellContainerProps } from './ShellContainer'
+import { paddingDecorator } from '../../storyUtils'
 
 export default {
   title: 'ui/Containers/ShellContainer',
@@ -8,6 +9,7 @@ export default {
   argTypes: {
     children: { control: 'text' },
   },
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story<ShellContainerProps> = (args) => (

@@ -1,13 +1,12 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import NoiseEffect from './NoiseEffect'
+import { paddingDecorator } from '../../storyUtils'
 
 export default {
   title: 'ui/Effects/NoiseEffect',
   component: NoiseEffect,
-  argTypes: {
-    children: { control: 'text' },
-  },
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story = (args) => <NoiseEffect {...args} />

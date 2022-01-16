@@ -1,13 +1,12 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import TextsEffect from './TextsEffect'
+import { paddingDecorator } from '../../storyUtils'
 
 export default {
   title: 'ui/Effects/TextsEffect',
   component: TextsEffect,
-  argTypes: {
-    children: { control: 'text' },
-  },
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story = (args) => <TextsEffect {...args} />

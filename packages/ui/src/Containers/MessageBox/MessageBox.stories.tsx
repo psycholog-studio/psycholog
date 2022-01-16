@@ -2,10 +2,12 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { css } from '@emotion/css'
 import MessageBox, { MessageBoxProps } from './MessageBox'
+import { paddingDecorator } from '../../storyUtils'
 
 export default {
   title: 'ui/Containers/MessageBox',
   component: MessageBox,
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story<MessageBoxProps> = (args) => {
