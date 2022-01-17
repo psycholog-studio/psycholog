@@ -24,6 +24,4 @@ export const backgroundWithBoxRotation = (scene: THREE.Scene) => {
     color: '#939393',
   })
   scene.add(bg1.mesh)
-
-  ThreeManager.LayerController.setScene(scene)
 }

@@ -124,8 +124,19 @@ class LayerController {
     this.recalculateSize()
   }
 
-  setScene = (scene: THREE.Scene) => {
+  setScene = (scene?: THREE.Scene) => {
     this.#scene = scene
+
+    if (!this.#scene) {
+      this.renderer.clear()
+      this.cssRenderer.domElement.style.display = 'none'
+    } else {
+      this.cssRenderer.domElement.style.display = 'initial'
+      console.log(this.cssRenderer.domElement.style.display)
+    }
+
+    this.renderCss()
+    this.renderWebgl()
   }
 
   subscribeStarup = (func: () => void) => {

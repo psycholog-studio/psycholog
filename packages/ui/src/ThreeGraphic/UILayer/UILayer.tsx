@@ -12,17 +12,20 @@ const UILayer = (props: UILayerProps): JSX.Element => {
   const { className, children } = props
 
   const uiWarpper = useCallback((element: HTMLDivElement) => {
-    const handleResize = () => {
-      const rect = ThreeManager.LayerController.webglApp.getBoundingClientRect()
-      element.style.height = `${rect.height}px`
-      element.style.width = `${rect.width}px`
+    if (element) {
+      const handleResize = () => {
+        const rect =
+          ThreeManager.LayerController.webglApp.getBoundingClientRect()
+        element.style.height = `${rect.height}px`
+        element.style.width = `${rect.width}px`
+      }
+
+      ThreeManager.LayerController.subscribeWebglAppResize(handleResize)
+
+      requestAnimationFrame(() => {
+        handleResize()
+      })
     }
-
-    ThreeManager.LayerController.subscribeWebglAppResize(handleResize)
-
-    requestAnimationFrame(() => {
-      handleResize()
-    })
   }, [])
 
   return (

@@ -31,9 +31,7 @@ const ThreeWebglLayer = (props: ThreeWebglLayerProps): JSX.Element => {
     }
   }, [])
 
-  if (scene) {
-    ThreeManager.LayerController.setScene(scene)
-  }
+  ThreeManager.LayerController.setScene(scene)
 
   return (
     <div ref={rootRefCallback} className={cx(styles.root, className)}></div>
