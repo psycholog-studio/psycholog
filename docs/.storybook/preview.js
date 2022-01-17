@@ -21,6 +21,12 @@ export const parameters = {
     }
   },
   actions: { argTypesRegex: "^on[A-Z].*" },
+  docs: {
+    source: {
+      type: 'dynamic',
+      excludeDecorators: true,
+    },
+  },
 }
 
 export const decorators = [
