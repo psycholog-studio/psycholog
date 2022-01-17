@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Story, Meta } from '@storybook/react'
 import BaseLayout, { BaseLayoutProps } from './BaseLayout'
 import * as THREE from 'three'
@@ -39,6 +39,13 @@ const cssBox = css`
 `
 
 const NormalTemplate: Story<BaseLayoutProps> = (args) => {
+  useEffect(() => {
+    ThreeManager.LayerController.setScene(scene)
+    return () => {
+      ThreeManager.LayerController.setScene(undefined)
+    }
+  }, [])
+
   return (
     <BaseLayout {...args} scene={scene}>
       <Box className={cssBox}>BaseLayout test!</Box>

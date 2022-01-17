@@ -1,10 +1,18 @@
-import React, { useEffect, useRef, useCallback, ReactNode } from 'react'
-import ReactDom from 'react-dom'
+import React, { useRef, useCallback, ReactNode, createContext } from 'react'
 import * as THREE from 'three'
 import { cx } from '@emotion/css'
 import ThreeManager from '../core/ThreeManager'
 import * as styles from './ThreeCSSLayer.styles'
-import ReactCSSObject from './ReactCSSObject'
+
+export type ThreeCSSLayerContextValue = {
+  scene?: THREE.Scene
+}
+
+export const ThreeCSSLayerContext = createContext<ThreeCSSLayerContextValue>({
+  scene: undefined,
+})
+
+export const ThreeCSSLayerConsumer = ThreeCSSLayerContext.Consumer
 
 export interface ThreeCSSLayerProps {
   className?: string
@@ -16,7 +24,6 @@ export interface ThreeCSSLayerProps {
 const ThreeCSSLayer = (props: ThreeCSSLayerProps): JSX.Element => {
   const { className, scene, children, onStartup } = props
   const rootRef = useRef<HTMLElement>()
-  const cssObjectRef = useRef<ReactCSSObject>(new ReactCSSObject())
 
   const rootRefCallback = useCallback((element: HTMLDivElement) => {
     if (!rootRef.current) {
@@ -35,24 +42,15 @@ const ThreeCSSLayer = (props: ThreeCSSLayerProps): JSX.Element => {
     }
   }, [])
 
-  useEffect(() => {
-    if (scene) {
-      scene.add(cssObjectRef.current.css3DSprite)
-
-      return () => {
-        scene.remove(cssObjectRef.current.css3DSprite)
-      }
-    }
-  }, [scene])
-
-  useEffect(() => {
-    ReactDom.render(<>{children}</>, cssObjectRef.current.rootElement, () => {
-      ThreeManager.LayerController.renderCss()
-    })
-  }, [children])
-
   return (
-    <div ref={rootRefCallback} className={cx(styles.root, className)}></div>
+    <ThreeCSSLayerContext.Provider
+      value={{
+        scene,
+      }}
+    >
+      {children}
+      <div ref={rootRefCallback} className={cx(styles.root, className)}></div>
+    </ThreeCSSLayerContext.Provider>
   )
 }
 

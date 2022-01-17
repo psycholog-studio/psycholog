@@ -132,7 +132,6 @@ class LayerController {
       this.cssRenderer.domElement.style.display = 'none'
     } else {
       this.cssRenderer.domElement.style.display = 'initial'
-      console.log(this.cssRenderer.domElement.style.display)
     }
 
     this.renderCss()

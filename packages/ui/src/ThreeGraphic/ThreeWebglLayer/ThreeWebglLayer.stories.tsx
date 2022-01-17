@@ -30,6 +30,13 @@ const boxScene = (() => {
 })()
 
 const Template: Story = (args) => {
+  useEffect(() => {
+    ThreeManager.LayerController.setScene(boxScene)
+    return () => {
+      ThreeManager.LayerController.setScene(undefined)
+    }
+  }, [])
+
   return (
     <div
       style={{
@@ -56,6 +63,13 @@ const backgroundScene = (() => {
 })()
 
 const BackgroundTemplate: Story = (args) => {
+  useEffect(() => {
+    ThreeManager.LayerController.setScene(backgroundScene)
+    return () => {
+      ThreeManager.LayerController.setScene(undefined)
+    }
+  }, [])
+
   return (
     <div
       style={{
