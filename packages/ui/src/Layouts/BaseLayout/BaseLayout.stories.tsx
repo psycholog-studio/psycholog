@@ -2,18 +2,33 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import BaseLayout, { BaseLayoutProps } from './BaseLayout'
 import * as THREE from 'three'
-import { backgroundWithBoxRotation } from '../../ThreeGraphic/ThreeWebglLayer/utils'
 import Box from '../../Containers/Box'
 import { css } from '@emotion/css'
+import ThreeManager from '../../ThreeGraphic/core/ThreeManager'
 
 export default {
   title: 'ui/Layouts/BaseLayout',
   component: BaseLayout,
 } as Meta
 
-const scene = new THREE.Scene()
+const scene = (() => {
+  const scene = new THREE.Scene()
+  const LayerController = ThreeManager.LayerController
 
-backgroundWithBoxRotation(scene)
+  const geometry = new THREE.BoxGeometry(200, 200, 200)
+  const material = new THREE.MeshNormalMaterial()
+  const mesh = new THREE.Mesh(geometry, material)
+  mesh.position.z = 500
+  scene.add(mesh)
+
+  const animatation = () => {
+    mesh.rotation.x += 0.01
+    mesh.rotation.y += 0.02
+  }
+
+  LayerController.subscribeAnimate(animatation)
+  return scene
+})()
 
 const cssBox = css`
   width: 700px;
@@ -23,19 +38,10 @@ const cssBox = css`
   color: white;
 `
 
-const cssRoot = css`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-`
 const NormalTemplate: Story<BaseLayoutProps> = (args) => {
   return (
     <BaseLayout {...args} scene={scene}>
-      <div className={cssRoot}>
-        <Box className={cssBox}>BaseLayout test!</Box>
-      </div>
+      <Box className={cssBox}>BaseLayout test!</Box>
     </BaseLayout>
   )
 }

@@ -4,7 +4,12 @@ export const root = css`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+`
+
+export const uiContentWrapper = css`
+  display: flex;
   justify-content: center;
   align-items: center;
 `

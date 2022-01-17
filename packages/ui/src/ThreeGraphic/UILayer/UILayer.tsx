@@ -30,7 +30,9 @@ const UILayer = (props: UILayerProps): JSX.Element => {
 
   return (
     <div className={cx(styles.root, className)}>
-      <div ref={uiWarpper}>{children}</div>
+      <div ref={uiWarpper} className={styles.uiContentWrapper}>
+        {children}
+      </div>
     </div>
   )
 }
