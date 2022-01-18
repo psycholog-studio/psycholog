@@ -2,6 +2,7 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "composite": true,
+    "sourceMap": true,
     "paths": {
       "@psycholog/ui": ["./packages/ui/src"],
       "@psycholog/ui/*": ["./packages/ui/src/*"],

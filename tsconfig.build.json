@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "baseUrl": "./",
     "target": "es2020",
     "module": "commonjs",
     "esModuleInterop": true,
@@ -13,7 +12,17 @@
     "moduleResolution": "node",
     "declaration": true,
     "noEmit": false,
-    "composite": true,
+    "types": [],
+    "sourceMap": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "@psycholog/ui": ["./packages/ui/build"],
+      "@psycholog/ui/*": ["./packages/ui/build/*"],
+      "@psycholog/scenes": ["./packages/scenes/build"],
+      "@psycholog/scenes/*": ["./packages/scenes/build/*"]
+    }
   },
-  "exclude": ["*.test.ts", "*.test.tsx", "*.stories.tsx", "**/build", "node_modules"]
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx", "build", "node_modules"]
 }
