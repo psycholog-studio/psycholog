@@ -8,9 +8,6 @@ export * from './MessageLine'
 export { default as PixiBackground } from './PixiBackground'
 export * from './PixiBackground'
 
-export { default as TerminalLine } from './TerminalLine'
-export * from './TerminalLine'
-
 export { default as TextLine } from './TextLine'
 export * from './TextLine'
 
