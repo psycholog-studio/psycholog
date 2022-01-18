@@ -23,7 +23,7 @@
     "url": "git+https://github.com/tokileecy/psycholog-core-legacy.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "rm -rf build && tsc -p tsconfig.build.json"
   },
   "bugs": {
     "url": "https://github.com/tokileecy/psycholog-core-legacy/issues"

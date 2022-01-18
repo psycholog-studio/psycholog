@@ -1,23 +1,19 @@
 {
-  "exclude": ["node_modules", "**/build"],
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "baseUrl": "./",
+    "composite": true,
     "paths": {
       "@psycholog/ui": ["./packages/ui/src"],
       "@psycholog/ui/*": ["./packages/ui/src/*"],
       "@psycholog/scenes": ["./packages/scenes/src"],
       "@psycholog/scenes/*": ["./packages/scenes/src/*"]
-    },
-    "jsx": "react",
-    "target": "es2015",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "declaration": true,
-    "isolatedModules": true,
-    "moduleResolution": "node"
-  }
+    }
+  },
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules"]
+  },
 }

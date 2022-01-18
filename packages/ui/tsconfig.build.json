@@ -1,10 +1,9 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "../../tsconfig.build.json",
   "compilerOptions": {
-    "declaration": true,
-    "noEmit": false,
+    "composite": true,
     "outDir": "build",
-    "rootDir": "./src",
+    "rootDir": "src",
   },
-  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
+  "include": ["src"]
 }

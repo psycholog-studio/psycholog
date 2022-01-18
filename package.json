@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "eslint:check": "eslint .",
+    "build": "yarn workspaces foreach -ptR --from '{@psycholog/ui}' run build",
     "prepare": "husky install"
   },
   "devDependencies": {
