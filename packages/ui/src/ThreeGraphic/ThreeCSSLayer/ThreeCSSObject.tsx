@@ -8,7 +8,6 @@ import React, {
 } from 'react'
 import ReactDom from 'react-dom'
 import { css } from '@emotion/css'
-import * as THREE from 'three'
 import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
 import ThreeManager from '../core/ThreeManager'
 import { ThreeCSSLayerContext } from './ThreeCSSLayer'
@@ -62,8 +61,10 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
     useEffect(() => {
       if (scene) {
         scene.add(css3DSpriteRef.current)
+      }
 
-        return () => {
+      return () => {
+        if (scene) {
           scene.remove(css3DSpriteRef.current)
         }
       }

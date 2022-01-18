@@ -11,7 +11,7 @@ export interface ThreeWebglLayerProps {
 }
 
 const ThreeWebglLayer = (props: ThreeWebglLayerProps): JSX.Element => {
-  const { className, onStartup, scene } = props
+  const { className, onStartup } = props
   const rootRef = useRef<HTMLElement>()
 
   const rootRefCallback = useCallback((element: HTMLDivElement) => {

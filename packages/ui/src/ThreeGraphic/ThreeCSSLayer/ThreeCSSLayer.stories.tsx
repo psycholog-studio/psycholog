@@ -36,7 +36,7 @@ const Template: Story = (args) => {
       }}
     >
       <ThreeCSSLayer {...args} scene={backgroundScene}>
-        {[...Array(7).keys()].map((v, index) => {
+        {[...Array(7).keys()].map((_v, index) => {
           return (
             <ThreeCSSObject
               key={index}
