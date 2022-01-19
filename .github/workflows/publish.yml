@@ -1,0 +1,34 @@
+name: publish
+on:
+  push:
+    branches:
+      - "!*"
+    tags:
+      - "v*"
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@tokileecy'
+      - name: Install
+        run: yarn install
+      - name: build
+        run: yarn release:build
+        env:
+          PACKAGE_ORG_NAME: ${{ secrets.PACKAGE_ORG_NAME }}
+      - name: publish
+        run: yarn release:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

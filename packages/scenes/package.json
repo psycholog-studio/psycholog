@@ -23,7 +23,9 @@
     "url": "git+https://github.com/tokileecy/psycholog-core-legacy.git"
   },
   "scripts": {
-    "build": "rm -rf build && tsc -p tsconfig.build.json"
+    "build": "rm -rf build && yarn build:node && yarn build:copy-files",
+    "build:node": "tsc -p tsconfig.build.json",
+    "build:copy-files": "node ../../scripts/create-package-file"
   },
   "bugs": {
     "url": "https://github.com/tokileecy/psycholog-core-legacy/issues"
@@ -42,6 +44,7 @@
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@types/three": "^0.136.1",
+    "fs-extra": "^10.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "three": "^0.136.0",

@@ -5,5 +5,14 @@
     "packages/*",
     "docs"
   ],
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "command": {
+    "version": {
+      "message": "chore(release): %s"
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
 }
