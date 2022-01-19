@@ -5,18 +5,6 @@
   "author": "tokileecy <tokileecy@gmail.com>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
   "license": "UNLICENSED",
-  "directories": {
-    "build": "build"
-  },
-  "main": "build/index.js",
-  "exports": {
-    ".": "./build",
-    "./*": "./build/*"
-  },
-  "files": [
-    "build/**/*"
-  ],
-  "module": "build/index.js",
   "publishConfig": {
     "access": "public"
   },
