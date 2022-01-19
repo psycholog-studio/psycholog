@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.1](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.0...v0.2.0-alpha.1) (2022-01-19)
+
+
+### Bug Fixes
+
+* packages export ([15608ad](https://github.com/tokileecy/psycholog/commit/15608ad61d5a48362e66c7b4fbc012a4b47e1af1))
+
+
+
+
+
 # [0.2.0-alpha.0](https://github.com/tokileecy/psycholog/compare/v0.1.0...v0.2.0-alpha.0) (2022-01-19)
 
 
