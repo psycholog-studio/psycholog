@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tokileecy/psycholog-core-legacy.git"
+    "url": "git+https://github.com/tokileecy/psycholog.git"
   },
   "scripts": {
     "build": "rm -rf build && yarn build:node && yarn build:copy-files",
@@ -18,7 +18,7 @@
     "build:copy-files": "node ../../scripts/create-package-file"
   },
   "bugs": {
-    "url": "https://github.com/tokileecy/psycholog-core-legacy/issues"
+    "url": "https://github.com/tokileecy/psycholog/issues"
   },
   "dependencies": {
     "@emotion/css": "^11.5.0",
