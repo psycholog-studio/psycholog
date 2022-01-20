@@ -14,11 +14,14 @@ const createPackageFile = async () => {
   const { scripts, devDependencies, workspaces, ...others } =
     JSON.parse(packageData)
 
+  const [orgName, packageName] = others.name.split('/')
+  const targetOrgName = orgName.replace('@psycholog', `@${PACKAGE_ORG_NAME}`)
+
   const newPackageData = {
     ...others,
     private: false,
     name: PACKAGE_ORG_NAME
-      ? others.name.replace('@psycholog', `@${PACKAGE_ORG_NAME}`)
+      ? `${targetOrgName}/psycholog-${packageName}`
       : others.name,
   }
 
