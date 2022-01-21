@@ -33,6 +33,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@psycholog/ui",
         "reference": "workspace:packages/ui"
+      },
+      {
+        "name": "@psycholog/utils",
+        "reference": "workspace:packages/utils"
       }
     ],
     "enableTopLevelFallback": true,
@@ -41,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@psycholog/docs", ["workspace:docs"]],
       ["@psycholog/scenes", ["workspace:packages/scenes"]],
       ["@psycholog/ui", ["virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#workspace:packages/ui", "workspace:packages/ui"]],
+      ["@psycholog/utils", ["virtual:258decf85da3c51e9f7ca3c0fe639847abff33a84f8eee4d7710768033d62da95018485fe146a57f927c34ac876f7cb2deabec28328ed5c497bd0e865c558301#workspace:packages/utils", "workspace:packages/utils"]],
       ["psycholog", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -6592,6 +6597,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@psycholog/ui", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#workspace:packages/ui"],
             ["@emotion/css", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:11.7.1"],
+            ["@psycholog/utils", "virtual:258decf85da3c51e9f7ca3c0fe639847abff33a84f8eee4d7710768033d62da95018485fe146a57f927c34ac876f7cb2deabec28328ed5c497bd0e865c558301#workspace:packages/utils"],
             ["@storybook/react", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:6.4.12"],
             ["@types/color", "npm:3.0.2"],
             ["@types/node", "npm:17.0.8"],
@@ -6622,6 +6628,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@psycholog/ui", "workspace:packages/ui"],
             ["@emotion/css", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:11.7.1"],
+            ["@psycholog/utils", "virtual:258decf85da3c51e9f7ca3c0fe639847abff33a84f8eee4d7710768033d62da95018485fe146a57f927c34ac876f7cb2deabec28328ed5c497bd0e865c558301#workspace:packages/utils"],
             ["@storybook/react", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:6.4.12"],
             ["@types/color", "npm:3.0.2"],
             ["@types/node", "npm:17.0.8"],
@@ -6635,6 +6642,40 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:17.0.2"],
             ["three", "npm:0.136.0"],
+            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@psycholog/utils", [
+        ["virtual:258decf85da3c51e9f7ca3c0fe639847abff33a84f8eee4d7710768033d62da95018485fe146a57f927c34ac876f7cb2deabec28328ed5c497bd0e865c558301#workspace:packages/utils", {
+          "packageLocation": "./.yarn/__virtual__/@psycholog-utils-virtual-42b50acf76/1/packages/utils/",
+          "packageDependencies": [
+            ["@psycholog/utils", "virtual:258decf85da3c51e9f7ca3c0fe639847abff33a84f8eee4d7710768033d62da95018485fe146a57f927c34ac876f7cb2deabec28328ed5c497bd0e865c558301#workspace:packages/utils"],
+            ["@types/node", "npm:17.0.8"],
+            ["@types/react", "npm:17.0.38"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:17.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:packages/utils", {
+          "packageLocation": "./packages/utils/",
+          "packageDependencies": [
+            ["@psycholog/utils", "workspace:packages/utils"],
+            ["@types/node", "npm:17.0.8"],
+            ["@types/react", "npm:17.0.38"],
+            ["@types/react-dom", "npm:17.0.11"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:8f11d52520f6fa4cee6b9587c134475814793e3e441ae4ec49103e288347c63b05bd663735b02634399246a634617cb5eac4e1da40aa2e288249339bbb6ba8b2#npm:17.0.2"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
           "linkType": "SOFT",

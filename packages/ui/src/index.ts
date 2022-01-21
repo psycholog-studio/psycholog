@@ -1,3 +1,6 @@
+export { default } from './ThreeGraphic'
+export * from './ThreeGraphic'
+
 export * from './Effects'
 
 export * from './Containers'

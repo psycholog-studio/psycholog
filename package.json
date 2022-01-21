@@ -10,6 +10,7 @@
     "registry": "https://npm.pkg.github.com/@tokileecy"
   },
   "scripts": {
+    "docs:dev": "yarn workspace @psycholog/docs run dev",
     "eslint:check": "eslint .",
     "release:build": "yarn workspaces foreach -ptR --from '@psycholog/{ui,scenes}' run build",
     "release:version": "lerna version --force-publish --no-push --conventional-commits",

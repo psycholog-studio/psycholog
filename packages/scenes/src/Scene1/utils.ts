@@ -1,10 +1,10 @@
-import ThreeManager from '@psycholog/ui/ThreeGraphic/core/ThreeManager'
-import ThreeBackground from '@psycholog/ui/ThreeGraphic/core/ThreeBackground'
+import { threeManager } from '../base/core'
+import { useThreeBackgroundGenerator } from '@psycholog/ui/ThreeGraphic/core/ThreeBackground'
 import * as THREE from 'three'
 
 export const scene = new THREE.Scene()
 
-const LayerController = ThreeManager.LayerController
+const LayerController = threeManager.LayerController
 const geometry = new THREE.BoxGeometry(200, 200, 200)
 const material = new THREE.MeshNormalMaterial()
 const mesh = new THREE.Mesh(geometry, material)
@@ -18,7 +18,12 @@ const animatation = () => {
 
 LayerController.subscribeAnimate(animatation)
 
-const bg1 = new ThreeBackground('assets/B.jpg', {
+const backgroundGenerator = useThreeBackgroundGenerator(() => {
+  return threeManager
+})
+
+const bg1 = backgroundGenerator('assets/B.jpg', {
   color: '#939393',
 })
+
 scene.add(bg1.mesh)

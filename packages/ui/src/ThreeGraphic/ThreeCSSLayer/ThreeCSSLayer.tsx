@@ -1,7 +1,7 @@
 import React, { useRef, useCallback, ReactNode, createContext } from 'react'
 import * as THREE from 'three'
 import { cx } from '@emotion/css'
-import ThreeManager from '../core/ThreeManager'
+import useThreeManager from '../hooks/useThreeManager'
 import * as styles from './ThreeCSSLayer.styles'
 
 export type ThreeCSSLayerContextValue = {
@@ -11,8 +11,6 @@ export type ThreeCSSLayerContextValue = {
 export const ThreeCSSLayerContext = createContext<ThreeCSSLayerContextValue>({
   scene: undefined,
 })
-
-export const ThreeCSSLayerConsumer = ThreeCSSLayerContext.Consumer
 
 export interface ThreeCSSLayerProps {
   className?: string
@@ -24,19 +22,20 @@ export interface ThreeCSSLayerProps {
 const ThreeCSSLayer = (props: ThreeCSSLayerProps): JSX.Element => {
   const { className, scene, children, onStartup } = props
   const rootRef = useRef<HTMLElement>()
+  const threeManager = useThreeManager()
 
   const rootRefCallback = useCallback((element: HTMLDivElement) => {
     if (!rootRef.current) {
       rootRef.current = element
     }
 
-    if (ThreeManager.LayerController.containerElement !== rootRef.current) {
-      ThreeManager.LayerController.setContainerElement(rootRef.current)
+    if (threeManager.LayerController.containerElement !== rootRef.current) {
+      threeManager.LayerController.setContainerElement(rootRef.current)
       rootRef.current.innerHTML = ''
-      rootRef.current.appendChild(ThreeManager.LayerController.cssApp)
+      rootRef.current.appendChild(threeManager.LayerController.cssApp)
 
-      if (!ThreeManager.LayerController.isStartup) {
-        ThreeManager.LayerController.startup()
+      if (!threeManager.LayerController.isStartup) {
+        threeManager.LayerController.startup()
         onStartup?.()
       }
     }

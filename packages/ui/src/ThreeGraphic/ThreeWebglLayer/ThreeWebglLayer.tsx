@@ -1,11 +1,9 @@
 import React, { useRef, useCallback } from 'react'
-import ThreeManager from '../core/ThreeManager'
+import useThreeManager from '../hooks/useThreeManager'
 import * as styles from './ThreeWebglLayer.styles'
 import { cx } from '@emotion/css'
-import * as THREE from 'three'
 
 export interface ThreeWebglLayerProps {
-  scene?: THREE.Scene
   className?: string
   onStartup?: () => void
 }
@@ -13,19 +11,20 @@ export interface ThreeWebglLayerProps {
 const ThreeWebglLayer = (props: ThreeWebglLayerProps): JSX.Element => {
   const { className, onStartup } = props
   const rootRef = useRef<HTMLElement>()
+  const threeManager = useThreeManager()
 
   const rootRefCallback = useCallback((element: HTMLDivElement) => {
     if (!rootRef.current) {
       rootRef.current = element
     }
 
-    if (ThreeManager.LayerController.containerElement !== rootRef.current) {
-      ThreeManager.LayerController.setContainerElement(rootRef.current)
+    if (threeManager.LayerController.containerElement !== rootRef.current) {
+      threeManager.LayerController.setContainerElement(rootRef.current)
       rootRef.current.innerHTML = ''
-      rootRef.current.appendChild(ThreeManager.LayerController.webglApp)
+      rootRef.current.appendChild(threeManager.LayerController.webglApp)
 
-      if (!ThreeManager.LayerController.isStartup) {
-        ThreeManager.LayerController.startup()
+      if (!threeManager.LayerController.isStartup) {
+        threeManager.LayerController.startup()
         onStartup?.()
       }
     }

@@ -6,8 +6,12 @@
     "paths": {
       "@psycholog/ui": ["./packages/ui/src"],
       "@psycholog/ui/*": ["./packages/ui/src/*"],
+
       "@psycholog/scenes": ["./packages/scenes/src"],
-      "@psycholog/scenes/*": ["./packages/scenes/src/*"]
+      "@psycholog/scenes/*": ["./packages/scenes/src/*"],
+
+      "@psycholog/utils": ["./packages/utils/src"],
+      "@psycholog/utils/*": ["./packages/utils/src/*"]
     }
   },
   "watchOptions": {

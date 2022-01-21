@@ -1,17 +1,23 @@
-import React, { useEffect } from 'react'
-import BaseLayout from '@psycholog/ui/Layouts/BaseLayout'
+import React, { useEffect, useRef } from 'react'
+import Layout from '../base/Layout'
 import ThreeManager from '@psycholog/ui/ThreeGraphic/core/ThreeManager'
 import { scene } from './utils'
 
 const Scene1 = (): JSX.Element => {
+  const threeManagerRef = useRef<ThreeManager>(null)
+
   useEffect(() => {
-    ThreeManager.LayerController.setScene(scene)
+    if (threeManagerRef.current) {
+      threeManagerRef.current.LayerController.setScene(scene)
+    }
     return () => {
-      ThreeManager.LayerController.setScene(undefined)
+      if (threeManagerRef.current) {
+        threeManagerRef.current.LayerController.setScene(undefined)
+      }
     }
   }, [])
 
-  return <BaseLayout scene={scene}></BaseLayout>
+  return <Layout threeManagerRef={threeManagerRef}></Layout>
 }
 
 export default Scene1

@@ -14,4 +14,4 @@ export class ThreeManager {
   }
 }
 
-export default new ThreeManager()
+export default ThreeManager

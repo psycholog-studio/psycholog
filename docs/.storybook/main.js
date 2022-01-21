@@ -23,8 +23,7 @@ module.exports = {
   }),
   "stories": [
     "../stories/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-    "../../packages/ui/src/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-    "../../packages/scenes/src/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+    "../../packages/**/src/**/*.stories.@(js|jsx|ts|tsx|mdx)",
   ],
   "addons": [
     "@storybook/addon-links",
@@ -47,6 +46,7 @@ module.exports = {
       ...config.resolve.alias,
       "@psycholog/ui": path.resolve(__dirname, "../../packages/ui/src"),
       "@psycholog/scenes": path.resolve(__dirname, "../../packages/scenes/src"),
+      "@psycholog/utils": path.resolve(__dirname, "../../packages/utils/src"),
     };
 
     config.module.rules.push({

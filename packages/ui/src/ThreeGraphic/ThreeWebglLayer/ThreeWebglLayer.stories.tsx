@@ -1,18 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Story, Meta } from '@storybook/react'
 import ThreeWebglLayer from './ThreeWebglLayer'
 import ThreeManager from '../core/ThreeManager'
+import ThreeGraphic from '../ThreeGraphic'
 import * as THREE from 'three'
 import ThreeBackground from '../core/ThreeBackground'
+import {
+  useThreeBackgroundGenerator,
+  ThreeBackgroundGenerator,
+} from '../core/ThreeBackground/ThreeBackground'
 
 export default {
   title: 'ui/ThreeGraphic/ThreeWebglLayer',
   component: ThreeWebglLayer,
 } as Meta
 
-const boxScene = (() => {
+const createBoxScene = (threeManager: ThreeManager) => {
   const scene = new THREE.Scene()
-  const LayerController = ThreeManager.LayerController
+  const LayerController = threeManager.LayerController
 
   const geometry = new THREE.BoxGeometry(200, 200, 200)
   const material = new THREE.MeshNormalMaterial()
@@ -27,13 +32,20 @@ const boxScene = (() => {
 
   LayerController.subscribeAnimate(animatation)
   return scene
-})()
+}
 
 const Template: Story = (args) => {
+  const threeManagerRef = useRef<ThreeManager>(null)
+
   useEffect(() => {
-    ThreeManager.LayerController.setScene(boxScene)
+    if (threeManagerRef.current) {
+      const boxScene = createBoxScene(threeManagerRef.current)
+      threeManagerRef.current.LayerController.setScene(boxScene)
+    }
     return () => {
-      ThreeManager.LayerController.setScene(undefined)
+      if (threeManagerRef.current) {
+        threeManagerRef.current.LayerController.setScene(undefined)
+      }
     }
   }, [])
 
@@ -44,7 +56,9 @@ const Template: Story = (args) => {
         height: '100vh',
       }}
     >
-      <ThreeWebglLayer {...args} scene={boxScene} />
+      <ThreeGraphic ref={threeManagerRef}>
+        <ThreeWebglLayer {...args} />
+      </ThreeGraphic>
     </div>
   )
 }
@@ -52,21 +66,33 @@ const Template: Story = (args) => {
 export const Normal = Template.bind({})
 Normal.args = {}
 
-const backgroundScene = (() => {
+const createBackgroundScene = (
+  threeBackgroundGenerator: ThreeBackgroundGenerator
+) => {
   const scene = new THREE.Scene()
-  const bg1 = new ThreeBackground('assets/B.jpg', {
+  const bg1 = threeBackgroundGenerator('assets/B.jpg', {
     color: '#939393',
   })
   scene.add(bg1.mesh)
 
   return scene
-})()
+}
 
 const BackgroundTemplate: Story = (args) => {
+  const threeManagerRef = useRef<ThreeManager>(null)
+  const threeBackgroundGenerator = useThreeBackgroundGenerator(() => {
+    return threeManagerRef.current
+  })
+
   useEffect(() => {
-    ThreeManager.LayerController.setScene(backgroundScene)
+    if (threeManagerRef.current) {
+      const backgroundScene = createBackgroundScene(threeBackgroundGenerator)
+      threeManagerRef.current.LayerController.setScene(backgroundScene)
+    }
     return () => {
-      ThreeManager.LayerController.setScene(undefined)
+      if (threeManagerRef.current) {
+        threeManagerRef.current.LayerController.setScene(undefined)
+      }
     }
   }, [])
 
@@ -77,7 +103,9 @@ const BackgroundTemplate: Story = (args) => {
         height: '100vh',
       }}
     >
-      <ThreeWebglLayer {...args} scene={backgroundScene} />
+      <ThreeGraphic ref={threeManagerRef}>
+        <ThreeWebglLayer {...args} />
+      </ThreeGraphic>
     </div>
   )
 }
