@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react",
     "target": "es2020",
@@ -17,11 +18,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
+    "baseUrl": "./",
     "paths": {
       "@psycholog/ui": ["./packages/ui/build"],
       "@psycholog/ui/*": ["./packages/ui/build/*"],
       "@psycholog/scenes": ["./packages/scenes/build"],
-      "@psycholog/scenes/*": ["./packages/scenes/build/*"]
+      "@psycholog/scenes/*": ["./packages/scenes/build/*"],
+      "@psycholog/utils": ["./packages/utils/build"],
+      "@psycholog/utils/*": ["./packages/utils/build/*"]
     }
   },
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx", "build", "node_modules", "./scripts"]

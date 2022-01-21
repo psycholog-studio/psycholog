@@ -3969,6 +3969,7 @@ __metadata:
     "@emotion/css": ^11.7.1
     "@psycholog/ui": ^0.2.0-alpha.2
     "@storybook/react": ^6.4.9
+    "@types/node": ^17.0.10
     "@types/react": ^17.0.37
     "@types/react-dom": ^17.0.11
     "@types/three": ^0.136.1
@@ -6112,6 +6113,13 @@ __metadata:
   version: 14.18.5
   resolution: "@types/node@npm:14.18.5"
   checksum: 5ad7090e4cd1d7cd9efa4915cc8b4f69503a1d2070b1998a55fce776ae03fef6c0703d6940197af2cd31b3516b41b552d9fced92d2a0837c28b8ed8b5ca0872c
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^17.0.10":
+  version: 17.0.10
+  resolution: "@types/node@npm:17.0.10"
+  checksum: 979e83d642a2b4f18fa1a4233f884822c05abc7acd0836024aa964187f8446432b21f7913e72fe2b3927c4a811c27a0b6cd60ac7c4ac6a6762cfbab70782aa6a
   languageName: node
   linkType: hard
 
@@ -17128,6 +17136,7 @@ __metadata:
     eslint-config-prettier: ^8.3.0
     eslint-config-recommended: ^4.1.0
     eslint-config-standard: ^16.0.3
+    eslint-import-resolver-node: ^0.3.6
     eslint-import-resolver-typescript: ^2.5.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-jest: ^25.3.4
@@ -17147,6 +17156,7 @@ __metadata:
     prettier: ^2.2.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    tsconfig-paths: ^3.12.0
     typescript: ^4.3.2
   languageName: unknown
   linkType: soft

@@ -1,8 +1,8 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
     "sourceMap": true,
+    "baseUrl": "./",
     "paths": {
       "@psycholog/ui": ["./packages/ui/src"],
       "@psycholog/ui/*": ["./packages/ui/src/*"],
@@ -12,7 +12,7 @@
 
       "@psycholog/utils": ["./packages/utils/src"],
       "@psycholog/utils/*": ["./packages/utils/src/*"]
-    }
+    },
   },
   "watchOptions": {
     "watchFile": "useFsEvents",
@@ -21,4 +21,5 @@
     "synchronousWatchDirectory": true,
     "excludeDirectories": ["**/node_modules"]
   },
+  "exclude": ["./packages/**/build", "node_modules"]
 }
