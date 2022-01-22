@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.4](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.3...v0.2.0-alpha.4) (2022-01-22)
+
+
+### Features
+
+* add version script ([8441f1d](https://github.com/tokileecy/psycholog/commit/8441f1de4e06001206b5d44e2123527d7b6e327b))
+* remove custom PACKAGE_ORG_NAME ([813b5b2](https://github.com/tokileecy/psycholog/commit/813b5b2bf98a455c12f1737be5c45fba2ee779b6))
+* rename org ([9629b5f](https://github.com/tokileecy/psycholog/commit/9629b5fe58d6f4be11ca8f1389b923e66f066d9f))
+
+
+
+
+
 # [0.2.0-alpha.3](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.2...v0.2.0-alpha.3) (2022-01-22)
 
 
