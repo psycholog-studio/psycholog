@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.3](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.2...v0.2.0-alpha.3) (2022-01-22)
+
+
+### Bug Fixes
+
+* ts path alias ([06a08d8](https://github.com/tokileecy/psycholog/commit/06a08d80fdb15165234c7f83c4bf9f63b133949c))
+* types warning ([c5e11c7](https://github.com/tokileecy/psycholog/commit/c5e11c7163d16c05563e4a82bb943d4489eddd85))
+
+
+### Features
+
+* add dotenv and adjust build package file ([ab34c60](https://github.com/tokileecy/psycholog/commit/ab34c607858783877228cc17daf25253b3ba01fe))
+
+
+
+
+
 # [0.2.0-alpha.2](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.1...v0.2.0-alpha.2) (2022-01-20)
 
 **Note:** Version bump only for package @psycholog/ui
