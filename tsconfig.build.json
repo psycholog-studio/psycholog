@@ -20,12 +20,12 @@
     "noImplicitReturns": true,
     "baseUrl": "./",
     "paths": {
-      "@psycholog/ui": ["./packages/ui/build"],
-      "@psycholog/ui/*": ["./packages/ui/build/*"],
-      "@psycholog/scenes": ["./packages/scenes/build"],
-      "@psycholog/scenes/*": ["./packages/scenes/build/*"],
-      "@psycholog/utils": ["./packages/utils/build"],
-      "@psycholog/utils/*": ["./packages/utils/build/*"]
+      "@psycholog-studio/ui": ["./packages/ui/build"],
+      "@psycholog-studio/ui/*": ["./packages/ui/build/*"],
+      "@psycholog-studio/scenes": ["./packages/scenes/build"],
+      "@psycholog-studio/scenes/*": ["./packages/scenes/build/*"],
+      "@psycholog-studio/utils": ["./packages/utils/build"],
+      "@psycholog-studio/utils/*": ["./packages/utils/build/*"]
     }
   },
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx", "build", "node_modules", "./scripts"]

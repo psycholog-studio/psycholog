@@ -22,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0-alpha.2](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.1...v0.2.0-alpha.2) (2022-01-20)
 
-**Note:** Version bump only for package @psycholog/ui
+**Note:** Version bump only for package @psycholog-studio/ui
 
 
 

@@ -4,14 +4,14 @@
     "sourceMap": true,
     "baseUrl": "./",
     "paths": {
-      "@psycholog/ui": ["./packages/ui/src"],
-      "@psycholog/ui/*": ["./packages/ui/src/*"],
+      "@psycholog-studio/ui": ["./packages/ui/src"],
+      "@psycholog-studio/ui/*": ["./packages/ui/src/*"],
 
-      "@psycholog/scenes": ["./packages/scenes/src"],
-      "@psycholog/scenes/*": ["./packages/scenes/src/*"],
+      "@psycholog-studio/scenes": ["./packages/scenes/src"],
+      "@psycholog-studio/scenes/*": ["./packages/scenes/src/*"],
 
-      "@psycholog/utils": ["./packages/utils/src"],
-      "@psycholog/utils/*": ["./packages/utils/src/*"]
+      "@psycholog-studio/utils": ["./packages/utils/src"],
+      "@psycholog-studio/utils/*": ["./packages/utils/src/*"]
     },
   },
   "watchOptions": {

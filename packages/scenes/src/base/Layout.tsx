@@ -1,5 +1,7 @@
 import React from 'react'
-import BaseLayout, { BaseLayoutProps } from '@psycholog/ui/Layouts/BaseLayout'
+import BaseLayout, {
+  BaseLayoutProps,
+} from '@psycholog-studio/studio/ui/Layouts/BaseLayout'
 import { threeManager } from './core'
 
 export type LayoutProps = Omit<BaseLayoutProps, 'threeManagerRef'>

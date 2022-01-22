@@ -10,7 +10,7 @@ import ReactDom from 'react-dom'
 import { css } from '@emotion/css'
 import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
 import { ThreeCSSLayerContext } from './ThreeCSSLayer'
-import useForwardedRef from '@psycholog/utils/hooks/useForwardedRef'
+import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
 import useThreeManager from '../hooks/useThreeManager'
 
 const cssRoot = css`

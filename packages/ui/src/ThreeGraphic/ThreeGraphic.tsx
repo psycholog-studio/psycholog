@@ -6,7 +6,7 @@ import React, {
   MutableRefObject,
 } from 'react'
 import ThreeManager from './core/ThreeManager'
-import useForwardedRef from '@psycholog/utils/hooks/useForwardedRef'
+import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
 
 export const ThreeManagerContext = createContext<
   MutableRefObject<ThreeManager | null>

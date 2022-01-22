@@ -1,5 +1,5 @@
 import { threeManager } from '../base/core'
-import { useThreeBackgroundGenerator } from '@psycholog/ui/ThreeGraphic/core/ThreeBackground'
+import { useThreeBackgroundGenerator } from '@psycholog-studio/ui/ThreeGraphic/core/ThreeBackground'
 import * as THREE from 'three'
 
 export const scene = new THREE.Scene()

@@ -1,5 +1,5 @@
 {
-  "name": "@psycholog/scenes",
+  "name": "@psycholog-studio/scenes",
   "version": "0.2.0-alpha.3",
   "description": "> TODO: description",
   "author": "tokileecy <tokileecy@gmail.com>",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
-    "@psycholog/ui": "^0.2.0-alpha.3"
+    "@psycholog-studio/ui": "^0.2.0-alpha.3"
   },
   "peerDependencies": {
     "react": "^17.0.2",

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Layout from '../base/Layout'
-import ThreeManager from '@psycholog/ui/ThreeGraphic/core/ThreeManager'
+import ThreeManager from '@psycholog-studio/ui/ThreeGraphic/core/ThreeManager'
 import { scene } from './utils'
 
 const Scene1 = (): JSX.Element => {

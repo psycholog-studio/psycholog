@@ -3918,9 +3918,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psycholog/docs@workspace:docs":
+"@psycholog-studio/docs@workspace:docs":
   version: 0.0.0-use.local
-  resolution: "@psycholog/docs@workspace:docs"
+  resolution: "@psycholog-studio/docs@workspace:docs"
   dependencies:
     "@babel/cli": ^7.16.8
     "@babel/core": ^7.16.7
@@ -3962,12 +3962,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psycholog/scenes@workspace:packages/scenes":
+"@psycholog-studio/scenes@workspace:packages/scenes":
   version: 0.0.0-use.local
-  resolution: "@psycholog/scenes@workspace:packages/scenes"
+  resolution: "@psycholog-studio/scenes@workspace:packages/scenes"
   dependencies:
     "@emotion/css": ^11.7.1
-    "@psycholog/ui": ^0.2.0-alpha.3
+    "@psycholog-studio/ui": ^0.2.0-alpha.3
     "@storybook/react": ^6.4.9
     "@types/node": ^17.0.10
     "@types/react": ^17.0.37
@@ -3985,12 +3985,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psycholog/ui@^0.2.0-alpha.3, @psycholog/ui@workspace:packages/ui":
+"@psycholog-studio/ui@^0.2.0-alpha.3, @psycholog-studio/ui@workspace:packages/ui":
   version: 0.0.0-use.local
-  resolution: "@psycholog/ui@workspace:packages/ui"
+  resolution: "@psycholog-studio/ui@workspace:packages/ui"
   dependencies:
     "@emotion/css": ^11.5.0
-    "@psycholog/utils": ^0.2.0-alpha.3
+    "@psycholog-studio/utils": ^0.2.0-alpha.3
     "@storybook/react": ^6.4.9
     "@types/color": ^3.0.2
     "@types/node": ^17.0.8
@@ -4012,9 +4012,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psycholog/utils@^0.2.0-alpha.3, @psycholog/utils@workspace:packages/utils":
+"@psycholog-studio/utils@^0.2.0-alpha.3, @psycholog-studio/utils@workspace:packages/utils":
   version: 0.0.0-use.local
-  resolution: "@psycholog/utils@workspace:packages/utils"
+  resolution: "@psycholog-studio/utils@workspace:packages/utils"
   dependencies:
     "@types/node": ^17.0.8
     "@types/react": ^17.0.37

@@ -1,8 +1,8 @@
 import React from 'react'
-import BaseLayout from '@psycholog/ui/Layouts/BaseLayout'
-import ShellContainer from '@psycholog/ui/Containers/ShellContainer'
-import TextLine from '@psycholog/ui/TextLine'
-import MessageLine from '@psycholog/ui/MessageLine'
+import BaseLayout from '@psycholog-studio/ui/Layouts/BaseLayout'
+import ShellContainer from '@psycholog-studio/ui/Containers/ShellContainer'
+import TextLine from '@psycholog-studio/ui/TextLine'
+import MessageLine from '@psycholog-studio/ui/MessageLine'
 
 const Scene0 = (): JSX.Element => {
   return (
