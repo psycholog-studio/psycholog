@@ -29,13 +29,13 @@ const ThreeCSSLayer = (props: ThreeCSSLayerProps): JSX.Element => {
       rootRef.current = element
     }
 
-    if (threeManager.LayerController.containerElement !== rootRef.current) {
-      threeManager.LayerController.setContainerElement(rootRef.current)
+    if (threeManager.layerController.containerElement !== rootRef.current) {
+      threeManager.layerController.setContainerElement(rootRef.current)
       rootRef.current.innerHTML = ''
-      rootRef.current.appendChild(threeManager.LayerController.cssApp)
+      rootRef.current.appendChild(threeManager.layerController.cssApp)
 
-      if (!threeManager.LayerController.isStartup) {
-        threeManager.LayerController.startup()
+      if (!threeManager.layerController.isStartup) {
+        threeManager.layerController.startup()
         onStartup?.()
       }
     }

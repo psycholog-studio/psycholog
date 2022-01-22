@@ -8,11 +8,11 @@ const Scene1 = (): JSX.Element => {
 
   useEffect(() => {
     if (threeManagerRef.current) {
-      threeManagerRef.current.LayerController.setScene(scene)
+      threeManagerRef.current.layerController.setScene(scene)
     }
     return () => {
       if (threeManagerRef.current) {
-        threeManagerRef.current.LayerController.setScene(undefined)
+        threeManagerRef.current.layerController.setScene(undefined)
       }
     }
   }, [])

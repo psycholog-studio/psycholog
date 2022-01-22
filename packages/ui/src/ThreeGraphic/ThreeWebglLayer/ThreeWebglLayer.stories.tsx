@@ -17,7 +17,7 @@ export default {
 
 const createBoxScene = (threeManager: ThreeManager) => {
   const scene = new THREE.Scene()
-  const LayerController = threeManager.LayerController
+  const layerController = threeManager.layerController
 
   const geometry = new THREE.BoxGeometry(200, 200, 200)
   const material = new THREE.MeshNormalMaterial()
@@ -30,7 +30,7 @@ const createBoxScene = (threeManager: ThreeManager) => {
     mesh.rotation.y += 0.02
   }
 
-  LayerController.subscribeAnimate(animatation)
+  layerController.subscribeAnimate(animatation)
   return scene
 }
 
@@ -40,11 +40,11 @@ const Template: Story = (args) => {
   useEffect(() => {
     if (threeManagerRef.current) {
       const boxScene = createBoxScene(threeManagerRef.current)
-      threeManagerRef.current.LayerController.setScene(boxScene)
+      threeManagerRef.current.layerController.setScene(boxScene)
     }
     return () => {
       if (threeManagerRef.current) {
-        threeManagerRef.current.LayerController.setScene(undefined)
+        threeManagerRef.current.layerController.setScene(undefined)
       }
     }
   }, [])
@@ -87,11 +87,11 @@ const BackgroundTemplate: Story = (args) => {
   useEffect(() => {
     if (threeManagerRef.current) {
       const backgroundScene = createBackgroundScene(threeBackgroundGenerator)
-      threeManagerRef.current.LayerController.setScene(backgroundScene)
+      threeManagerRef.current.layerController.setScene(backgroundScene)
     }
     return () => {
       if (threeManagerRef.current) {
-        threeManagerRef.current.LayerController.setScene(undefined)
+        threeManagerRef.current.layerController.setScene(undefined)
       }
     }
   }, [])

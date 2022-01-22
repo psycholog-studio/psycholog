@@ -4,7 +4,7 @@ import * as THREE from 'three'
 
 export const scene = new THREE.Scene()
 
-const LayerController = threeManager.LayerController
+const layerController = threeManager.layerController
 const geometry = new THREE.BoxGeometry(200, 200, 200)
 const material = new THREE.MeshNormalMaterial()
 const mesh = new THREE.Mesh(geometry, material)
@@ -16,7 +16,7 @@ const animatation = () => {
   mesh.rotation.y += 0.02
 }
 
-LayerController.subscribeAnimate(animatation)
+layerController.subscribeAnimate(animatation)
 
 const backgroundGenerator = useThreeBackgroundGenerator(() => {
   return threeManager

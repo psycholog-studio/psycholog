@@ -3,7 +3,6 @@ import { Story, Meta } from '@storybook/react'
 import ThreeCSSLayer from './ThreeCSSLayer'
 import * as THREE from 'three'
 import ThreeManager from '../core/ThreeManager'
-import ThreeBackground from '../core/ThreeBackground'
 import ThreeCSSObject from './ThreeCSSObject'
 import ThreeGraphic from '../ThreeGraphic'
 
@@ -17,11 +16,11 @@ const Template: Story = (args) => {
   const threeManagerRef = useRef<ThreeManager>()
   useEffect(() => {
     if (threeManagerRef.current) {
-      threeManagerRef.current.LayerController.setScene(sceneRef.current)
+      threeManagerRef.current.layerController.setScene(sceneRef.current)
     }
     return () => {
       if (threeManagerRef.current) {
-        threeManagerRef.current.LayerController.setScene(undefined)
+        threeManagerRef.current.layerController.setScene(undefined)
       }
     }
   }, [])

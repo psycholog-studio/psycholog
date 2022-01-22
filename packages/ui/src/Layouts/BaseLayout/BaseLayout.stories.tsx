@@ -25,8 +25,8 @@ const createScene = (threeManager) => {
     mesh.rotation.y += 0.02
   }
 
-  const LayerController = threeManager.LayerController
-  LayerController.subscribeAnimate(animatation)
+  const layerController = threeManager.layerController
+  layerController.subscribeAnimate(animatation)
   return scene
 }
 
@@ -55,11 +55,11 @@ const NormalTemplate: Story<BaseLayoutProps> = (args) => {
 
     if (threeManagerRef.current) {
       sceneRef.current = createScene(threeManagerRef.current)
-      threeManagerRef.current.LayerController.setScene(sceneRef.current)
+      threeManagerRef.current.layerController.setScene(sceneRef.current)
     }
     return () => {
       if (threeManagerRef.current) {
-        threeManagerRef.current.LayerController.setScene(undefined)
+        threeManagerRef.current.layerController.setScene(undefined)
       }
     }
   }, [])

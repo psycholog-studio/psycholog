@@ -17,7 +17,7 @@ class ThreeBackground {
     const { getThreeManager, ...meshBasicMaterialOptions } = options
     this.getThreeManager = getThreeManager
     const threeManager = this.getThreeManager?.()
-    const aspect = threeManager?.BackgroundController.aspect ?? 1
+    const aspect = threeManager?.backgroundController.aspect ?? 1
     this.geometry = new THREE.PlaneGeometry(aspect * baseScale, baseScale)
 
     const texture = new THREE.TextureLoader().load(textureUrl)

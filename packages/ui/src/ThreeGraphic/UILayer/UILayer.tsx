@@ -17,12 +17,12 @@ const UILayer = (props: UILayerProps): JSX.Element => {
       if (element) {
         const handleResize = () => {
           const rect =
-            threeManager.LayerController.webglApp.getBoundingClientRect()
+            threeManager.layerController.webglApp.getBoundingClientRect()
           element.style.height = `${rect.height}px`
           element.style.width = `${rect.width}px`
         }
 
-        threeManager.LayerController.subscribeWebglAppResize(handleResize)
+        threeManager.layerController.subscribeWebglAppResize(handleResize)
 
         requestAnimationFrame(() => {
           handleResize()
