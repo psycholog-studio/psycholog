@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.6](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.5...v0.2.0-alpha.6) (2022-01-22)
+
+
+### Features
+
+* renaming ThreeManger controllers ([09b6f53](https://github.com/psycholog-studio/psycholog/commit/09b6f53673b4c61bd93013fe79ab705e8cce290a))
+
+
+
+
+
 # [0.2.0-alpha.5](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.4...v0.2.0-alpha.5) (2022-01-22)
 
 **Note:** Version bump only for package @psycholog-studio/scenes
