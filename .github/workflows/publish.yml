@@ -21,13 +21,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@tokileecy'
+          scope: '@psycholog-studio'
       - name: Install
         run: yarn install
       - name: build
         run: yarn release:build
-        env:
-          PACKAGE_ORG_NAME: ${{ secrets.PACKAGE_ORG_NAME }}
       - name: publish
         run: yarn release:publish
         env:

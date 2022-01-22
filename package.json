@@ -4,10 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/tokileecy/psycholog.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@tokileecy"
+    "url": "https://github.com/psycholog-studio/psycholog.git"
   },
   "scripts": {
     "docs:dev": "yarn workspace @psycholog-studio/docs run dev",

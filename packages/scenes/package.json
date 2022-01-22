@@ -5,12 +5,9 @@
   "author": "tokileecy <tokileecy@gmail.com>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
   "license": "UNLICENSED",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tokileecy/psycholog.git"
+    "url": "git+https://github.com/psycholog-studio/psycholog.git"
   },
   "scripts": {
     "build": "rm -rf build && yarn build:node && yarn build:copy-files",

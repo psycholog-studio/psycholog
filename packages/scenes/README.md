@@ -1,11 +1,11 @@
-# `@psycholog-studio/studio/scenes`
+# `@psycholog-studio/scenes`
 
 > TODO: description
 
 ## Usage
 
 ```
-const scenes = require('@psycholog-studio/studio/scenes');
+const scenes = require('@psycholog-studio/scenes');
 
 // TODO: DEMONSTRATE API
 ```
