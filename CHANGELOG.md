@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.7](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.6...v0.2.0-alpha.7) (2022-01-22)
+
+
+### Features
+
+* add CSSLayer Content to BaseLayout ([7954360](https://github.com/psycholog-studio/psycholog/commit/79543603c491b3efce47dcb8c74ef47725194df8))
+
+
+
+
+
 # [0.2.0-alpha.6](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.5...v0.2.0-alpha.6) (2022-01-22)
 
 
