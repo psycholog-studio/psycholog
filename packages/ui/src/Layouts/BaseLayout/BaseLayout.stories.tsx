@@ -5,13 +5,14 @@ import * as THREE from 'three'
 import Box from '../../Containers/Box'
 import ThreeManager from '../../ThreeGraphic/core/ThreeManager'
 import { css } from '@emotion/css'
+import ThreeCSSObject from '../../ThreeGraphic/ThreeCSSLayer/ThreeCSSObject'
 
 export default {
   title: 'ui/Layouts/BaseLayout',
   component: BaseLayout,
 } as Meta
 
-const createScene = (threeManager) => {
+const createScene = (threeManager: ThreeManager) => {
   const scene = new THREE.Scene()
 
   const geometry = new THREE.BoxGeometry(200, 200, 200)
@@ -39,8 +40,8 @@ const cssBox = css`
 `
 
 const NormalTemplate: Story<BaseLayoutProps> = (args) => {
-  const sceneRef = useRef<THREE.Scene>(null)
-  const threeManagerRef = useRef<ThreeManager>()
+  const sceneRef = useRef<THREE.Scene | null>(null)
+  const threeManagerRef = useRef<ThreeManager | null>(null)
 
   useEffect(() => {
     if (sceneRef.current) {
@@ -67,8 +68,25 @@ const NormalTemplate: Story<BaseLayoutProps> = (args) => {
   return (
     <BaseLayout
       {...args}
-      scene={sceneRef.current}
       threeManagerRef={threeManagerRef}
+      cssLayerContent={
+        <ThreeCSSObject
+          ref={(obj) => {
+            if (obj) {
+              obj.position.y = 300
+            }
+          }}
+        >
+          <div
+            style={{
+              fontSize: '100px',
+              color: 'white',
+            }}
+          >
+            CSSObject Test!
+          </div>
+        </ThreeCSSObject>
+      }
     >
       <Box className={cssBox}>BaseLayout test!</Box>
     </BaseLayout>

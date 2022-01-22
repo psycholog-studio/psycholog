@@ -13,7 +13,8 @@ export default {
 
 const Template: Story = (args) => {
   const sceneRef = useRef(new THREE.Scene())
-  const threeManagerRef = useRef<ThreeManager>()
+  const threeManagerRef = useRef<ThreeManager | null>(null)
+
   useEffect(() => {
     if (threeManagerRef.current) {
       threeManagerRef.current.layerController.setScene(sceneRef.current)

@@ -9,8 +9,47 @@ export type LayerControllerOptions = {
   width?: number
   height?: number
 }
+export interface LayerControllerCallbackEvent extends Event {
+  detail?: {
+    scene?: THREE.Scene
+  }
+}
+
+export type LayerControllerCallback = (e: LayerControllerCallbackEvent) => void
+
+export type LayerControllerEvents = 'scene-changed'
+
+type LayerControllerAddEventListener = (
+  type: LayerControllerEvents,
+  callback: LayerControllerCallback | null,
+  options?: boolean | AddEventListenerOptions
+) => void
+
+type LayerControllerRemoveEventListener = (
+  type: LayerControllerEvents,
+  callback: EventListenerOrEventListenerObject | null,
+  options?: boolean | EventListenerOptions
+) => void
+export class LayerControllerEventTarget extends EventTarget {
+  addEventListener: LayerControllerAddEventListener = (
+    type,
+    callback,
+    options?
+  ): void => {
+    super.addEventListener(type, callback, options)
+  }
+
+  removeEventListener: LayerControllerRemoveEventListener = (
+    type,
+    callback,
+    options?
+  ): void => {
+    super.removeEventListener(type, callback, options)
+  }
+}
 
 class LayerController {
+  #eventTarget: LayerControllerEventTarget = new LayerControllerEventTarget()
   #containerElement: HTMLElement | undefined = undefined
   #isStartup = false
   // #clock: THREE.Clock = new THREE.Clock()
@@ -137,6 +176,22 @@ class LayerController {
 
     this.renderCss()
     this.renderWebgl()
+
+    this.#eventTarget.dispatchEvent(
+      new CustomEvent('scene-changed', {
+        detail: {
+          scene: this.#scene,
+        },
+      })
+    )
+  }
+
+  addEventListener: LayerControllerAddEventListener = (...arg) => {
+    this.#eventTarget.addEventListener(...arg)
+  }
+
+  removeEventListener: LayerControllerRemoveEventListener = (...arg) => {
+    this.#eventTarget.removeEventListener(...arg)
   }
 
   subscribeStarup = (func: () => void) => {
