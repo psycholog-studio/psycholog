@@ -13,6 +13,7 @@ export type LayerControllerOptions = {
 class LayerController {
   #containerElement: HTMLElement | undefined = undefined
   #isStartup = false
+  // #clock: THREE.Clock = new THREE.Clock()
   #scene: THREE.Scene | undefined = undefined
 
   renderer: THREE.WebGLRenderer

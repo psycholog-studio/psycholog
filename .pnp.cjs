@@ -62,6 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/is-ci", "npm:3.0.0"],
             ["@typescript-eslint/eslint-plugin", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:5.9.1"],
             ["@typescript-eslint/parser", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:5.9.1"],
+            ["dotenv", "npm:14.2.0"],
             ["eslint", "npm:8.6.0"],
             ["eslint-config-prettier", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:8.3.0"],
             ["eslint-config-recommended", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:4.1.0"],
@@ -14999,6 +15000,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:14.2.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-14.2.0-b237345d26-85a0e44918.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:14.2.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:8.6.0", {
           "packageLocation": "./.yarn/cache/dotenv-npm-8.6.0-2ce3e9f7bb-38e902c80b.zip/node_modules/dotenv/",
           "packageDependencies": [
@@ -23495,6 +23503,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/is-ci", "npm:3.0.0"],
             ["@typescript-eslint/eslint-plugin", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:5.9.1"],
             ["@typescript-eslint/parser", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:5.9.1"],
+            ["dotenv", "npm:14.2.0"],
             ["eslint", "npm:8.6.0"],
             ["eslint-config-prettier", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:8.3.0"],
             ["eslint-config-recommended", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:4.1.0"],
