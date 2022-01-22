@@ -12,8 +12,9 @@
   "scripts": {
     "docs:dev": "yarn workspace @psycholog/docs run dev",
     "eslint:check": "eslint .",
+    "version": "yarn install && git stage yarn.lock",
     "release:build": "yarn workspaces foreach -ptR --from '@psycholog/{ui,scenes,utils}' run build",
-    "release:version": "lerna version --force-publish --no-push --conventional-commits",
+    "release:version": "lerna version --force-publish --conventional-commits",
     "release:publish": "lerna publish from-package --dist-tag latest -y --contents build",
     "husky:prepare": "is-ci || husky install"
   },
