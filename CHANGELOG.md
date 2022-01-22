@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.5](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.4...v0.2.0-alpha.5) (2022-01-22)
+
+
+### Bug Fixes
+
+* **utils:** no component publish ([73b481c](https://github.com/psycholog-studio/psycholog/commit/73b481c16dfaf335e3f371e46bff3b84967b4220))
+
+
+
+
+
 # [0.2.0-alpha.4](https://github.com/tokileecy/psycholog/compare/v0.2.0-alpha.3...v0.2.0-alpha.4) (2022-01-22)
 
 
