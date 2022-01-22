@@ -4,6 +4,9 @@ import { ThreeManagerContext } from '../ThreeGraphic'
 
 const useThreeManager = (): ThreeManager => {
   const threeManagerRef = useContext(ThreeManagerContext)
+  if (!threeManagerRef.current) {
+    threeManagerRef.current = new ThreeManager()
+  }
   return threeManagerRef.current
 }
 

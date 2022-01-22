@@ -4,7 +4,7 @@ import ThreeManager from '@psycholog/ui/ThreeGraphic/core/ThreeManager'
 import { scene } from './utils'
 
 const Scene1 = (): JSX.Element => {
-  const threeManagerRef = useRef<ThreeManager>(null)
+  const threeManagerRef = useRef<ThreeManager | null>(null)
 
   useEffect(() => {
     if (threeManagerRef.current) {

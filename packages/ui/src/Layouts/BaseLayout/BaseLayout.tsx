@@ -1,4 +1,4 @@
-import React, { ReactNode, RefObject } from 'react'
+import React, { ReactNode, MutableRefObject } from 'react'
 import * as styles from './BaseLayout.styles'
 import ThreeGraphic from '../../ThreeGraphic'
 import ThreeManager from '../../ThreeGraphic/core/ThreeManager'
@@ -8,7 +8,7 @@ import UILayer from '../../ThreeGraphic/UILayer'
 
 export interface BaseLayoutProps {
   children?: ReactNode
-  threeManagerRef?: RefObject<ThreeManager>
+  threeManagerRef?: MutableRefObject<ThreeManager | null>
   threeManager?: ThreeManager
 }
 
