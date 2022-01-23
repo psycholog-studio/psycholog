@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.8](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.7...v0.2.0-alpha.8) (2022-01-23)
+
+**Note:** Version bump only for package @psycholog-studio/utils
+
+
+
+
+
 # [0.2.0-alpha.7](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.6...v0.2.0-alpha.7) (2022-01-22)
 
 **Note:** Version bump only for package @psycholog-studio/utils
