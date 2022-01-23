@@ -7,7 +7,7 @@ import React, {
   ForwardedRef,
 } from 'react'
 import ReactDom from 'react-dom'
-import { css } from '@emotion/css'
+import { cx, css } from '@emotion/css'
 import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
 import { ThreeCSSLayerContext } from './ThreeCSSLayer'
 import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
@@ -21,11 +21,12 @@ const cssRoot = css`
 
 export interface ThreeCSSLayerProps {
   children?: ReactNode
+  className?: string
 }
 
 const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
   (props: ThreeCSSLayerProps, ref: ForwardedRef<CSS3DObject>): null => {
-    const { children } = props
+    const { className, children } = props
 
     const threeManager = useThreeManager()
     const { scene } = useContext(ThreeCSSLayerContext)
@@ -33,7 +34,7 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
     const rootElementRef = useRef<HTMLElement>(
       (() => {
         const element = document.createElement('div')
-        element.classList.add(cssRoot)
+        element.classList.add(cx(cssRoot, className))
         return element
       })()
     )
