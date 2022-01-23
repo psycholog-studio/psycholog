@@ -34,7 +34,7 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
     const rootElementRef = useRef<HTMLElement>(
       (() => {
         const element = document.createElement('div')
-        element.classList.add(cx(cssRoot, className))
+        element.classList.add(...cx(cssRoot, className).split(' '))
         return element
       })()
     )
