@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.9](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.8...v0.2.0-alpha.9) (2022-01-23)
+
+
+### Features
+
+* add frame-changed event ([d8797c2](https://github.com/psycholog-studio/psycholog/commit/d8797c2d15c79c411f497036c135e8f7f268cfcc))
+
+
+
+
+
 # [0.2.0-alpha.8](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.7...v0.2.0-alpha.8) (2022-01-23)
 
 
