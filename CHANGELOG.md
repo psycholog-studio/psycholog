@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.12](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.11...v0.2.0-alpha.12) (2022-01-23)
+
+
+### Features
+
+* move some THREECSSObject styles to class ([f0e348d](https://github.com/psycholog-studio/psycholog/commit/f0e348d17f8c03a80da0e75de311c54b3691be5c))
+
+
+
+
+
 # [0.2.0-alpha.11](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.10...v0.2.0-alpha.11) (2022-01-23)
 
 
