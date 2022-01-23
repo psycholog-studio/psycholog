@@ -2,11 +2,12 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { css } from '@emotion/css'
 import Cancel, { CancelProps } from './Cancel'
+import { paddingDecorator } from '../storyUtils'
 
 export default {
-  title: 'next-app/Cancel',
+  title: 'ui/Cancel',
   component: Cancel,
-  argTypes: {},
+  decorators: [paddingDecorator],
 } as Meta
 
 const Template: Story<CancelProps> = (args) => {
@@ -22,9 +23,13 @@ const Template: Story<CancelProps> = (args) => {
   )
 }
 
-export const NormalCancel = Template.bind({})
+export const Normal = Template.bind({})
 
-NormalCancel.args = {
+Normal.args = {
   title: 'SKILL',
   animated: false,
+}
+
+Normal.parameters = {
+  backgrounds: { default: 'dark' },
 }
