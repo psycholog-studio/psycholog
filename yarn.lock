@@ -3967,7 +3967,7 @@ __metadata:
   resolution: "@psycholog-studio/scenes@workspace:packages/scenes"
   dependencies:
     "@emotion/css": ^11.7.1
-    "@psycholog-studio/ui": ^0.2.0-alpha.10
+    "@psycholog-studio/ui": ^0.2.0-alpha.11
     "@storybook/react": ^6.4.9
     "@types/node": ^17.0.10
     "@types/react": ^17.0.37
@@ -3985,12 +3985,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psycholog-studio/ui@^0.2.0-alpha.10, @psycholog-studio/ui@workspace:packages/ui":
+"@psycholog-studio/ui@^0.2.0-alpha.11, @psycholog-studio/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@psycholog-studio/ui@workspace:packages/ui"
   dependencies:
     "@emotion/css": ^11.5.0
-    "@psycholog-studio/utils": ^0.2.0-alpha.10
+    "@psycholog-studio/utils": ^0.2.0-alpha.11
     "@storybook/react": ^6.4.9
     "@types/color": ^3.0.2
     "@types/node": ^17.0.8
@@ -4012,7 +4012,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psycholog-studio/utils@^0.2.0-alpha.10, @psycholog-studio/utils@workspace:packages/utils":
+"@psycholog-studio/utils@^0.2.0-alpha.11, @psycholog-studio/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@psycholog-studio/utils@workspace:packages/utils"
   dependencies:

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.11](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.10...v0.2.0-alpha.11) (2022-01-23)
+
+
+### Bug Fixes
+
+* ThreeCSSObject classList add error ([24847a2](https://github.com/psycholog-studio/psycholog/commit/24847a2e819b32aa8ba9eda6002de731009b3d0f))
+
+
+
+
+
 # [0.2.0-alpha.10](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.9...v0.2.0-alpha.10) (2022-01-23)
 
 
