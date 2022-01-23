@@ -12,12 +12,13 @@ export type LayerControllerOptions = {
 export interface LayerControllerCallbackEvent extends Event {
   detail?: {
     scene?: THREE.Scene
+    time?: number
   }
 }
 
 export type LayerControllerCallback = (e: LayerControllerCallbackEvent) => void
 
-export type LayerControllerEvents = 'scene-changed'
+export type LayerControllerEvents = 'scene-changed' | 'frame-changed'
 
 type LayerControllerAddEventListener = (
   type: LayerControllerEvents,
@@ -52,7 +53,7 @@ class LayerController {
   #eventTarget: LayerControllerEventTarget = new LayerControllerEventTarget()
   #containerElement: HTMLElement | undefined = undefined
   #isStartup = false
-  // #clock: THREE.Clock = new THREE.Clock()
+  #clock: THREE.Clock = new THREE.Clock()
   #scene: THREE.Scene | undefined = undefined
 
   renderer: THREE.WebGLRenderer
@@ -141,6 +142,10 @@ class LayerController {
     return this.cssRenderer.domElement
   }
 
+  get clock() {
+    return this.#clock
+  }
+
   get scene() {
     return this.#scene
   }
@@ -151,7 +156,7 @@ class LayerController {
     }
     this.#isStartup = true
 
-    this.animate()
+    this.frameAnimate()
   }
 
   setContainerElement = (element: HTMLElement) => {
@@ -247,9 +252,16 @@ class LayerController {
     }
   }
 
-  animate = () => {
+  frameAnimate = (time?: number) => {
     if (this.isAnimating) {
-      requestAnimationFrame(this.animate)
+      requestAnimationFrame(this.frameAnimate)
+      this.#eventTarget.dispatchEvent(
+        new CustomEvent('frame-changed', {
+          detail: {
+            time,
+          },
+        })
+      )
     }
 
     for (const animation of this.animates) {
