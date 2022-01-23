@@ -39,6 +39,9 @@ const BaseLayout = (props: BaseLayoutProps): JSX.Element => {
     (threeManager: ThreeManager | null) => {
       if (!targetThreeManagerRef.current) {
         targetThreeManagerRef.current = threeManager
+        if (cssLayerScene !== threeManager?.layerController.scene) {
+          setCssLayerScene(threeManager?.layerController.scene)
+        }
       }
       threeManager?.layerController.addEventListener('scene-changed', (e) => {
         setCssLayerScene(e.detail?.scene)

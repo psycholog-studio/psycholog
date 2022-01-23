@@ -49,11 +49,13 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
     useEffect(() => {
       if (scene) {
         scene.add(css3DSpriteRef.current)
+        threeManager.layerController.renderCss()
       }
 
       return () => {
         if (scene) {
           scene.remove(css3DSpriteRef.current)
+          threeManager.layerController.renderCss()
         }
       }
     }, [scene])
