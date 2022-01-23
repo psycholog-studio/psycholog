@@ -7,17 +7,12 @@ import React, {
   ForwardedRef,
 } from 'react'
 import ReactDom from 'react-dom'
-import { cx, css } from '@emotion/css'
+import { cx } from '@emotion/css'
 import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
-import { ThreeCSSLayerContext } from './ThreeCSSLayer'
+import { ThreeCSSLayerContext } from '../ThreeCSSLayer'
 import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
-import useThreeManager from '../hooks/useThreeManager'
-
-const cssRoot = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+import useThreeManager from '../../hooks/useThreeManager'
+import * as styles from './ThreeCSSObject.styles'
 
 export interface ThreeCSSLayerProps {
   children?: ReactNode
@@ -34,7 +29,7 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
     const rootElementRef = useRef<HTMLElement>(
       (() => {
         const element = document.createElement('div')
-        element.classList.add(...cx(cssRoot, className).split(' '))
+        element.classList.add(...cx(styles.root, className).split(' '))
         return element
       })()
     )
@@ -43,6 +38,8 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
       ref,
       (() => {
         const css3DSprite = new CSS3DObject(rootElementRef.current)
+        css3DSprite.element.style.pointerEvents = ''
+        css3DSprite.element.style.userSelect = ''
         return css3DSprite
       })()
     )
