@@ -6,10 +6,16 @@ export const root = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 `
 
 export const uiContentWrapper = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
 `
