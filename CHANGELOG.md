@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.10](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.9...v0.2.0-alpha.10) (2022-01-23)
+
+
+### Features
+
+* add Cancel ([2c2821e](https://github.com/psycholog-studio/psycholog/commit/2c2821e552ddbbf30102d45208bbea7ad154c49d))
+* add className to ThreeCSSObject ([9772714](https://github.com/psycholog-studio/psycholog/commit/9772714f795c9947c290a3fd00eae30989f33a93))
+* disable UILayer wrapper porinter-events ([8078cb2](https://github.com/psycholog-studio/psycholog/commit/8078cb207da43384def5dac134c23a900160ba43))
+
+
+
+
+
 # [0.2.0-alpha.9](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.8...v0.2.0-alpha.9) (2022-01-23)
 
 
