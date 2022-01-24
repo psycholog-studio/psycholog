@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.13](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.12...v0.2.0-alpha.13) (2022-01-24)
+
+
+### Features
+
+* add classes to BaseLayout ([5619a62](https://github.com/psycholog-studio/psycholog/commit/5619a622210d56fc7dc20dc803c1421b8ae1d437))
+* add Input ([8391645](https://github.com/psycholog-studio/psycholog/commit/8391645b04a4b2eff2f7b35d72dc96b04d085872))
+
+
+
+
+
 # [0.2.0-alpha.12](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.11...v0.2.0-alpha.12) (2022-01-23)
 
 

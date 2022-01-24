@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-alpha.13](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.12...v0.2.0-alpha.13) (2022-01-24)
+
+
+### Features
+
+* set scenes repo to private ([be8f253](https://github.com/psycholog-studio/psycholog/commit/be8f2535144e4bdcd53cc4bffa91c0a70a38331c))
+
+
+
+
+
 # [0.2.0-alpha.12](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.11...v0.2.0-alpha.12) (2022-01-23)
 
 **Note:** Version bump only for package @psycholog-studio/scenes
