@@ -1,6 +1,7 @@
 {
   "name": "@psycholog-studio/scenes",
   "version": "0.2.0-alpha.12",
+  "private": true,
   "description": "> TODO: description",
   "author": "tokileecy <tokileecy@gmail.com>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
