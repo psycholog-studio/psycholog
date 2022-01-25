@@ -68,7 +68,7 @@ const BaseLayout = (props: BaseLayoutProps): JSX.Element => {
   }, [cssLayerScene])
 
   return (
-    <main className={cx(styles.root, classes.root, className)}>
+    <div className={cx(styles.root, classes.root, className)}>
       <ThreeGraphic
         ref={targetThreeManagerRefCallback}
         threeManager={threeManager}
@@ -86,7 +86,7 @@ const BaseLayout = (props: BaseLayoutProps): JSX.Element => {
           className={cx(styles.threeWebglLayer, classes.webglLayer)}
         />
       </ThreeGraphic>
-    </main>
+    </div>
   )
 }
 
