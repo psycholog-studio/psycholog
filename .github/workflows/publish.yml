@@ -15,6 +15,24 @@ jobs:
         node-version: [15.x]
 
     steps:
+      - uses: actions/delete-package-versions@v2
+        with: 
+          package-name: 'ui'
+          token: ${{ secrets.NPM_TOKEN }}
+          min-versions-to-keep: 3
+          delete-only-pre-release-versions: "true"
+      - uses: actions/delete-package-versions@v2
+        with: 
+          package-name: 'utils'
+          token: ${{ secrets.NPM_TOKEN }}
+          min-versions-to-keep: 3
+          delete-only-pre-release-versions: "true"
+      - uses: actions/delete-package-versions@v2
+        with: 
+          package-name: 'scenes'
+          token: ${{ secrets.NPM_TOKEN }}
+          min-versions-to-keep: 3
+          delete-only-pre-release-versions: "true"
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
