@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.14...v0.2.0) (2022-01-25)
+
+
+### Features
+
+* adjust BaseLayout root tag ([4cb2e10](https://github.com/psycholog-studio/psycholog/commit/4cb2e10bb84a75153dfe969097307b421a881144))
+
+
+
+
+
 # [0.2.0-alpha.14](https://github.com/psycholog-studio/psycholog/compare/v0.2.0-alpha.13...v0.2.0-alpha.14) (2022-01-24)
 
 
