@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/psycholog-studio/psycholog/compare/v0.2.2...v0.2.3) (2022-02-04)
+
+
+### Bug Fixes
+
+* fix ThreeCSSObject not support ssr ([ad02658](https://github.com/psycholog-studio/psycholog/commit/ad02658a9c4bab15eee45df45c5d8e9357f61d16))
+
+
+
+
+
 ## [0.2.2](https://github.com/psycholog-studio/psycholog/compare/v0.2.1...v0.2.2) (2022-02-04)
 
 
