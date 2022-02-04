@@ -8,7 +8,7 @@ import React, {
 } from 'react'
 import ReactDom from 'react-dom'
 import { cx } from '@emotion/css'
-import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
+import { CSS3DObject } from '../../../lib/CSS3DRenderer'
 import { ThreeCSSLayerContext } from '../ThreeCSSLayer'
 import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
 import useThreeManager from '../../hooks/useThreeManager'

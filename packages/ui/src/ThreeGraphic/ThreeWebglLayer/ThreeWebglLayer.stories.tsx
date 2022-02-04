@@ -4,7 +4,7 @@ import ThreeWebglLayer from './ThreeWebglLayer'
 import ThreeManager from '../core/ThreeManager'
 import ThreeGraphic from '../ThreeGraphic'
 import * as THREE from 'three'
-import ThreeBackground from '../core/ThreeBackground'
+
 import {
   useThreeBackgroundGenerator,
   ThreeBackgroundGenerator,
@@ -81,7 +81,7 @@ const createBackgroundScene = (
 const BackgroundTemplate: Story = (args) => {
   const threeManagerRef = useRef<ThreeManager>(null)
   const threeBackgroundGenerator = useThreeBackgroundGenerator(() => {
-    return threeManagerRef.current
+    return threeManagerRef.current as ThreeManager
   })
 
   useEffect(() => {

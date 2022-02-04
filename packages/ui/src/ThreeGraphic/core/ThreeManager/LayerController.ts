@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
+import { CSS3DRenderer } from '../../../lib/CSS3DRenderer'
 
 export type LayerControllerOptions = {
   isAutoSize?: boolean
@@ -83,38 +83,46 @@ class LayerController {
     this.width = width
     this.height = height
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true })
-    this.renderer.domElement.classList.add('webgl-app')
-
-    this.cssRenderer = new CSS3DRenderer()
-    this.cssRenderer.domElement.classList.add('css-app')
-
     this.camera = new THREE.PerspectiveCamera(70, 0, 0.01, 2000)
     this.camera.position.z = 1500
 
-    this.webglAppResizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.contentBoxSize) {
-          for (const func of this.webglAppResizeFuncs) {
-            func()
+    // Support SSR
+    if (typeof document !== 'undefined') {
+      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      this.renderer.domElement.classList.add('webgl-app')
+
+      this.cssRenderer = new CSS3DRenderer()
+      this.cssRenderer.domElement.classList.add('css-app')
+
+      this.webglAppResizeObserver = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.contentBoxSize) {
+            for (const func of this.webglAppResizeFuncs) {
+              func()
+            }
+
+            this.recalculateSize()
           }
-
-          this.recalculateSize()
         }
-      }
-    })
+      })
 
-    this.webglAppResizeObserver.observe(this.webglApp)
+      this.webglAppResizeObserver.observe(this.webglApp)
 
-    this.containerResizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.contentBoxSize) {
-          this.recalculateSize()
+      this.containerResizeObserver = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.contentBoxSize) {
+            this.recalculateSize()
+          }
         }
-      }
-    })
+      })
 
-    this.recalculateSize()
+      this.recalculateSize()
+    } else {
+      this.renderer = {} as THREE.WebGL1Renderer
+      this.cssRenderer = {} as CSS3DRenderer
+      this.containerResizeObserver = {} as ResizeObserver
+      this.webglAppResizeObserver = {} as ResizeObserver
+    }
 
     if (!this.isAutoSize) {
       this.camera.aspect = this.width / this.height

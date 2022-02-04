@@ -53,6 +53,7 @@
   },
   "workspaces": [
     "packages/*",
+    "lab/*",
     "docs"
   ],
   "packageManager": "yarn@3.1.1"

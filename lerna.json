@@ -3,6 +3,7 @@
   "useWorkspaces": true,
   "packages": [
     "packages/*",
+    "lab/*",
     "docs"
   ],
   "version": "0.2.1",

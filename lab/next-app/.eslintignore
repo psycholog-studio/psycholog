@@ -1,0 +1,5 @@
+next.config.js
+.next
+/public
+.stories.tsx
+.stories.ts

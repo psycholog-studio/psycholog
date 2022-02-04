@@ -13,6 +13,7 @@ babel.config.js
 /docs/**/node_modules
 /packages/**/node_modules
 /packages/**/build
+/packages/**/lib
 
 package.json
 yarn.lock
