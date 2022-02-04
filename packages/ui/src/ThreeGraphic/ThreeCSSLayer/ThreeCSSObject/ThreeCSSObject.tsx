@@ -28,30 +28,38 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
 
     const rootElementRef = useRef<HTMLElement>(
       (() => {
-        const element = document.createElement('div')
-        element.classList.add(...cx(styles.root, className).split(' '))
-        return element
+        if (typeof document !== 'undefined') {
+          const element = document.createElement('div')
+          element.classList.add(...cx(styles.root, className).split(' '))
+          return element
+        } else {
+          return null
+        }
       })()
     )
 
-    const css3DSpriteRef = useForwardedRef<CSS3DObject>(
+    const css3DSpriteRef = useForwardedRef<CSS3DObject | null>(
       ref,
       (() => {
-        const css3DSprite = new CSS3DObject(rootElementRef.current)
-        css3DSprite.element.style.pointerEvents = ''
-        css3DSprite.element.style.userSelect = ''
-        return css3DSprite
+        if (rootElementRef.current !== null) {
+          const css3DSprite = new CSS3DObject(rootElementRef.current)
+          css3DSprite.element.style.pointerEvents = ''
+          css3DSprite.element.style.userSelect = ''
+          return css3DSprite
+        } else {
+          return null
+        }
       })()
     )
 
     useEffect(() => {
-      if (scene) {
+      if (scene && css3DSpriteRef.current) {
         scene.add(css3DSpriteRef.current)
         threeManager.layerController.renderCss()
       }
 
       return () => {
-        if (scene) {
+        if (scene && css3DSpriteRef.current) {
           scene.remove(css3DSpriteRef.current)
           threeManager.layerController.renderCss()
         }
