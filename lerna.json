@@ -6,7 +6,7 @@
     "lab/*",
     "docs"
   ],
-  "version": "0.2.3",
+  "version": "0.3.0",
   "command": {
     "version": {
       "message": "chore(release): %s"
