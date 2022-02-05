@@ -3,3 +3,52 @@ import { Meta } from '@storybook/addon-docs'
 <Meta title="Introduction" />
 
 # psycholog
+
+Toki's components library.
+
+## How to use psycholog ui
+
+### Install psycholog ui
+
+#### npm
+
+`.npmrc`
+
+```
+//npm.pkg.github.com/:_authToken="<authToken>"
+@tokileecy:registry=https://npm.pkg.github.com
+```
+
+#### yarn berry
+
+`~/.yarnrc.yml`
+```
+npmRegistries:
+  "https://npm.pkg.github.com":
+    npmAuthToken: <authToken>
+
+npmScopes:
+  tokileecy:
+    npmRegistryServer: "https://npm.pkg.github.com"
+    npmAuthToken: <authToken>
+```
+
+`yarn add @tokeleecy/psycholog-ui`
+
+### add css reset on entry point
+
+
+```js
+// import reset.css 
+import '@psycholog-studio/ui/reset.css'
+```
+
+### import ui components
+
+```js
+// example
+import Input from '@psycholog-studio/ui/Input'
+
+// ...
+
+```

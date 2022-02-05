@@ -1,5 +1,8 @@
 # PSYCHOLOG
 
+Toki's components library.
+
+docs(pages): https://psycholog-studio.github.io/psycholog/
 
 ## How to install ui packages
 
