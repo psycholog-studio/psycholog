@@ -8,21 +8,20 @@ Toki's components library.
 
 ## How to use psycholog ui
 
-### Install psycholog ui
-
-#### npm
-
-`.npmrc`
+1. Install psycholog ui , `yarn add @tokeleecy/psycholog-ui`
 
 ```
+# npm
+# .npmrc
+
 //npm.pkg.github.com/:_authToken="<authToken>"
 @tokileecy:registry=https://npm.pkg.github.com
 ```
 
-#### yarn berry
-
-`~/.yarnrc.yml`
 ```
+# yarn berry
+# ~/.yarnrc.yml
+
 npmRegistries:
   "https://npm.pkg.github.com":
     npmAuthToken: <authToken>
@@ -33,9 +32,9 @@ npmScopes:
     npmAuthToken: <authToken>
 ```
 
-`yarn add @tokeleecy/psycholog-ui`
 
-### add css reset on entry point
+
+2. add css reset on entry point
 
 
 ```js
@@ -43,7 +42,7 @@ npmScopes:
 import '@psycholog-studio/ui/reset.css'
 ```
 
-### import ui components
+3. import ui components
 
 ```js
 // example
