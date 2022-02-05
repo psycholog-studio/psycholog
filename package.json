@@ -8,6 +8,7 @@
   },
   "scripts": {
     "docs:dev": "yarn workspace @psycholog-studio/docs run dev",
+    "docs:export": "yarn workspace @psycholog-studio/docs run export",
     "eslint:check": "eslint .",
     "version": "yarn install && git stage yarn.lock",
     "release:build": "yarn workspaces foreach -ptR --from '@psycholog-studio/{ui,scenes,utils}' run build",
