@@ -31,6 +31,14 @@ const createPackageFile = async () => {
   )
   console.log(`Created package.json in ${targetPath}`)
 
+  await fse
+    .copy(
+      path.resolve(__dirname, '../LICENSE'),
+      path.resolve(buildPath, './LICENSE')
+    )
+    .then(() => console.log('success!'))
+    .catch((err) => console.error(err))
+
   return newPackageData
 }
 
