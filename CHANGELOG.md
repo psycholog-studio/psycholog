@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/psycholog-studio/psycholog/compare/v0.3.0...v0.3.1) (2022-02-05)
+
+
+### Features
+
+* add yarn interactive-tools ([d7475a8](https://github.com/psycholog-studio/psycholog/commit/d7475a8aa260f256713735ac112ccd50e3ae82dd))
+
+
+
+
+
 # [0.3.0](https://github.com/psycholog-studio/psycholog/compare/v0.2.3...v0.3.0) (2022-02-05)
 
 **Note:** Version bump only for package psycholog
