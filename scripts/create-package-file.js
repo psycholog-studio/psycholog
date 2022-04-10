@@ -1,5 +1,3 @@
-require('../.pnp.cjs')
-
 const fse = require('fs-extra')
 const path = require('path')
 
