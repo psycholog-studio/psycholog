@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/psycholog-studio/psycholog/compare/v0.3.1...v0.3.2) (2022-04-10)
+
+
+### Bug Fixes
+
+* mdx error ([9276091](https://github.com/psycholog-studio/psycholog/commit/9276091955bf5193194376fa2888e61c7c158b42))
+
+
+
+
+
 ## [0.3.1](https://github.com/psycholog-studio/psycholog/compare/v0.3.0...v0.3.1) (2022-02-05)
 
 
