@@ -1,10 +1,10 @@
-
 const path = require('path')
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 const node_modules = path.join(__dirname, 'node_modules');
 
 module.exports = {
-  staticDirs: [{ from: '../../assets', to: '/assets' }],
+  staticDirs: [{ from: '../assets', to: '/assets' }],
   babel: async (options) => ({
     ...options,
     plugins: [
@@ -22,31 +22,37 @@ module.exports = {
     ]
   }),
   "stories": [
-    "../stories/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-    "../../packages/**/src/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+    "../stories/**/*.stories.mdx",
+    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
+    "../packages/ui/src/**/*.stories.@(js|jsx|ts|tsx)",
+    "../packages/scenes/src/**/*.stories.@(js|jsx|ts|tsx)",
+    "../packages/utils/src/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   "addons": [
     "@storybook/addon-links",
-    {
-      name: '@storybook/addon-docs',
-      options: { configureJSX: true }
-    },
     "@storybook/addon-essentials",
-    '@storybook/addon-storysource',
-    '@storybook/addon-events',
-    '@storybook/addon-measure',
+    "@storybook/addon-interactions",
   ],
+  "framework": "@storybook/react",
+  "core": {
+    "builder": "@storybook/builder-webpack5"
+  },
+  features: {
+    previewMdx2: true, // 👈 MDX 2 enabled here
+  },
   webpackFinal: async (config, { configType }) => {
     config.module.rules.unshift({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
 
+    config.plugins.push(new NodePolyfillPlugin());
+    
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@psycholog-studio/ui": path.resolve(__dirname, "../../packages/ui/src"),
-      "@psycholog-studio/scenes": path.resolve(__dirname, "../../packages/scenes/src"),
-      "@psycholog-studio/utils": path.resolve(__dirname, "../../packages/utils/src"),
+      "@psycholog-studio/ui": path.resolve(__dirname, "../packages/ui/src"),
+      "@psycholog-studio/scenes": path.resolve(__dirname, "../packages/scenes/src"),
+      "@psycholog-studio/utils": path.resolve(__dirname, "../packages/utils/src"),
     };
 
     config.module.rules.push({

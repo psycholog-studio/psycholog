@@ -67,10 +67,11 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
     }, [scene])
 
     useEffect(() => {
-      ReactDom.render(<>{children}</>, rootElementRef.current, () => {
+      const root = ReactDom.createRoot(rootElementRef.current, () => {
         // TODO add render queue to ThreeManager
         threeManager.layerController.renderCss()
       })
+      root.render(<>{children}</>)
     }, [children])
 
     return null

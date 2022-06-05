@@ -62,3 +62,5 @@ Thumbs.db
 
 .env
 v8-compile-cache-0
+.turbo
+out-docs/

@@ -1,5 +1,15 @@
+// export const parameters = {
+//   actions: { argTypesRegex: "^on[A-Z].*" },
+//   controls: {
+//     matchers: {
+//       color: /(background|color)$/i,
+//       date: /Date$/,
+//     },
+//   },
+// }
+
 import { injectGlobal } from '@emotion/css'
-import '../../packages/ui/src/reset.css'
+import '../packages/ui/src/reset.css'
 import './styles.css'
 
 injectGlobal`

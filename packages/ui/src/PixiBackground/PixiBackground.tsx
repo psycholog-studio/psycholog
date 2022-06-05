@@ -29,7 +29,7 @@ const SCREEN_SIZE_WIDTH = 1920
 const SCREEN_SIZE_HEIGHT = 1280
 
 const PixiBackground = (): JSX.Element => {
-  const rootRef = useRef()
+  const rootRef = useRef<HTMLDivElement>()
   const pixiContainer = useRef(
     new PIXIContainer({
       width: SCREEN_SIZE_WIDTH,
@@ -37,7 +37,7 @@ const PixiBackground = (): JSX.Element => {
     })
   )
 
-  const rootRefCallback = useCallback((element) => {
+  const rootRefCallback = useCallback((element: HTMLDivElement) => {
     rootRef.current = element
     element.appendChild(pixiContainer.current.pixiApp.view)
   }, [])
