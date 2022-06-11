@@ -5000,7 +5000,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:14.2.4":
+"@nrwl/cli@npm:14.2.4, @nrwl/cli@npm:^14.2.4":
   version: 14.2.4
   resolution: "@nrwl/cli@npm:14.2.4"
   dependencies:
@@ -22692,7 +22692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:14.2.4":
+"nx@npm:14.2.4, nx@npm:^14.2.4":
   version: 14.2.4
   resolution: "nx@npm:14.2.4"
   dependencies:
@@ -24683,7 +24683,7 @@ __metadata:
     "@emotion/react": "npm:11.9.0"
     "@emotion/styled": "npm:11.8.1"
     "@mdx-js/react": "npm:^1.6.22"
-    "@nrwl/cli": "npm:14.2.4"
+    "@nrwl/cli": "npm:^14.2.4"
     "@nrwl/jest": "npm:14.2.4"
     "@nrwl/react": "npm:^14.2.4"
     "@nrwl/storybook": "npm:^14.2.4"
@@ -24739,7 +24739,7 @@ __metadata:
     jest: "npm:^28.1.1"
     lerna: "npm:^5.1.1"
     node-polyfill-webpack-plugin: "npm:^1.1.4"
-    nx: "npm:14.2.4"
+    nx: "npm:^14.2.4"
     prettier: "npm:^2.6.2"
     react: "npm:^18.1.0"
     react-dom: "npm:^18.1.0"
