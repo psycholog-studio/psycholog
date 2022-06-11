@@ -102,7 +102,7 @@
     "lab/*",
     "docs"
   ],
-  "packageManager": "yarn@4.0.0-rc.6",
+  "packageManager": "yarn@4.0.0-rc.9",
   "dependencies": {
     "@emotion/css": "^11.9.0",
     "@emotion/react": "11.9.0",
