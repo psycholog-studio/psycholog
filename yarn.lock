@@ -4654,6 +4654,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdx-js/react@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@mdx-js/react@npm:2.1.1"
+  dependencies:
+    "@types/mdx": "npm:^2.0.0"
+    "@types/react": "npm:>=16"
+  peerDependencies:
+    react: ">=16"
+  checksum: a30ccfee9fdc19fc920bb120479a99999a267516462861313856d0878dc8e6ccc7011819bbf5ce5facc40325cd8c72ef03ea7bd19d6199b3c4dde867646f5f10
+  languageName: node
+  linkType: hard
+
 "@mdx-js/util@npm:1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/util@npm:1.6.22"
@@ -7669,9 +7681,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/mdx2-csf@npm:^0.0.4-canary.7.37514ba.0":
-  version: 0.0.4-canary.7.37514ba.0
-  resolution: "@storybook/mdx2-csf@npm:0.0.4-canary.7.37514ba.0"
+"@storybook/mdx2-csf@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@storybook/mdx2-csf@npm:0.0.3"
   dependencies:
     "@babel/generator": "npm:^7.12.11"
     "@babel/parser": "npm:^7.12.11"
@@ -7679,9 +7691,9 @@ __metadata:
     estree-to-babel: "npm:^4.9.0"
     hast-util-to-estree: "npm:^2.0.2"
     js-string-escape: "npm:^1.0.1"
-    loader-utils: "npm:^2.0.2"
+    loader-utils: "npm:^2.0.0"
     lodash: "npm:^4.17.21"
-  checksum: f6f25a22a302dacbf4fbc76b7da423fea32dccd8987dcedae949fc7a85abe5e10452e17ef108b9a729b286714368dd30a1c22b938dd2aaa776dd26c29b77d394
+  checksum: a407f19455aa51c78ecbff388493b31845775e2fb1dd85a3b6fe48c80858bcdcaa03eee0e456a89726d7d86c94ca70739eb1275daaf0924299880c5a42f43d54
   languageName: node
   linkType: hard
 
@@ -9149,7 +9161,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.12, @types/react@npm:^18.0.12":
+"@types/react@npm:18.0.12, @types/react@npm:>=16, @types/react@npm:^18.0.12":
   version: 18.0.12
   resolution: "@types/react@npm:18.0.12"
   dependencies:
@@ -20456,7 +20468,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^2.0.0, loader-utils@npm:^2.0.2":
+"loader-utils@npm:^2.0.0":
   version: 2.0.2
   resolution: "loader-utils@npm:2.0.2"
   dependencies:
@@ -24682,7 +24694,7 @@ __metadata:
     "@emotion/css": "npm:^11.9.0"
     "@emotion/react": "npm:11.9.0"
     "@emotion/styled": "npm:11.8.1"
-    "@mdx-js/react": "npm:^1.6.22"
+    "@mdx-js/react": "npm:^2.1.1"
     "@nrwl/cli": "npm:^14.2.4"
     "@nrwl/jest": "npm:14.2.4"
     "@nrwl/react": "npm:^14.2.4"
@@ -24696,7 +24708,7 @@ __metadata:
     "@storybook/addon-links": "npm:^6.5.8"
     "@storybook/builder-webpack5": "npm:^6.5.8"
     "@storybook/manager-webpack5": "npm:^6.5.8"
-    "@storybook/mdx2-csf": "npm:^0.0.4-canary.7.37514ba.0"
+    "@storybook/mdx2-csf": "npm:^0.0.3"
     "@storybook/react": "npm:^6.5.8"
     "@storybook/testing-library": "npm:^0.0.12"
     "@svgr/webpack": "npm:^6.2.1"

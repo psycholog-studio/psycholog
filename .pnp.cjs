@@ -63,7 +63,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/css", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:11.9.0"],\
           ["@emotion/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:11.9.0"],\
           ["@emotion/styled", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:11.8.1"],\
-          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:1.6.22"],\
+          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:2.1.1"],\
           ["@nrwl/cli", "npm:14.2.4"],\
           ["@nrwl/jest", "npm:14.2.4"],\
           ["@nrwl/react", "npm:14.2.4"],\
@@ -77,7 +77,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/addon-links", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
           ["@storybook/builder-webpack5", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
           ["@storybook/manager-webpack5", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
-          ["@storybook/mdx2-csf", "npm:0.0.4-canary.7.37514ba.0"],\
+          ["@storybook/mdx2-csf", "npm:0.0.3"],\
           ["@storybook/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
           ["@storybook/testing-library", "npm:0.0.12"],\
           ["@svgr/webpack", "npm:6.2.1"],\
@@ -10498,10 +10498,31 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:1.6.22", {\
-        "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-eae7bd5e2c/3/.yarn/berry/cache/@mdx-js-react-npm-1.6.22-57e4c05c2b-9.zip/node_modules/@mdx-js/react/",\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@mdx-js-react-npm-2.1.1-9ddd2e5958-9.zip/node_modules/@mdx-js/react/",\
         "packageDependencies": [\
-          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:1.6.22"],\
+          ["@mdx-js/react", "npm:2.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:2.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-4d9674ab40/3/.yarn/berry/cache/@mdx-js-react-npm-2.1.1-9ddd2e5958-9.zip/node_modules/@mdx-js/react/",\
+        "packageDependencies": [\
+          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:2.1.1"],\
+          ["@types/mdx", "npm:2.0.2"],\
+          ["@types/react", "npm:18.0.12"],\
+          ["react", "npm:18.1.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:1.6.22", {\
+        "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-ff1d6f2336/3/.yarn/berry/cache/@mdx-js-react-npm-1.6.22-57e4c05c2b-9.zip/node_modules/@mdx-js/react/",\
+        "packageDependencies": [\
+          ["@mdx-js/react", "virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:1.6.22"],\
           ["@types/react", "npm:18.0.12"],\
           ["react", "npm:18.1.0"]\
         ],\
@@ -14183,7 +14204,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/plugin-transform-react-jsx", "virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:7.16.7"],\
           ["@babel/preset-env", "virtual:c434339fe4fa1f8971e19eda167b4949c5cbc3a05c4fc2590b6dfd872134d5875db0440d6aa6e6d0c181e50a93bb3242811005ad50d546c412c68aa9f932b39d#npm:7.16.8"],\
           ["@jest/transform", "npm:26.6.2"],\
-          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:1.6.22"],\
+          ["@mdx-js/react", "virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:1.6.22"],\
           ["@storybook/addons", "virtual:af696edca24d161c31b2d1f658e73b4f8bdbfb2c48d9e7e8929d9135f879a42bf13fc7da06b068af36bb1cecaac5b7e438bd777e1da6f3e6858ae9bff42abe87#npm:6.5.8"],\
           ["@storybook/api", "virtual:af696edca24d161c31b2d1f658e73b4f8bdbfb2c48d9e7e8929d9135f879a42bf13fc7da06b068af36bb1cecaac5b7e438bd777e1da6f3e6858ae9bff42abe87#npm:6.5.8"],\
           ["@storybook/components", "virtual:af696edca24d161c31b2d1f658e73b4f8bdbfb2c48d9e7e8929d9135f879a42bf13fc7da06b068af36bb1cecaac5b7e438bd777e1da6f3e6858ae9bff42abe87#npm:6.5.8"],\
@@ -14192,7 +14213,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/csf", "npm:0.0.2--canary.4566f4d.1"],\
           ["@storybook/docs-tools", "npm:6.5.8"],\
           ["@storybook/mdx1-csf", "npm:0.0.1"],\
-          ["@storybook/mdx2-csf", "npm:0.0.4-canary.7.37514ba.0"],\
+          ["@storybook/mdx2-csf", "npm:0.0.3"],\
           ["@storybook/node-logger", "npm:6.5.8"],\
           ["@storybook/postinstall", "npm:6.5.8"],\
           ["@storybook/preview-web", "virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:6.5.8"],\
@@ -14232,7 +14253,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/plugin-transform-react-jsx", "virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:7.16.7"],\
           ["@babel/preset-env", "virtual:c434339fe4fa1f8971e19eda167b4949c5cbc3a05c4fc2590b6dfd872134d5875db0440d6aa6e6d0c181e50a93bb3242811005ad50d546c412c68aa9f932b39d#npm:7.16.8"],\
           ["@jest/transform", "npm:26.6.2"],\
-          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:1.6.22"],\
+          ["@mdx-js/react", "virtual:689a59553409c4442a280755ef3a237255ea513a713aad12b027401bf844b3fb4dca5b0aaa2f8009ae1a43782f09591663bbd14456f7d21f5b4e42787fe863d3#npm:1.6.22"],\
           ["@storybook/addons", "virtual:af696edca24d161c31b2d1f658e73b4f8bdbfb2c48d9e7e8929d9135f879a42bf13fc7da06b068af36bb1cecaac5b7e438bd777e1da6f3e6858ae9bff42abe87#npm:6.5.8"],\
           ["@storybook/api", "virtual:af696edca24d161c31b2d1f658e73b4f8bdbfb2c48d9e7e8929d9135f879a42bf13fc7da06b068af36bb1cecaac5b7e438bd777e1da6f3e6858ae9bff42abe87#npm:6.5.8"],\
           ["@storybook/components", "virtual:af696edca24d161c31b2d1f658e73b4f8bdbfb2c48d9e7e8929d9135f879a42bf13fc7da06b068af36bb1cecaac5b7e438bd777e1da6f3e6858ae9bff42abe87#npm:6.5.8"],\
@@ -15934,10 +15955,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@storybook/mdx2-csf", [\
-      ["npm:0.0.4-canary.7.37514ba.0", {\
-        "packageLocation": "../../.yarn/berry/cache/@storybook-mdx2-csf-npm-0.0.4-canary.7.37514ba.0-640d854410-9.zip/node_modules/@storybook/mdx2-csf/",\
+      ["npm:0.0.3", {\
+        "packageLocation": "../../.yarn/berry/cache/@storybook-mdx2-csf-npm-0.0.3-1cf5560b00-9.zip/node_modules/@storybook/mdx2-csf/",\
         "packageDependencies": [\
-          ["@storybook/mdx2-csf", "npm:0.0.4-canary.7.37514ba.0"],\
+          ["@storybook/mdx2-csf", "npm:0.0.3"],\
           ["@babel/generator", "npm:7.16.8"],\
           ["@babel/parser", "npm:7.16.8"],\
           ["@mdx-js/mdx", "npm:2.1.1"],\
@@ -37193,7 +37214,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/css", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:11.9.0"],\
           ["@emotion/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:11.9.0"],\
           ["@emotion/styled", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:11.8.1"],\
-          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:1.6.22"],\
+          ["@mdx-js/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:2.1.1"],\
           ["@nrwl/cli", "npm:14.2.4"],\
           ["@nrwl/jest", "npm:14.2.4"],\
           ["@nrwl/react", "npm:14.2.4"],\
@@ -37207,7 +37228,7 @@ const RAW_RUNTIME_STATE =
           ["@storybook/addon-links", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
           ["@storybook/builder-webpack5", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
           ["@storybook/manager-webpack5", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
-          ["@storybook/mdx2-csf", "npm:0.0.4-canary.7.37514ba.0"],\
+          ["@storybook/mdx2-csf", "npm:0.0.3"],\
           ["@storybook/react", "virtual:244f64ef794bbec30973c6274cf724b9e16f5bb936139e411d4021017a45eef5fa2b49c7cd0f35ca18505578e38dc628a0aba66d7e6be60e99b637f236b0e435#npm:6.5.8"],\
           ["@storybook/testing-library", "npm:0.0.12"],\
           ["@svgr/webpack", "npm:6.2.1"],\
@@ -44802,6 +44823,14 @@ class NodeFS extends BasePortableFakeFS {
   truncateSync(p, len) {
     return this.realFs.truncateSync(npath.fromPortablePath(p), len);
   }
+  async ftruncatePromise(fd, len) {
+    return await new Promise((resolve, reject) => {
+      this.realFs.ftruncate(fd, len, this.makeCallback(resolve, reject));
+    });
+  }
+  ftruncateSync(fd, len) {
+    return this.realFs.ftruncateSync(fd, len);
+  }
   watch(p, a, b) {
     return this.realFs.watch(npath.fromPortablePath(p), a, b);
   }
@@ -46030,6 +46059,12 @@ class ZipFS extends BasePortableFakeFS {
     source.copy(truncated);
     return this.writeFileSync(p, truncated);
   }
+  async ftruncatePromise(fd, len) {
+    return this.truncatePromise(this.fdToPath(fd, `ftruncate`), len);
+  }
+  ftruncateSync(fd, len) {
+    return this.truncateSync(this.fdToPath(fd, `ftruncateSync`), len);
+  }
   watch(p, a, b) {
     let persistent;
     switch (typeof a) {
@@ -46270,6 +46305,12 @@ class ProxiedFS extends FakeFS {
   }
   truncateSync(p, len) {
     return this.baseFs.truncateSync(this.mapToBase(p), len);
+  }
+  async ftruncatePromise(fd, len) {
+    return this.baseFs.ftruncatePromise(fd, len);
+  }
+  ftruncateSync(fd, len) {
+    return this.baseFs.ftruncateSync(fd, len);
   }
   watch(p, a, b) {
     return this.baseFs.watch(this.mapToBase(p), a, b);
@@ -46994,6 +47035,24 @@ class ZipOpenFS extends BasePortableFakeFS {
       return zipFs.truncateSync(subPath, len);
     });
   }
+  async ftruncatePromise(fd, len) {
+    if ((fd & ZIP_FD) === 0)
+      return this.baseFs.ftruncatePromise(fd, len);
+    const entry = this.fdMap.get(fd);
+    if (typeof entry === `undefined`)
+      throw EBADF(`ftruncate`);
+    const [zipFs, realFd] = entry;
+    return zipFs.ftruncatePromise(realFd, len);
+  }
+  ftruncateSync(fd, len) {
+    if ((fd & ZIP_FD) === 0)
+      return this.baseFs.ftruncateSync(fd, len);
+    const entry = this.fdMap.get(fd);
+    if (typeof entry === `undefined`)
+      throw EBADF(`ftruncateSync`);
+    const [zipFs, realFd] = entry;
+    return zipFs.ftruncateSync(realFd, len);
+  }
   watch(p, a, b) {
     return this.makeCallSync(p, () => {
       return this.baseFs.watch(p, a, b);
@@ -47217,6 +47276,7 @@ const SYNC_IMPLEMENTATIONS = new Set([
   `statSync`,
   `symlinkSync`,
   `truncateSync`,
+  `ftruncateSync`,
   `unlinkSync`,
   `unwatchFile`,
   `utimesSync`,
@@ -47249,6 +47309,7 @@ const ASYNC_IMPLEMENTATIONS = new Set([
   `statPromise`,
   `symlinkPromise`,
   `truncatePromise`,
+  `ftruncatePromise`,
   `unlinkPromise`,
   `utimesPromise`,
   `writeFilePromise`,
