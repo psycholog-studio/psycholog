@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Story, Meta } from '@storybook/react'
 import Input, { InputProps } from './Input'
 import { paddingDecorator } from '../storyUtils'

@@ -1,0 +1,23 @@
+{
+  "name": "@psycholog-studio/base",
+  "version": "0.3.2",
+  "description": "> TODO: description",
+  "author": "tokileecy <tokileecy@gmail.com>",
+  "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
+  "main": "index",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./build/ && mkdir ./build/ &&node ../../scripts/create-package-file && cp index.js ./build/index.js && cp index.d.ts ./build/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psycholog-studio/psycholog.git"
+  },
+  "peerDependencies": {
+    "three": "^0.136.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.141.0",
+    "three": "^0.141.0"
+  }
+}

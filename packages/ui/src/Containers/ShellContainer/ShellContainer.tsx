@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { cx, css } from '@emotion/css'
 import * as styles from './ShellContainer.styles'
 

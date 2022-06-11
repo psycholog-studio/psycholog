@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import * as styles from './TextsEffect.styles'
 
 const getRandom = (min: number, max: number): number => {

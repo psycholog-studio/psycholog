@@ -1,4 +1,3 @@
-import React from 'react'
 import BaseLayout from '@psycholog-studio/ui/Layouts/BaseLayout'
 import ShellContainer from '@psycholog-studio/ui/Containers/ShellContainer'
 import TextLine from '@psycholog-studio/ui/TextLine'

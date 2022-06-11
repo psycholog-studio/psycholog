@@ -1,4 +1,4 @@
-import React, { useCallback, ReactNode } from 'react'
+import { useCallback, ReactNode } from 'react'
 import { cx } from '@emotion/css'
 import useThreeManager from '../hooks/useThreeManager'
 import * as styles from './UILayer.styles'

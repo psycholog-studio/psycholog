@@ -1,4 +1,3 @@
-import React from 'react'
 import * as styles from './TextLine.styles'
 import { cx } from '@emotion/css'
 

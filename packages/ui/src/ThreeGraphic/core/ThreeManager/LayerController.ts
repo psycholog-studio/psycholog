@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { CSS3DRenderer } from '../../../lib/CSS3DRenderer'
+import { CSS3DRenderer } from '@psycholog-studio/base'
 
 export type LayerControllerOptions = {
   isAutoSize?: boolean

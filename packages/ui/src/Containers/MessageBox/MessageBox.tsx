@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { cx } from '@emotion/css'
 import Box, { BoxProps, BoxRef } from '../Box'
 import * as styles from './MessageBox.styles'

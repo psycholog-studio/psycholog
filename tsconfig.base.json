@@ -1,8 +1,7 @@
-{
+{ 
   "compilerOptions": {
-    "jsx": "react",
-    "target": "es2020",
-    "module": "commonjs",
+    "jsx": "react-jsx",
+    "target": "es2022",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,11 +10,38 @@
     "isolatedModules": true,
     "moduleResolution": "node",
     "declaration": true,
-    "noEmit": false,
+    "noEmit": true,
     "types": [],
-    "sourceMap": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
-  }
+    "noImplicitReturns": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "skipDefaultLibCheck": true,
+    "paths": {
+      "@psycholog-studio/ui": ["./packages/ui/src"],
+      "@psycholog-studio/ui/*": ["./packages/ui/src/*"],
+
+      "@psycholog-studio/scenes": ["./packages/scenes/src"],
+      "@psycholog-studio/scenes/*": ["./packages/scenes/src/*"],
+
+      "@psycholog-studio/utils": ["./packages/utils/src"],
+      "@psycholog-studio/utils/*": ["./packages/utils/src/*"],
+    },
+  },
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules"]
+  },
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx", "dist", "node_modules", "./scripts"]
 }

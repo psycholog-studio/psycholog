@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Layout from '../base/Layout'
 import ThreeManager from '@psycholog-studio/ui/ThreeGraphic/core/ThreeManager'
 import { scene } from './utils'

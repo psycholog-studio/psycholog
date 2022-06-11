@@ -4,13 +4,17 @@
   "description": "> TODO: description",
   "author": "tokileecy <tokileecy@gmail.com>",
   "license": "MIT",
-  "main": "lib/utils.js",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psycholog-studio/psycholog.git"
   },
   "scripts": {
-    "build": "rm -rf build && yarn build:node && yarn build:copy-files",
+    "build": "rm -rf dist && yarn build:node && yarn build:copy-files",
     "build:node": "tsc -p tsconfig.build.json",
     "build:copy-files": "node ../../scripts/create-package-file"
   },

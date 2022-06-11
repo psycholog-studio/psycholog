@@ -1,4 +1,4 @@
-import React, {
+import {
   useEffect,
   useRef,
   useContext,
@@ -6,13 +6,14 @@ import React, {
   forwardRef,
   ForwardedRef,
 } from 'react'
-import ReactDom from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { cx } from '@emotion/css'
-import { CSS3DObject } from '../../../lib/CSS3DRenderer'
+import { CSS3DObject } from '@psycholog-studio/base'
 import { ThreeCSSLayerContext } from '../ThreeCSSLayer'
 import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
 import useThreeManager from '../../hooks/useThreeManager'
 import * as styles from './ThreeCSSObject.styles'
+import { Object3D } from 'three'
 
 export interface ThreeCSSLayerProps {
   children?: ReactNode
@@ -54,24 +55,32 @@ const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
 
     useEffect(() => {
       if (scene && css3DSpriteRef.current) {
-        scene.add(css3DSpriteRef.current)
+        scene.add(css3DSpriteRef.current as unknown as Object3D)
         threeManager.layerController.renderCss()
       }
 
       return () => {
         if (scene && css3DSpriteRef.current) {
-          scene.remove(css3DSpriteRef.current)
+          scene.remove(css3DSpriteRef.current as unknown as Object3D)
           threeManager.layerController.renderCss()
         }
       }
     }, [scene])
 
     useEffect(() => {
-      const root = ReactDom.createRoot(rootElementRef.current, () => {
-        // TODO add render queue to ThreeManager
-        threeManager.layerController.renderCss()
-      })
-      root.render(<>{children}</>)
+      if (rootElementRef.current) {
+        const root = createRoot(rootElementRef.current)
+        root.render(
+          <div
+            ref={() => {
+              // TODO add render queue to ThreeManager
+              threeManager.layerController.renderCss()
+            }}
+          >
+            {children}
+          </div>
+        )
+      }
     }, [children])
 
     return null

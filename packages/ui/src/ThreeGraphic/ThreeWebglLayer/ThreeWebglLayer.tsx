@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react'
+import { useRef, useCallback } from 'react'
 import useThreeManager from '../hooks/useThreeManager'
 import * as styles from './ThreeWebglLayer.styles'
 import { cx } from '@emotion/css'

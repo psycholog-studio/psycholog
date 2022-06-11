@@ -1,4 +1,3 @@
-import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import TextsEffect from './TextsEffect'
 import { paddingDecorator } from '../../storyUtils'

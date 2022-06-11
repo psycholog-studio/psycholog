@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, ReactNode, createContext } from 'react'
+import { useRef, useCallback, ReactNode, createContext } from 'react'
 import * as THREE from 'three'
 import { cx } from '@emotion/css'
 import useThreeManager from '../hooks/useThreeManager'

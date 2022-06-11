@@ -5,6 +5,7 @@
   "packages": [
     "packages/*",
     "lab/*",
+    "libs/*",
     "docs"
   ],
   "version": "0.3.2",
@@ -14,7 +15,12 @@
     },
     "publish": {
       "conventionalCommits": true,
-      "registry": "https://npm.pkg.github.com"
+      "registry": "https://npm.pkg.github.com",
+      "ignoreChanges": [
+        ".pnp.cjs",
+        ".yarn.lock",
+        "*.md"
+      ]
     }
   }
 }

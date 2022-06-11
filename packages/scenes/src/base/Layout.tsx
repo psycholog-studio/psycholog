@@ -1,4 +1,3 @@
-import React from 'react'
 import BaseLayout, {
   BaseLayoutProps,
 } from '@psycholog-studio/ui/Layouts/BaseLayout'

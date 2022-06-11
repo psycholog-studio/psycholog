@@ -6,6 +6,7 @@
 # compiled output
 /dist
 /build
+/libs/**/build
 /packages/**/build
 /tmp
 /out-tsc
@@ -13,6 +14,7 @@
 # dependencies
 /node_modules
 /docs/node_modules
+/libs/**/node_modules
 /packages/**/node_modules
 /legacy/**/node_modules
 
@@ -56,7 +58,7 @@ Thumbs.db
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-# .pnp.*
+.pnp.*
 
 #custom
 

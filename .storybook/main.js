@@ -53,6 +53,7 @@ module.exports = {
       "@psycholog-studio/ui": path.resolve(__dirname, "../packages/ui/src"),
       "@psycholog-studio/scenes": path.resolve(__dirname, "../packages/scenes/src"),
       "@psycholog-studio/utils": path.resolve(__dirname, "../packages/utils/src"),
+      "@psycholog-studio/base": path.resolve(__dirname, "../libs/base"),
     };
 
     config.module.rules.push({

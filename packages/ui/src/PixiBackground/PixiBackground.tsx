@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback, useEffect } from 'react'
 import * as PIXI from 'pixi.js'
 import PIXIContainer from './PixiContainer'
 import * as styles from './PixiBackground.styles'

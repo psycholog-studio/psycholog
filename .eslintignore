@@ -12,6 +12,7 @@ babel.config.js
 
 /docs/**/node_modules
 /packages/**/node_modules
+/libs/**/build
 /packages/**/build
 /packages/**/lib
 

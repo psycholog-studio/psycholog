@@ -1,4 +1,3 @@
-import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { css } from '@emotion/css'
 import Box, { BoxProps } from './Box'

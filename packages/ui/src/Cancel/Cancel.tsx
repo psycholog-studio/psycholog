@@ -1,4 +1,3 @@
-import React from 'react'
 import * as styles from './Cancel.styles'
 
 export type CancelProps = Record<string, unknown>

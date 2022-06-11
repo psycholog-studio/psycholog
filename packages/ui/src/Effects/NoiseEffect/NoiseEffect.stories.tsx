@@ -1,4 +1,3 @@
-import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import NoiseEffect from './NoiseEffect'
 import { paddingDecorator } from '../../storyUtils'

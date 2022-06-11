@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Story, Meta } from '@storybook/react'
 import ThreeCSSLayer from './ThreeCSSLayer'
 import * as THREE from 'three'
