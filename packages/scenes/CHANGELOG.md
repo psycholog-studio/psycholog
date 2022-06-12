@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/psycholog-studio/psycholog/compare/v0.3.2...v0.4.0) (2022-06-12)
+
+
+### Features
+
+* add base repo, adjust structure ([fe90747](https://github.com/psycholog-studio/psycholog/commit/fe9074726953e8865455ed595f3a736be60d394a))
+* upgrade yarn version, react 18, other dependencies ([50755c3](https://github.com/psycholog-studio/psycholog/commit/50755c3022dedce868fe59aca98d4af7c5b97f06))
+
+
+
+
+
 ## [0.3.2](https://github.com/psycholog-studio/psycholog/compare/v0.3.1...v0.3.2) (2022-04-10)
 
 **Note:** Version bump only for package @psycholog-studio/scenes
