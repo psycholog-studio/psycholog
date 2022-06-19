@@ -6,6 +6,7 @@
   "author": "tokileecy <tokileecy@gmail.com>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psycholog-studio/psycholog.git"
