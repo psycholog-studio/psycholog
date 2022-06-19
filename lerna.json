@@ -8,7 +8,7 @@
     "libs/*",
     "docs"
   ],
-  "version": "0.4.0",
+  "version": "0.4.1",
   "command": {
     "version": {
       "message": "chore(release): %s"
