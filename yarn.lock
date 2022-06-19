@@ -6336,7 +6336,7 @@ __metadata:
     "@types/three": "npm:^0.141.0"
     three: "npm:^0.141.0"
   peerDependencies:
-    three: ^0.136.0
+    three: ^0.141.0
   languageName: unknown
   linkType: soft
 
@@ -6401,9 +6401,9 @@ __metadata:
     three: "npm:^0.141.0"
     typescript: "npm:^4.7.3"
   peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    three: ^0.136.0
+    react: ^18.1.0
+    react-dom: ^18.1.0
+    three: ^0.141.0
   languageName: unknown
   linkType: soft
 
@@ -6430,9 +6430,9 @@ __metadata:
     three: "npm:^0.141.0"
     typescript: "npm:^4.7.3"
   peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    three: ^0.136.0
+    react: ^18.1.0
+    react-dom: ^18.1.0
+    three: ^0.141.0
   languageName: unknown
   linkType: soft
 
@@ -6447,8 +6447,8 @@ __metadata:
     react-dom: "npm:^18.1.0"
     typescript: "npm:^4.7.3"
   peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: ^18.1.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
