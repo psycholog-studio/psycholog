@@ -6,9 +6,6 @@
   "license": "MIT",
   "main": "dist/index",
   "types": "dist/index",
-  "files": [
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psycholog-studio/psycholog.git"
