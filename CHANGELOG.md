@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/psycholog-studio/psycholog/compare/v0.4.1...v0.4.2) (2022-06-19)
+
+
+### Bug Fixes
+
+* utils publish empty ([095803c](https://github.com/psycholog-studio/psycholog/commit/095803c610180252956b868f931576558b89f3c2))
+
+
+
+
+
 ## [0.4.1](https://github.com/psycholog-studio/psycholog/compare/v0.4.0...v0.4.1) (2022-06-19)
 
 
