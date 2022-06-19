@@ -1,6 +1,6 @@
 {
   "name": "@psycholog-studio/next-app",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,8 +11,8 @@
   "dependencies": {
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
-    "@psycholog-studio/ui": "^0.4.2",
-    "@psycholog-studio/utils": "^0.4.2",
+    "@psycholog-studio/ui": "^0.4.3",
+    "@psycholog-studio/utils": "^0.4.3",
     "@tweenjs/tween.js": "^18.6.4",
     "color": "^4.2.3",
     "d3": "^7.4.4",
