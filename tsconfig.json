@@ -1,0 +1,23 @@
+{
+  "exclude": ["node_modules", "**/build"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@psycholog/ui": ["./packages/ui/src"],
+      "@psycholog/ui/*": ["./packages/ui/src/*"],
+      "@psycholog/scenes": ["./packages/scenes/src"],
+      "@psycholog/scenes/*": ["./packages/scenes/src/*"]
+    },
+    "jsx": "react",
+    "target": "es2015",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "isolatedModules": true,
+    "moduleResolution": "node"
+  }
+}
