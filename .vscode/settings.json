@@ -1,8 +1,14 @@
 {
   "eslint.packageManager": "yarn",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
+		"source.fixAll.eslint": true,
+	},
+	"eslint.workingDirectories": [
+		"./packages/scenes",
+		"./packages/ui",
+		"./packages/utils"
+	],
+	"editor.tabSize": 2,
   "eslint.options": {
     "extensions": [
       ".js",
