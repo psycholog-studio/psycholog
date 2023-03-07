@@ -47,10 +47,10 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@psycholog-studio'
       - name: Install
-        run: yarn install
+        run: pnpm install
       - name: build
-        run: yarn release:build
+        run: pnpm release:build
       - name: publish
-        run: yarn release:publish
+        run: pnpm release:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

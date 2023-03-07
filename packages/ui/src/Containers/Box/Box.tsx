@@ -1,6 +1,5 @@
-import {
+import React, {
   ForwardedRef,
-  forwardRef,
   DetailedHTMLProps,
   HTMLAttributes,
 } from 'react'
@@ -15,7 +14,7 @@ export type BoxProps = Omit<
 
 export type BoxRef = ForwardedRef<HTMLDivElement>
 
-const Box = forwardRef((inProps: BoxProps, ref: BoxRef): JSX.Element => {
+const Box = React.forwardRef((inProps: BoxProps, ref: BoxRef): JSX.Element => {
   const { className, children, ...props } = inProps
   return (
     <div {...props} ref={ref} className={cx(styles.root, className)}>

@@ -1,9 +1,8 @@
-import {
+import React, {
   useEffect,
   useRef,
   useContext,
   ReactNode,
-  forwardRef,
   ForwardedRef,
 } from 'react'
 import { createRoot } from 'react-dom/client'
@@ -20,7 +19,7 @@ export interface ThreeCSSLayerProps {
   className?: string
 }
 
-const ThreeCSSObject = forwardRef<CSS3DObject, ThreeCSSLayerProps>(
+const ThreeCSSObject = React.forwardRef<CSS3DObject, ThreeCSSLayerProps>(
   (props: ThreeCSSLayerProps, ref: ForwardedRef<CSS3DObject>): null => {
     const { className, children } = props
 

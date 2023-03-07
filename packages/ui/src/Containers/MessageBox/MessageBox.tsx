@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import React from 'react'
 import { cx } from '@emotion/css'
 import Box, { BoxProps, BoxRef } from '../Box'
 import * as styles from './MessageBox.styles'
@@ -7,7 +7,7 @@ export interface MessageBoxProps extends BoxProps {
   collapsed?: boolean
 }
 
-const MessageBox = forwardRef(
+const MessageBox = React.forwardRef(
   (inProps: MessageBoxProps, ref: BoxRef): JSX.Element => {
     const { collapsed, className, ...props } = inProps
 

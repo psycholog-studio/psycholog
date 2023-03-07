@@ -1,14 +1,12 @@
-import {
-  forwardRef,
+import React, {
   ReactNode,
   ForwardedRef,
-  createContext,
   MutableRefObject,
 } from 'react'
 import ThreeManager from './core/ThreeManager'
 import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef'
 
-export const ThreeManagerContext = createContext<
+export const ThreeManagerContext = React.createContext<
   MutableRefObject<ThreeManager | null>
 >({ current: null })
 
@@ -17,7 +15,7 @@ type ThreeGraphicProps = {
   threeManager?: ThreeManager
 }
 
-const ThreeGraphic = forwardRef<ThreeManager, ThreeGraphicProps>(
+const ThreeGraphic = React.forwardRef<ThreeManager, ThreeGraphicProps>(
   (props: ThreeGraphicProps, ref: ForwardedRef<ThreeManager>) => {
     const { threeManager, children } = props
     let targetThreeManager = threeManager

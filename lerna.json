@@ -1,12 +1,7 @@
 {
-  "npmClient": "yarn",
+  "npmClient": "pnpm",
+  "useNx": true,
   "useWorkspaces": true,
-  "packages": [
-    "packages/*",
-    "lab/*",
-    "libs/*",
-    "docs"
-  ],
   "version": "0.4.3",
   "command": {
     "version": {

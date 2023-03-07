@@ -10,8 +10,8 @@
     "docs:dev": "start-storybook -p 6006",
     "docs:export": "build-storybook -o ./out-docs --quiet",
     "eslint:check": "eslint .",
-    "version": "yarn install && git stage yarn.lock",
-    "release:build": "yarn workspaces foreach -ptR --from '@psycholog-studio/{ui,scenes,utils}' run build",
+    "version": "pnpm install",
+    "release:build": " pnpm lerna run build --scope \"@psycholog-studio/{ui,scenes,utils,base}\"",
     "release:version": "lerna version --force-publish --conventional-commits",
     "release:publish": "lerna publish from-package --dist-tag latest -y --contents build --no-push --force-publish",
     "husky:prepare": "is-ci || husky install",
@@ -76,6 +76,7 @@
     "jest": "^28.1.1",
     "lerna": "^6.5.1",
     "node-polyfill-webpack-plugin": "^1.1.4",
+    "nx": "14.2.4",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -89,13 +90,6 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   },
-  "workspaces": [
-    "packages/*",
-    "lab/*",
-    "libs/*",
-    "docs"
-  ],
-  "packageManager": "yarn@3.4.1",
   "dependencies": {
     "@emotion/css": "^11.9.0",
     "@emotion/react": "11.9.3",

@@ -1,4 +1,4 @@
-import { useRef, useCallback, ReactNode, createContext } from 'react'
+import React, { useRef, useCallback, ReactNode } from 'react'
 import * as THREE from 'three'
 import { cx } from '@emotion/css'
 import useThreeManager from '../hooks/useThreeManager'
@@ -8,7 +8,7 @@ export type ThreeCSSLayerContextValue = {
   scene?: THREE.Scene
 }
 
-export const ThreeCSSLayerContext = createContext<ThreeCSSLayerContextValue>({
+export const ThreeCSSLayerContext = React.createContext<ThreeCSSLayerContextValue>({
   scene: undefined,
 })
 

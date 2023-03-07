@@ -1,5 +1,8 @@
-{ 
+{
   "compilerOptions": {
+    "rootDir": ".",
+    "importHelpers": true,
+    "lib": ["es2017", "dom"],
     "jsx": "react-jsx",
     "target": "es2022",
     "esModuleInterop": true,
@@ -9,7 +12,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleResolution": "node",
-    "declaration": true,
     "noEmit": true,
     "types": [],
     "noUnusedLocals": true,
@@ -26,15 +28,13 @@
     "module": "esnext",
     "skipDefaultLibCheck": true,
     "paths": {
-      "@psycholog-studio/ui": ["./packages/ui/src"],
-      "@psycholog-studio/ui/*": ["./packages/ui/src/*"],
-
-      "@psycholog-studio/scenes": ["./packages/scenes/src"],
-      "@psycholog-studio/scenes/*": ["./packages/scenes/src/*"],
-
-      "@psycholog-studio/utils": ["./packages/utils/src"],
-      "@psycholog-studio/utils/*": ["./packages/utils/src/*"],
-    },
+      "@psycholog-studio/scenes": ["packages/scenes/src"],
+      "@psycholog-studio/scenes/*": ["packages/scenes/src/*"],
+      "@psycholog-studio/ui": ["packages/ui/src"],
+      "@psycholog-studio/ui/*": ["packages/ui/src/*"],
+      "@psycholog-studio/utils": ["packages/utils/src"],
+      "@psycholog-studio/utils/*": ["packages/utils/src/*"]
+    }
   },
   "watchOptions": {
     "watchFile": "useFsEvents",
@@ -43,5 +43,12 @@
     "synchronousWatchDirectory": true,
     "excludeDirectories": ["**/node_modules"]
   },
-  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx", "dist", "node_modules", "./scripts"]
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "dist",
+    "node_modules",
+    "./scripts"
+  ],
 }

@@ -12,7 +12,7 @@
     "url": "git+https://github.com/psycholog-studio/psycholog.git"
   },
   "scripts": {
-    "build": "rm -rf dist && yarn build:node && yarn build:copy-files",
+    "build": "rm -rf dist && pnpm build:node && pnpm build:copy-files",
     "build:node": "tsc -p tsconfig.build.json",
     "build:copy-files": "node ../../scripts/create-package-file"
   },
