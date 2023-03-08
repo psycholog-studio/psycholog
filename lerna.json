@@ -10,7 +10,7 @@
     "publish": {
       "conventionalCommits": true,
       "registry": "https://npm.pkg.github.com",
-      "ignoreChanges": [".pnp.cjs", ".yarn.lock", "*.md"]
+      "ignoreChanges": ["pnpm-lock.yaml", "*.md"]
     }
   },
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
