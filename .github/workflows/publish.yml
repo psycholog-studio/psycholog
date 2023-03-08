@@ -48,7 +48,7 @@ jobs:
           scope: '@psycholog-studio'
       - uses: pnpm/action-setup@v2
         with:
-          version: 6.0.2
+          version: 7.29.0
       - name: Install
         run: pnpm install
       - name: build
