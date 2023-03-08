@@ -2,7 +2,7 @@
   "npmClient": "pnpm",
   "useNx": true,
   "useWorkspaces": true,
-  "version": "0.4.3",
+  "version": "0.5.0-alpha.0",
   "command": {
     "version": {
       "message": "chore(release): %s"
@@ -10,11 +10,7 @@
     "publish": {
       "conventionalCommits": true,
       "registry": "https://npm.pkg.github.com",
-      "ignoreChanges": [
-        ".pnp.cjs",
-        ".yarn.lock",
-        "*.md"
-      ]
+      "ignoreChanges": [".pnp.cjs", ".yarn.lock", "*.md"]
     }
   },
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
