@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0-alpha.6](https://github.com/psycholog-studio/psycholog/compare/v0.5.0-alpha.5...v0.5.0-alpha.6) (2023-03-08)
+
+### Bug Fixes
+
+- lock file not stage after versioned ([8e1c90c](https://github.com/psycholog-studio/psycholog/commit/8e1c90c545562a2ba507ce4a6f8dacd1a355e2ec))
+
 # [0.5.0-alpha.5](https://github.com/psycholog-studio/psycholog/compare/v0.5.0-alpha.4...v0.5.0-alpha.5) (2023-03-08)
 
 **Note:** Version bump only for package psycholog
