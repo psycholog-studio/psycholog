@@ -28,6 +28,8 @@
     "module": "esnext",
     "skipDefaultLibCheck": true,
     "paths": {
+      "@psycholog-studio/base": ["packages/base"],
+      "@psycholog-studio/base/*": ["packages/base/*"],
       "@psycholog-studio/scenes": ["packages/scenes/src"],
       "@psycholog-studio/scenes/*": ["packages/scenes/src/*"],
       "@psycholog-studio/ui": ["packages/ui/src"],

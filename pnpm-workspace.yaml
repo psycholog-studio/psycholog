@@ -1,5 +1,2 @@
 packages:
   - "packages/*"
-  - "lab/*"
-  - "libs/*"
-  - "docs"
