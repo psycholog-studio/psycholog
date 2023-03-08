@@ -10,7 +10,7 @@
     "docs:dev": "start-storybook -p 6006",
     "docs:export": "build-storybook -o ./out-docs --quiet",
     "eslint:check": "eslint .",
-    "version": "pnpm install",
+    "version": "pnpm install && git stage pnpm-lock.yaml",
     "release:build": " pnpm lerna run build --scope \"@psycholog-studio/{ui,scenes,utils,base}\"",
     "release:version": "lerna version --force-publish --conventional-commits",
     "release:publish": "lerna publish from-package --dist-tag latest -y --contents build --no-push --force-publish",

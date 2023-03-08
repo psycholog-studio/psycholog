@@ -54,6 +54,6 @@ jobs:
       - name: build
         run: pnpm release:build
       - name: publish
-        run: pnpm release:publish
+        run: git checkout pnpm-lock.yaml && pnpm release:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
