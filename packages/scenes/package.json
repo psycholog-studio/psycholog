@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
-    "@psycholog-studio/ui": "^0.5.0"
+    "@psycholog-studio/ui": "workspace:^0.5.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
