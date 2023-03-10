@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { CSS3DRenderer } from '../../../lib/CSS3DObject';
+import { CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer';
 
 export type LayerControllerOptions = {
   isAutoSize?: boolean;
