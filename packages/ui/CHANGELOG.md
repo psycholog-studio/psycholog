@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/psycholog-studio/psycholog/compare/v0.5.0...v0.5.1) (2023-03-10)
+
+### Bug Fixes
+
+- pixi types warning(workaround) ([d02c4cc](https://github.com/psycholog-studio/psycholog/commit/d02c4cc7fb4c603b98ca6fee1af1e169ade3cdc5))
+
 # [0.5.0](https://github.com/psycholog-studio/psycholog/compare/v0.5.0-alpha.6...v0.5.0) (2023-03-08)
 
 **Note:** Version bump only for package @psycholog-studio/ui

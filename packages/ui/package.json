@@ -1,6 +1,6 @@
 {
   "name": "@psycholog-studio/ui",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "> TODO: description",
   "author": "tokileecy <tokileecy@gmail.com>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
@@ -22,7 +22,7 @@
   "dependencies": {
     "@emotion/css": "^11.10.6",
     "@emotion/react": "^11.10.6",
-    "@psycholog-studio/utils": "workspace:^0.5.0",
+    "@psycholog-studio/utils": "workspace:^0.5.1",
     "color": "^4.2.3",
     "pixi.js": "^7.1.4"
   },
