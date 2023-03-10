@@ -11,8 +11,8 @@
     "url": "git+https://github.com/psycholog-studio/psycholog.git"
   },
   "scripts": {
-    "eslint:check": "eslint .",
-    "eslint:fix": "eslint . --fix",
+    "eslint:check": "pnpm eslint .",
+    "eslint:fix": "pnpm eslint . --fix",
     "build": "rm -rf dist && pnpm build:node && pnpm build:copy-files",
     "build:node": "tsc -p tsconfig.build.json",
     "build:copy-files": "node ../../scripts/create-package-file"
