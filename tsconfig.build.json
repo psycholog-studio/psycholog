@@ -31,8 +31,6 @@
     "skipDefaultLibCheck": true,
 
     "paths": {
-      "@psycholog-studio/base": ["./packages/base/build"],
-      "@psycholog-studio/base/*": ["./packages/base/build/*"],
       "@psycholog-studio/ui": ["./packages/ui/build"],
       "@psycholog-studio/ui/*": ["./packages/ui/build/*"],
       "@psycholog-studio/scenes": ["./packages/scenes/build"],

@@ -22,7 +22,6 @@
   "dependencies": {
     "@emotion/css": "^11.10.6",
     "@emotion/react": "^11.10.6",
-    "@psycholog-studio/base": "workspace:^0.5.0",
     "@psycholog-studio/utils": "workspace:^0.5.0",
     "color": "^4.2.3",
     "pixi.js": "^7.1.4"

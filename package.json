@@ -12,7 +12,7 @@
     "eslint:check": "pnpm lerna run eslint:check",
     "eslint:fix": "pnpm lerna run eslint:fix",
     "version": "pnpm install && git stage pnpm-lock.yaml",
-    "release:build": " pnpm lerna run build --scope \"@psycholog-studio/{ui,scenes,utils,base}\"",
+    "release:build": " pnpm lerna run build --scope \"@psycholog-studio/{ui,scenes,utils}\"",
     "release:version": "lerna version --force-publish --conventional-commits",
     "release:publish": "lerna publish from-package --dist-tag latest -y --contents build --no-push --force-publish",
     "husky:prepare": "is-ci || husky install",

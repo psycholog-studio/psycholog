@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import { createRoot } from 'react-dom/client';
 import { cx } from '@emotion/css';
-import { CSS3DObject } from '@psycholog-studio/base';
+import { CSS3DObject } from '../../../lib/CSS3DObject';
 import { ThreeCSSLayerContext } from '../ThreeCSSLayer';
 import useForwardedRef from '@psycholog-studio/utils/hooks/useForwardedRef';
 import useThreeManager from '../../hooks/useThreeManager';

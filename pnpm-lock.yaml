@@ -159,14 +159,6 @@ importers:
       webpack: 5.76.0_webpack-cli@5.0.1
       webpack-cli: 5.0.1_webpack@5.76.0
 
-  packages/base:
-    specifiers:
-      '@types/three': ^0.149.0
-      three: ^0.150.1
-    devDependencies:
-      '@types/three': 0.149.0
-      three: 0.150.1
-
   packages/scenes:
     specifiers:
       '@emotion/css': ^11.10.6
@@ -218,7 +210,6 @@ importers:
     specifiers:
       '@emotion/css': ^11.10.6
       '@emotion/react': ^11.10.6
-      '@psycholog-studio/base': workspace:^0.5.0
       '@psycholog-studio/utils': workspace:^0.5.0
       '@storybook/react': ^6.5.16
       '@types/color': ^3.0.3
@@ -245,7 +236,6 @@ importers:
     dependencies:
       '@emotion/css': 11.10.6
       '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
-      '@psycholog-studio/base': link:../base
       '@psycholog-studio/utils': link:../utils
       color: 4.2.3
       pixi.js: 7.1.4

@@ -33,12 +33,6 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           min-versions-to-keep: 3
           delete-only-pre-release-versions: "true"
-      - uses: actions/delete-package-versions@v2
-        with: 
-          package-name: 'base'
-          token: ${{ secrets.NPM_TOKEN }}
-          min-versions-to-keep: 3
-          delete-only-pre-release-versions: "true"
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
