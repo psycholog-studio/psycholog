@@ -161,7 +161,7 @@ importers:
   packages/scenes:
     specifiers:
       '@emotion/css': ^11.10.6
-      '@psycholog-studio/ui': workspace:^0.5.1
+      '@psycholog-studio/ui': workspace:^0.5.2
       '@storybook/react': ^6.5.16
       '@types/node': ^18.15.0
       '@types/react': ^18.0.28
@@ -209,7 +209,7 @@ importers:
     specifiers:
       '@emotion/css': ^11.10.6
       '@emotion/react': ^11.10.6
-      '@psycholog-studio/utils': workspace:^0.5.1
+      '@psycholog-studio/utils': workspace:^0.5.2
       '@storybook/react': ^6.5.16
       '@types/color': ^3.0.3
       '@types/node': ^18.15.0

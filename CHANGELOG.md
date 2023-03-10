@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/psycholog-studio/psycholog/compare/v0.5.1...v0.5.2) (2023-03-10)
+
+### Bug Fixes
+
+- release deps should not catain workspace: ([7085666](https://github.com/psycholog-studio/psycholog/commit/70856667a345bc893d8c1793584da053717d5524))
+
 ## [0.5.1](https://github.com/psycholog-studio/psycholog/compare/v0.5.0...v0.5.1) (2023-03-10)
 
 ### Bug Fixes
