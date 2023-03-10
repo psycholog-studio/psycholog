@@ -2,7 +2,7 @@
   "npmClient": "pnpm",
   "useNx": true,
   "useWorkspaces": true,
-  "version": "0.5.2",
+  "version": "0.5.3",
   "command": {
     "version": {
       "message": "chore(release): %s"
