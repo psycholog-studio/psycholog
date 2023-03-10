@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/psycholog-studio/psycholog/compare/v0.5.3...v0.5.4) (2023-03-10)
+
+### Features
+
+- remove CSS3DObject from lib ([712bc62](https://github.com/psycholog-studio/psycholog/commit/712bc62e7166ad2aadbd7912b648114c18948088))
+
 ## [0.5.3](https://github.com/psycholog-studio/psycholog/compare/v0.5.2...v0.5.3) (2023-03-10)
 
 **Note:** Version bump only for package @psycholog-studio/ui
