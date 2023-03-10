@@ -12,12 +12,30 @@ const createPackageFile = async () => {
     path.resolve(packagePath, './package.json'),
     'utf8'
   )
-  const { scripts, devDependencies, workspaces, ...others } =
+  const { scripts, dependencies, devDependencies, workspaces, ...others } =
     JSON.parse(packageData)
 
-  const newPackageData = {
+  
+  let newPackageData = {
     ...others,
     private: false,
+  }
+
+  if(dependencies) {
+    const targetDependencies = Object.entries(dependencies).reduce((obj, [depsName, depsValue]) => {
+      if (depsName.includes('@psycholog')) {
+        obj[depsName] = depsValue.replace('workspace:', '')
+      } else {
+        obj[depsName] = depsValue
+      }
+
+      return obj
+    }, {})
+
+    newPackageData = {
+      ...newPackageData,
+      dependencies: targetDependencies,
+    }
   }
 
   const targetPath = path.resolve(buildPath, './package.json')
