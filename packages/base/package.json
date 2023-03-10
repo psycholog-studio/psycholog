@@ -5,7 +5,6 @@
   "author": "tokileecy <tokileecy@gmail.com>",
   "homepage": "https://github.com/tokileecy/psycholog-core-legacy#readme",
   "main": "index",
-  "type": "module",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./build/ && mkdir ./build/ &&node ../../scripts/create-package-file && cp index.js ./build/index.js && cp index.d.ts ./build/index.d.ts"

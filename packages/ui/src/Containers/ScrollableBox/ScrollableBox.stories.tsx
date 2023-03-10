@@ -1,12 +1,12 @@
-import { Story, Meta } from '@storybook/react'
-import ScrollableBox, { ScrollableBoxProps } from './ScrollableBox'
-import { paddingDecorator } from '../../storyUtils'
+import { Story, Meta } from '@storybook/react';
+import ScrollableBox, { ScrollableBoxProps } from './ScrollableBox';
+import { paddingDecorator } from '../../storyUtils';
 
 export default {
   title: 'ui/Containers/ScrollableBox',
   component: ScrollableBox,
   decorators: [paddingDecorator],
-} as Meta
+} as Meta;
 
 const Template: Story<ScrollableBoxProps> = (args) => {
   return (
@@ -19,16 +19,16 @@ const Template: Story<ScrollableBoxProps> = (args) => {
         overflow: 'hidden',
       }}
     />
-  )
-}
+  );
+};
 
-export const Normal = Template.bind({})
+export const Normal = Template.bind({});
 
 Normal.parameters = {
   backgrounds: { default: 'dark' },
-}
+};
 
 Normal.args = {
   children:
     'fqewkfopewqjfoewqjfopeqwjfopiewqjiopfwjiopfewqiopfjeiqwopjfqwejfwqepfjpoewjfopejofpewjqpofjewpiofjopiewqjfpoweqjfpoewjfopiewqjfopqewjfpoqewjpofewpoqfjewpoqjfpioeqwjfpoieqwjfpoeqwjfpoqwejpofiqwejpoifweqpiofjqwopiefjopiqewfjipoeqwjfopeqwjipfipj',
-}
+};

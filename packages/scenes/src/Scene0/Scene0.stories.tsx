@@ -1,6 +1,6 @@
-import React from 'react'
-import { Story, Meta } from '@storybook/react'
-import Scene0 from './Scene0'
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+import Scene0 from './Scene0';
 
 export default {
   title: 'scenes/Scene0',
@@ -8,9 +8,10 @@ export default {
   argTypes: {
     children: { control: 'text' },
   },
-} as Meta
+} as Meta;
 
-const Template: Story = (args) => <Scene0 {...args} />
+const Template: Story = (args) => <Scene0 {...args} />;
 
-export const Normal = Template.bind({})
-Normal.args = {}
+export const Normal = Template.bind({});
+
+Normal.args = {};

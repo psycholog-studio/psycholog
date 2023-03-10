@@ -1,15 +1,15 @@
-import * as styles from './YtVideoChatMessages.styles'
-import YtVideoChatMessage from '../YtVideoChatMessage/YtVideoChatMessage'
+import * as styles from './YtVideoChatMessages.styles';
+import YtVideoChatMessage from '../YtVideoChatMessage/YtVideoChatMessage';
 
 export interface YtVideoChatMessagesProps {
   messages?: {
-    name: string
-    message: string
-  }[]
+    name: string;
+    message: string;
+  }[];
 }
 
 const YtVideoChatMessages = (props: YtVideoChatMessagesProps) => {
-  const { messages } = props
+  const { messages } = props;
 
   return (
     <div className={styles.root}>
@@ -25,7 +25,7 @@ const YtVideoChatMessages = (props: YtVideoChatMessagesProps) => {
       </div>
       <div className={styles.footer}>隱藏即時通訊</div>
     </div>
-  )
-}
+  );
+};
 
-export default YtVideoChatMessages
+export default YtVideoChatMessages;

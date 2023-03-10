@@ -1,14 +1,14 @@
-import * as styles from './YtVideoItem.styles'
+import * as styles from './YtVideoItem.styles';
 
 export interface YtVideoItemProps {
-  title?: string
-  desc?: string
-  time?: string
-  progress?: number
+  title?: string;
+  desc?: string;
+  time?: string;
+  progress?: number;
 }
 
 const YtVideoItem = (props: YtVideoItemProps) => {
-  const { title, desc, time, progress = 0.25 } = props
+  const { title, desc, time, progress = 0.25 } = props;
 
   return (
     <div className={styles.root}>
@@ -29,7 +29,7 @@ const YtVideoItem = (props: YtVideoItemProps) => {
         <div className={styles.desc}>{desc}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default YtVideoItem
+export default YtVideoItem;

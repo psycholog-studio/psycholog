@@ -1,2 +1,2 @@
-export { default } from './ShellContainer'
-export * from './ShellContainer'
+export { default } from './ShellContainer';
+export * from './ShellContainer';

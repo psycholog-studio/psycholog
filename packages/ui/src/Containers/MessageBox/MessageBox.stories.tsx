@@ -1,13 +1,13 @@
-import { Story, Meta } from '@storybook/react'
-import { css } from '@emotion/css'
-import MessageBox, { MessageBoxProps } from './MessageBox'
-import { paddingDecorator } from '../../storyUtils'
+import { Story, Meta } from '@storybook/react';
+import { css } from '@emotion/css';
+import MessageBox, { MessageBoxProps } from './MessageBox';
+import { paddingDecorator } from '../../storyUtils';
 
 export default {
   title: 'ui/Containers/MessageBox',
   component: MessageBox,
   decorators: [paddingDecorator],
-} as Meta
+} as Meta;
 
 const Template: Story<MessageBoxProps> = (args) => {
   return (
@@ -19,15 +19,15 @@ const Template: Story<MessageBoxProps> = (args) => {
     >
       messageBox
     </MessageBox>
-  )
-}
+  );
+};
 
-export const Normal = Template.bind({})
+export const Normal = Template.bind({});
 
 Normal.parameters = {
   backgrounds: { default: 'dark' },
-}
+};
 
 Normal.args = {
   collapsed: false,
-}
+};

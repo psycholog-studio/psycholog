@@ -1,9 +1,9 @@
-import { css, keyframes } from '@emotion/css'
+import { css, keyframes } from '@emotion/css';
 
 const blinker = keyframes`
   from {opacity: 1.0;}
   to {opacity: 0.0;}
-`
+`;
 
 export const root = css`
   padding: 4px;
@@ -20,7 +20,7 @@ export const root = css`
     line-height: 1.4em;
     margin: 0;
   }
-`
+`;
 
 export const input = css`
   height: 0;
@@ -40,7 +40,7 @@ export const input = css`
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
   }
-`
+`;
 
 export const terminalInput = css`
   outline: none;
@@ -49,4 +49,4 @@ export const terminalInput = css`
   border: none;
   resize: none;
   color: white;
-`
+`;

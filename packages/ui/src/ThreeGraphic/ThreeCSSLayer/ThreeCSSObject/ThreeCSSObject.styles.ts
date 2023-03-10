@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 export const root = css`
   display: flex;
@@ -6,4 +6,4 @@ export const root = css`
   justify-content: center;
   pointer-events: auto;
   user-select: none;
-`
+`;

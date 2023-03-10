@@ -1,2 +1,2 @@
-export { default } from './ThreeCSSObject'
-export * from './ThreeCSSObject'
+export { default } from './ThreeCSSObject';
+export * from './ThreeCSSObject';

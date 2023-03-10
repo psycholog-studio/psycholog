@@ -1,76 +1,85 @@
-import { useState, useEffect } from 'react'
-import * as styles from './TextsEffect.styles'
+import { useState, useEffect } from 'react';
+import * as styles from './TextsEffect.styles';
 
 const getRandom = (min: number, max: number): number => {
-  return Math.floor(Math.random() * max) + min
-}
+  return Math.floor(Math.random() * max) + min;
+};
 
 const getRandomTexts = () => {
   const aText = [
     'test!test!test!test!test!test!test!test!test!test!test!test!test!test!test!test!test!test!test!',
     'test!test!test!test!test!test!test!test!',
-  ]
+  ];
 
-  const t = 'test!'
+  const t = 'test!';
+
   for (let i = 0; i < 70; i++) {
-    const q = getRandom(4, 30)
-    let s = ''
+    const q = getRandom(4, 30);
+    let s = '';
+
     for (let j = 0; j < q; j++) {
-      s += t
+      s += t;
     }
-    aText.push(s)
+
+    aText.push(s);
   }
 
-  return aText
-}
+  return aText;
+};
 
 const delay = (interval: number): Promise<unknown> => {
   return new Promise((resolve) => {
-    window.setTimeout(resolve, interval)
-  })
-}
+    window.setTimeout(resolve, interval);
+  });
+};
 
 const TextsEffect = (): JSX.Element => {
-  const [texts, setTexts] = useState<string[]>([])
+  const [texts, setTexts] = useState<string[]>([]);
 
   const animate = async () => {
-    const randomTexts = getRandomTexts()
-    let currentIndex = 0
-    let isEsc = false
+    const randomTexts = getRandomTexts();
+    let currentIndex = 0;
+    let isEsc = false;
+
     const onEscClicked = function (e: { which: number }) {
       if (e.which === 27) {
-        isEsc = true
+        isEsc = true;
       }
-      document.removeEventListener('keydown', onEscClicked)
-    }
-    document.addEventListener('keydown', onEscClicked)
+
+      document.removeEventListener('keydown', onEscClicked);
+    };
+
+    document.addEventListener('keydown', onEscClicked);
+
     while (currentIndex < randomTexts.length) {
       if (isEsc) {
-        break
+        break;
       }
 
-      const lt = getRandom(10, 50)
-      await delay(lt)
+      const lt = getRandom(10, 50);
+
+      await delay(lt);
       setTexts((prev) => {
-        const next = [...prev]
-        next.push(randomTexts[currentIndex])
-        return next
-      })
-      currentIndex++
+        const next = [...prev];
+
+        next.push(randomTexts[currentIndex]);
+        return next;
+      });
+      currentIndex++;
     }
-  }
+  };
 
   useEffect(() => {
-    animate()
-  }, [])
+    animate();
+  }, []);
 
   return (
     <div className={styles.root}>
       {texts.map((text, index) => {
-        return <span key={index}>{text}</span>
+        return <span key={index}>{text}</span>;
       })}
     </div>
-  )
-}
+  );
+};
 
-export default TextsEffect
+export default TextsEffect;

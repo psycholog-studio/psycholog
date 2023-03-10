@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 // font-size: ${fontSize}px;
 // color: ${fontColor};
@@ -9,7 +9,7 @@ export const root = css`
   white-space: normal;
   text-shadow: 0px 0px 6.9px #000000, 0px 0px 6.9px #000000;
   padding: 2px 0px;
-`
+`;
 
 export const textButton = css`
   border-bottom-style: solid;
@@ -22,4 +22,4 @@ export const textButton = css`
     border-color: #c0d4f2;
     background-color: #386d9c;
   }
-`
+`;

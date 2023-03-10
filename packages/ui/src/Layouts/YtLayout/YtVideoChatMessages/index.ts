@@ -1,2 +1,2 @@
-export { default } from './YtVideoChatMessages'
-export * from './YtVideoChatMessages'
+export { default } from './YtVideoChatMessages';
+export * from './YtVideoChatMessages';

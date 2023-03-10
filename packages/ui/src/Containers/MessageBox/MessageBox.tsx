@@ -1,15 +1,15 @@
-import React from 'react'
-import { cx } from '@emotion/css'
-import Box, { BoxProps, BoxRef } from '../Box'
-import * as styles from './MessageBox.styles'
+import React from 'react';
+import { cx } from '@emotion/css';
+import Box, { BoxProps, BoxRef } from '../Box';
+import * as styles from './MessageBox.styles';
 
 export interface MessageBoxProps extends BoxProps {
-  collapsed?: boolean
+  collapsed?: boolean;
 }
 
 const MessageBox = React.forwardRef(
   (inProps: MessageBoxProps, ref: BoxRef): JSX.Element => {
-    const { collapsed, className, ...props } = inProps
+    const { collapsed, className, ...props } = inProps;
 
     return (
       <Box
@@ -20,13 +20,13 @@ const MessageBox = React.forwardRef(
           {
             collapsed,
           },
-          className
+          className,
         )}
       />
-    )
-  }
-)
+    );
+  },
+);
 
-MessageBox.displayName = 'MessageBox'
+MessageBox.displayName = 'MessageBox';
 
-export default MessageBox
+export default MessageBox;

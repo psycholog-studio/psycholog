@@ -1,2 +1,2 @@
-export { default } from './ThreeWebglLayer'
-export * from './ThreeWebglLayer'
+export { default } from './ThreeWebglLayer';
+export * from './ThreeWebglLayer';

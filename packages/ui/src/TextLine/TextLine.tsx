@@ -1,14 +1,14 @@
-import * as styles from './TextLine.styles'
-import { cx } from '@emotion/css'
+import * as styles from './TextLine.styles';
+import { cx } from '@emotion/css';
 
 export interface TextLineProps {
-  text: string
-  type?: 'button' | 'string'
+  text: string;
+  type?: 'button' | 'string';
 }
 
 const TextLine = (props: TextLineProps): JSX.Element => {
-  const { text, type = 'string' } = props
-  const textInside = text.replace(/ /g, '\u00A0')
+  const { text, type = 'string' } = props;
+  const textInside = text.replace(/ /g, '\u00A0');
 
   return (
     <span
@@ -18,7 +18,7 @@ const TextLine = (props: TextLineProps): JSX.Element => {
     >
       {textInside}
     </span>
-  )
-}
+  );
+};
 
-export default TextLine
+export default TextLine;

@@ -1,2 +1,2 @@
-export { default } from './NoiseEffect'
-export * from './NoiseEffect'
+export { default } from './NoiseEffect';
+export * from './NoiseEffect';

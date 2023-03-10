@@ -1,2 +1,2 @@
-export { default } from './ThreeGraphic'
-export * from './ThreeGraphic'
+export { default } from './ThreeGraphic';
+export * from './ThreeGraphic';

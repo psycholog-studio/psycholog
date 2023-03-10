@@ -1,11 +1,11 @@
-import { css } from '@emotion/css'
-import Color from 'color'
+import { css } from '@emotion/css';
+import Color from 'color';
 
-const scrollBarColor = new Color('#ffffff').alpha(0.7).toString()
+const scrollBarColor = new Color('#ffffff').alpha(0.7).toString();
 
-const textareaHorizonPadding = 0.4
+const textareaHorizonPadding = 0.4;
 
-const scrollBarPadding = 0.3
+const scrollBarPadding = 0.3;
 
 const scrollBar = css`
   &::-webkit-scrollbar {
@@ -26,7 +26,7 @@ const scrollBar = css`
     scrollbar-color: ${scrollBarColor} transparent;
     scrollbar-width: thin;
   }
-`
+`;
 
 export const scrollable = css`
   padding: 0 ${scrollBarPadding}ch 0
@@ -44,4 +44,4 @@ export const scrollable = css`
   line-break: anywhere;
 
   ${scrollBar};
-`
+`;

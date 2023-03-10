@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import PixiBackground from './PixiBackground'
+import { Story, Meta } from '@storybook/react';
+import PixiBackground from './PixiBackground';
 
 export default {
   title: 'ui/PixiBackground',
@@ -7,11 +7,12 @@ export default {
   argTypes: {
     children: { control: 'text' },
   },
-} as Meta
+} as Meta;
 
-const Template: Story = (args) => <PixiBackground {...args} />
+const Template: Story = (args) => <PixiBackground {...args} />;
 
-export const Normal = Template.bind({})
+export const Normal = Template.bind({});
+
 Normal.args = {
   text: '>>EWFEWQF?EWF?',
-}
+};

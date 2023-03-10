@@ -1,30 +1,31 @@
-import { useEffect, useRef } from 'react'
-import { Story, Meta } from '@storybook/react'
-import ThreeCSSLayer from './ThreeCSSLayer'
-import * as THREE from 'three'
-import ThreeManager from '../core/ThreeManager'
-import ThreeCSSObject from './ThreeCSSObject'
-import ThreeGraphic from '../ThreeGraphic'
+import { useEffect, useRef } from 'react';
+import { Story, Meta } from '@storybook/react';
+import ThreeCSSLayer from './ThreeCSSLayer';
+import * as THREE from 'three';
+import ThreeManager from '../core/ThreeManager';
+import ThreeCSSObject from './ThreeCSSObject';
+import ThreeGraphic from '../ThreeGraphic';
 
 export default {
   title: 'ui/ThreeGraphic/ThreeCSSLayer',
   component: ThreeCSSLayer,
-} as Meta
+} as Meta;
 
 const Template: Story = (args) => {
-  const sceneRef = useRef(new THREE.Scene())
-  const threeManagerRef = useRef<ThreeManager | null>(null)
+  const sceneRef = useRef(new THREE.Scene());
+  const threeManagerRef = useRef<ThreeManager | null>(null);
 
   useEffect(() => {
     if (threeManagerRef.current) {
-      threeManagerRef.current.layerController.setScene(sceneRef.current)
+      threeManagerRef.current.layerController.setScene(sceneRef.current);
     }
+
     return () => {
       if (threeManagerRef.current) {
-        threeManagerRef.current.layerController.setScene(undefined)
+        threeManagerRef.current.layerController.setScene(undefined);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <div
@@ -44,12 +45,12 @@ const Template: Story = (args) => {
                     obj.scale.set(
                       10 - index * 0.3,
                       10 - index * 0.3,
-                      10 - index * 0.3
-                    )
-                    obj.position.set(50 + index * 100, -300 + index * 200, 100)
-                    obj.rotateZ((Math.PI * index) / 20)
-                    obj.rotateY(Math.PI / 10)
-                    obj.rotateX(Math.PI / 5)
+                      10 - index * 0.3,
+                    );
+                    obj.position.set(50 + index * 100, -300 + index * 200, 100);
+                    obj.rotateZ((Math.PI * index) / 20);
+                    obj.rotateY(Math.PI / 10);
+                    obj.rotateX(Math.PI / 5);
                   }
                 }}
               >
@@ -60,16 +61,16 @@ const Template: Story = (args) => {
                   {index}
                 </span>
               </ThreeCSSObject>
-            )
+            );
           })}
 
           <ThreeCSSObject
             ref={(obj) => {
               if (obj) {
-                obj.scale.set(10, 10, 10)
-                obj.position.set(-200, 400, 100)
-                obj.rotateZ(Math.PI / 2)
-                obj.rotateY(Math.PI / 2)
+                obj.scale.set(10, 10, 10);
+                obj.position.set(-200, 400, 100);
+                obj.rotateZ(Math.PI / 2);
+                obj.rotateY(Math.PI / 2);
               }
             }}
           >
@@ -78,10 +79,10 @@ const Template: Story = (args) => {
           <ThreeCSSObject
             ref={(obj) => {
               if (obj) {
-                obj.scale.set(10, 10, 10)
-                obj.position.set(-200, -400, 0)
-                obj.rotateZ(Math.PI / 2)
-                obj.rotateY(-Math.PI / 2)
+                obj.scale.set(10, 10, 10);
+                obj.position.set(-200, -400, 0);
+                obj.rotateZ(Math.PI / 2);
+                obj.rotateY(-Math.PI / 2);
               }
             }}
           >
@@ -90,8 +91,9 @@ const Template: Story = (args) => {
         </ThreeCSSLayer>
       </ThreeGraphic>
     </div>
-  )
-}
+  );
+};
 
-export const Normal = Template.bind({})
-Normal.args = {}
+export const Normal = Template.bind({});
+
+Normal.args = {};

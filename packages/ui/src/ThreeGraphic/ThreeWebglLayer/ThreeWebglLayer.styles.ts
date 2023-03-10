@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 export const root = css`
   width: 100%;
@@ -7,4 +7,4 @@ export const root = css`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-`
+`;

@@ -1,2 +1,2 @@
-export { default } from './UnderlineItem'
-export * from './UnderlineItem'
+export { default } from './UnderlineItem';
+export * from './UnderlineItem';

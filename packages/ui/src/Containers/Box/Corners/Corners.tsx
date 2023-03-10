@@ -1,7 +1,7 @@
-import { css } from '@emotion/css'
-import CornerSvg from './CornerSvg'
+import { css } from '@emotion/css';
+import CornerSvg from './CornerSvg';
 
-const cornerSize = 10
+const cornerSize = 10;
 
 const Corners = (): JSX.Element => {
   return (
@@ -51,7 +51,7 @@ const Corners = (): JSX.Element => {
         `}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Corners
+export default Corners;

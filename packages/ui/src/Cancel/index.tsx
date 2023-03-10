@@ -1,2 +1,2 @@
-export { default } from './Cancel'
-export * from './Cancel'
+export { default } from './Cancel';
+export * from './Cancel';

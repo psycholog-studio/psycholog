@@ -9,7 +9,8 @@
   "scripts": {
     "docs:dev": "start-storybook -p 6006",
     "docs:export": "build-storybook -o ./out-docs --quiet",
-    "eslint:check": "eslint .",
+    "eslint:check": "pnpm lerna run eslint:check",
+    "eslint:fix": "pnpm lerna run eslint:fix",
     "version": "pnpm install && git stage pnpm-lock.yaml",
     "release:build": " pnpm lerna run build --scope \"@psycholog-studio/{ui,scenes,utils,base}\"",
     "release:version": "lerna version --force-publish --conventional-commits",
@@ -72,12 +73,12 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-testing-library": "^5.10.2",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.1.0",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
     "jest": "^29.5.0",
     "lerna": "^6.5.1",
-    "node-polyfill-webpack-plugin": "^1.1.4",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "nx": "15.8.5",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
@@ -90,7 +91,7 @@
     "typescript": "^4.9.5",
     "util": "^0.12.5",
     "webpack": "^5.76.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "@emotion/css": "^11.10.6",
@@ -99,7 +100,7 @@
     "core-js": "^3.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "regenerator-runtime": "0.13.9",
+    "regenerator-runtime": "0.13.11",
     "tslib": "^2.5.0"
   }
 }

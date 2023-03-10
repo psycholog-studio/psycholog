@@ -1,5 +1,5 @@
-import { css } from '@emotion/css'
-import Color from 'color'
+import { css } from '@emotion/css';
+import Color from 'color';
 
 export const root = css`
   display: flex;
@@ -16,4 +16,4 @@ export const root = css`
   &.collapsed {
     transform: translateX(-100%);
   }
-`
+`;

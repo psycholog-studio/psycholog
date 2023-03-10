@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 export const root = css`
   width: 100%;
@@ -7,7 +7,7 @@ export const root = css`
   justify-content: center;
   align-items: center;
   pointer-events: none;
-`
+`;
 
 export const uiContentWrapper = css`
   display: flex;
@@ -18,4 +18,4 @@ export const uiContentWrapper = css`
   > * {
     pointer-events: auto;
   }
-`
+`;

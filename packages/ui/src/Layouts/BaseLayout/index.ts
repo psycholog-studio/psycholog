@@ -1,2 +1,2 @@
-export { default } from './BaseLayout'
-export * from './BaseLayout'
+export { default } from './BaseLayout';
+export * from './BaseLayout';

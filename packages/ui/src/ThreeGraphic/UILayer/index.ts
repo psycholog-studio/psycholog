@@ -1,2 +1,2 @@
-export { default } from './UILayer'
-export * from './UILayer'
+export { default } from './UILayer';
+export * from './UILayer';

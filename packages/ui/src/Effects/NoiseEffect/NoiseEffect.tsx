@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import * as styles from './NoiseEffect.styles'
+import { useState } from 'react';
+import * as styles from './NoiseEffect.styles';
 
 const NoiseEffect = (): JSX.Element => {
-  const [testNoiseX] = useState(200)
-  const [testNoiseY] = useState(5)
+  const [testNoiseX] = useState(200);
+  const [testNoiseY] = useState(5);
 
   return (
     <div className={styles.root}>
@@ -35,7 +35,7 @@ const NoiseEffect = (): JSX.Element => {
         test!
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NoiseEffect
+export default NoiseEffect;

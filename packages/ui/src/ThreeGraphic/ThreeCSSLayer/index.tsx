@@ -1,2 +1,2 @@
-export { default } from './ThreeCSSLayer'
-export * from './ThreeCSSLayer'
+export { default } from './ThreeCSSLayer';
+export * from './ThreeCSSLayer';

@@ -33,6 +33,6 @@ const sizes = {
     width: 2560,
     height: 1440,
   },
-} as const
+} as const;
 
-export default sizes
+export default sizes;

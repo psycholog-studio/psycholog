@@ -1,1 +1,12 @@
+.eslintrc.js
+jest.preset.js
+jest.config.ts
+.vscode
+.storybook
+.husky
+.github
 node_modules
+scripts
+assets
+build
+out-docs

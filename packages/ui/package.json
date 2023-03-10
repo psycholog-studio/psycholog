@@ -9,15 +9,15 @@
     "type": "git",
     "url": "git+https://github.com/psycholog-studio/psycholog.git"
   },
-  "type": "module",
   "scripts": {
     "eslint:check": "eslint .",
+    "eslint:fix": "eslint . --fix",
     "build": "rm -rf build && pnpm build:node && pnpm build:copy-files",
     "build:node": "tsc -p tsconfig.build.json",
     "build:copy-files": "node ../../scripts/create-package-file && cp src/reset.css build/reset.css"
   },
   "eslintConfig": {
-    "extends": "../../.eslintrc.js"
+    "extends": "../../config/.eslintrc.js"
   },
   "dependencies": {
     "@emotion/css": "^11.10.6",
@@ -47,7 +47,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.1.0",
     "prettier": "2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

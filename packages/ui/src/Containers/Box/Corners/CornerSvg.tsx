@@ -1,9 +1,10 @@
-import React from 'react'
-import { cx, css } from '@emotion/css'
+import React from 'react';
+import { cx, css } from '@emotion/css';
 
 export type CornerProps = React.SVGProps<SVGSVGElement> & {
-  cornerSize?: number
-}
+  cornerSize?: number;
+  className: string;
+};
 
 const CornerSvg = ({
   cornerSize = 16,
@@ -23,12 +24,12 @@ const CornerSvg = ({
           width: ${cornerSize * 2}px;
           height: ${cornerSize * 2}px;
         `,
-        className
+        className,
       )}
     >
       <path d="M22.4706 20C21.1061 20 20 21.1061 20 22.4706V48H27.4118V37.2941C27.4118 31.8362 31.8362 27.4118 37.2941 27.4118H48V20H22.4706Z" />
     </svg>
-  )
-}
+  );
+};
 
-export default CornerSvg
+export default CornerSvg;

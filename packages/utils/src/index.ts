@@ -1,3 +1,3 @@
-import * as hooks from './hooks'
+import * as hooks from './hooks';
 
-export { hooks }
+export { hooks };

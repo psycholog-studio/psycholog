@@ -1,2 +1,2 @@
-export { default } from './Scene1'
-export * from './Scene1'
+export { default } from './Scene1';
+export * from './Scene1';

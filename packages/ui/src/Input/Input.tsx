@@ -1,27 +1,27 @@
-import React, { forwardRef, ForwardedRef } from 'react'
-import { cx } from '@emotion/css'
-import Box from '../Containers/Box'
-import { scrollable } from '../Containers/ScrollableBox/ScrollableContent/ScrollableContent.styles'
-import * as styles from './Input.styles'
+import React, { forwardRef, ForwardedRef } from 'react';
+import { cx } from '@emotion/css';
+import Box from '../Containers/Box';
+import { scrollable } from '../Containers/ScrollableBox/ScrollableContent/ScrollableContent.styles';
+import * as styles from './Input.styles';
 
 type BaseInputCategory = React.InputHTMLAttributes<HTMLInputElement> &
-  React.TextareaHTMLAttributes<HTMLTextAreaElement>
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-export type InputClassesKey = 'root' | 'input' | 'textarea' | 'textareaWrap'
+export type InputClassesKey = 'root' | 'input' | 'textarea' | 'textareaWrap';
 
-export type InputComponent = 'input' | 'textarea'
+export type InputComponent = 'input' | 'textarea';
 
 export type InputProps = {
-  component?: InputComponent
+  component?: InputComponent;
   classes?: {
-    [k in InputClassesKey]?: string
-  }
-} & BaseInputCategory
+    [k in InputClassesKey]?: string;
+  };
+} & BaseInputCategory;
 
-export type InputRef = ForwardedRef<HTMLInputElement & HTMLTextAreaElement>
+export type InputRef = ForwardedRef<HTMLInputElement & HTMLTextAreaElement>;
 
 const Input = forwardRef((inProps: InputProps, ref: InputRef): JSX.Element => {
-  const { component = 'input', classes = {}, className, ...props } = inProps
+  const { component = 'input', classes = {}, className, ...props } = inProps;
 
   return (
     <Box className={cx(styles.root, classes.root, className)}>
@@ -42,9 +42,9 @@ const Input = forwardRef((inProps: InputProps, ref: InputRef): JSX.Element => {
         </div>
       )}
     </Box>
-  )
-})
+  );
+});
 
-Input.displayName = 'Input'
+Input.displayName = 'Input';
 
-export default Input
+export default Input;

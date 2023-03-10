@@ -1,12 +1,12 @@
-import YtVideoItem, { YtVideoItemProps } from '../YtVideoItem'
-import * as styles from './YtVideoSuggest.styles'
+import YtVideoItem, { YtVideoItemProps } from '../YtVideoItem';
+import * as styles from './YtVideoSuggest.styles';
 
 export interface YtVideoSuggestProps {
-  items: Required<YtVideoItemProps>[]
+  items: Required<YtVideoItemProps>[];
 }
 
 const YtVideoSuggest = (props: YtVideoSuggestProps) => {
-  const { items = [] } = props
+  const { items = [] } = props;
 
   return (
     <div className={styles.root}>
@@ -18,11 +18,11 @@ const YtVideoSuggest = (props: YtVideoSuggestProps) => {
       </div>
       <div className={styles.content}>
         {items.map((item, index) => {
-          return <YtVideoItem key={index + item?.title ?? ''} {...item} />
+          return <YtVideoItem key={index + item?.title ?? ''} {...item} />;
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default YtVideoSuggest
+export default YtVideoSuggest;

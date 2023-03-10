@@ -1,20 +1,20 @@
-import { ReactNode } from 'react'
-import { cx, css } from '@emotion/css'
-import * as styles from './ShellContainer.styles'
+import { ReactNode } from 'react';
+import { cx, css } from '@emotion/css';
+import * as styles from './ShellContainer.styles';
 
 export interface ShellContainerProps {
-  width: number
-  height: number
-  children?: ReactNode
+  width: number;
+  height: number;
+  children?: ReactNode;
 }
 
-const offsetX = 34.4
+const offsetX = 34.4;
 
 const ShellContainer = (props: ShellContainerProps): JSX.Element => {
-  const { width, height, children } = props
+  const { width, height, children } = props;
 
-  const rectWidth = width
-  const rectHeight = height
+  const rectWidth = width;
+  const rectHeight = height;
 
   const cssRootSize = css`
     width: ${width}px;
@@ -23,7 +23,7 @@ const ShellContainer = (props: ShellContainerProps): JSX.Element => {
     svg {
       left: -${offsetX}px;
     }
-  `
+  `;
 
   return (
     <div className={cx(styles.root, cssRootSize)}>
@@ -61,7 +61,7 @@ const ShellContainer = (props: ShellContainerProps): JSX.Element => {
       </svg>
       <div className={styles.content}>{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default ShellContainer
+export default ShellContainer;

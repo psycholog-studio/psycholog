@@ -1,2 +1,2 @@
-export { default } from './TextLine'
-export * from './TextLine'
+export { default } from './TextLine';
+export * from './TextLine';

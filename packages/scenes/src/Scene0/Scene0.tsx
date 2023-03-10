@@ -1,7 +1,7 @@
-import BaseLayout from '@psycholog-studio/ui/Layouts/BaseLayout'
-import ShellContainer from '@psycholog-studio/ui/Containers/ShellContainer'
-import TextLine from '@psycholog-studio/ui/TextLine'
-import MessageLine from '@psycholog-studio/ui/MessageLine'
+import BaseLayout from '@psycholog-studio/ui/Layouts/BaseLayout';
+import ShellContainer from '@psycholog-studio/ui/Containers/ShellContainer';
+import TextLine from '@psycholog-studio/ui/TextLine';
+import MessageLine from '@psycholog-studio/ui/MessageLine';
 
 const Scene0 = (): JSX.Element => {
   return (
@@ -14,7 +14,7 @@ const Scene0 = (): JSX.Element => {
         </MessageLine>
       </ShellContainer>
     </BaseLayout>
-  )
-}
+  );
+};
 
-export default Scene0
+export default Scene0;

@@ -1,13 +1,13 @@
-import { Story, Meta } from '@storybook/react'
-import { css } from '@emotion/css'
-import Box, { BoxProps } from './Box'
-import { paddingDecorator } from '../../storyUtils'
+import { Story, Meta } from '@storybook/react';
+import { css } from '@emotion/css';
+import Box, { BoxProps } from './Box';
+import { paddingDecorator } from '../../storyUtils';
 
 export default {
   title: 'ui/Containers/Box',
   component: Box,
   decorators: [paddingDecorator],
-} as Meta
+} as Meta;
 
 const Template: Story<BoxProps> = (args) => {
   return (
@@ -19,13 +19,13 @@ const Template: Story<BoxProps> = (args) => {
         padding: 50px;
       `}
     />
-  )
-}
+  );
+};
 
-export const Normal = Template.bind({})
+export const Normal = Template.bind({});
 
 Normal.parameters = {
   backgrounds: { default: 'dark' },
-}
+};
 
-Normal.args = {}
+Normal.args = {};

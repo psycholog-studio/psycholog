@@ -1,15 +1,15 @@
-import YtVideoChatMessages from './YtVideoChatMessages'
-import * as styles from './YtLayout.styles'
+import YtVideoChatMessages from './YtVideoChatMessages';
+import * as styles from './YtLayout.styles';
 
 export interface YtLayoutProps {
   messages: {
-    name: string
-    message: string
-  }[]
+    name: string;
+    message: string;
+  }[];
 }
 
 const YtLayout = (props: YtLayoutProps) => {
-  const { messages } = props
+  const { messages } = props;
 
   return (
     <div className={styles.root}>
@@ -22,7 +22,7 @@ const YtLayout = (props: YtLayoutProps) => {
         <YtVideoChatMessages messages={messages} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default YtLayout
+export default YtLayout;

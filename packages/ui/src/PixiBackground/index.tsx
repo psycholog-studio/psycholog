@@ -1,2 +1,2 @@
-export { default } from './PixiBackground'
-export * from './PixiBackground'
+export { default } from './PixiBackground';
+export * from './PixiBackground';

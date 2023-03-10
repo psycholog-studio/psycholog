@@ -1,3 +1,3 @@
-import ThreeManager from '@psycholog-studio/ui/ThreeGraphic/core/ThreeManager'
+import ThreeManager from '@psycholog-studio/ui/ThreeGraphic/core/ThreeManager';
 
-export const threeManager = new ThreeManager()
+export const threeManager = new ThreeManager();

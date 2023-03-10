@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 export const root = css`
   rect {
@@ -9,4 +9,4 @@ export const root = css`
   path {
     fill: #23d7ff;
   }
-`
+`;

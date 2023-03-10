@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 export const createUnderlineStyle = (color: string) => {
   return css`
@@ -27,5 +27,5 @@ export const createUnderlineStyle = (color: string) => {
         transform: scaleX(1);
       }
     }
-  `
-}
+  `;
+};

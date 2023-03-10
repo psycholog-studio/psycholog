@@ -1,4 +1,4 @@
-import { css } from '@emotion/css'
+import { css } from '@emotion/css';
 
 export const root = css`
   position: relative;
@@ -7,7 +7,7 @@ export const root = css`
     z-index: 0;
     position: absolute;
   }
-`
+`;
 
 export const content = css`
   position: absolute;
@@ -17,4 +17,4 @@ export const content = css`
   padding: 20px;
   width: 100%;
   height: 100%;
-`
+`;

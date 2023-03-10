@@ -1,2 +1,2 @@
-export { default } from './MessageLine'
-export * from './MessageLine'
+export { default } from './MessageLine';
+export * from './MessageLine';
