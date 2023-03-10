@@ -27,7 +27,6 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@emotion/babel-plugin": "^11.10.6",
-    "@mdx-js/react": "^1.6.22",
     "@nrwl/cli": "^15.8.5",
     "@nrwl/eslint-plugin-nx": "^15.8.5",
     "@storybook/addon-actions": "^6.5.16",
