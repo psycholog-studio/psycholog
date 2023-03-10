@@ -42,7 +42,9 @@ const PixiBackground = (): JSX.Element => {
 
   const rootRefCallback = useCallback((element: HTMLDivElement) => {
     rootRef.current = element;
-    element.appendChild(pixiContainer.current.pixiApp.view);
+    element.appendChild(
+      pixiContainer.current.pixiApp.view as HTMLCanvasElement,
+    );
   }, []);
 
   useEffect(() => {

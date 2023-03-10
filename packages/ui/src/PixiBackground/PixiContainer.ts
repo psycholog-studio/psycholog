@@ -18,7 +18,7 @@ class PIXIContainer {
       width: this.width,
       height: this.height,
       antialias: true,
-      transparent: options.transparent || false,
+      // transparent: options.transparent || false,
       // resolution: window.devicePixelRatio || 1
       // resolution: 1 //這邊解析度應該由系統調整
     });
